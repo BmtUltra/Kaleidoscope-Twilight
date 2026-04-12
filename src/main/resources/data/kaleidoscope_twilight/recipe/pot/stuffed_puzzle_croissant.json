@@ -1,0 +1,27 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "twilightforest:crumble_horn"
+  },
+  "ingredients": [
+    {
+      "item": "twilightforest:blueberry"
+    },
+    {
+      "item": "twilightforest:moss_patch"
+    },
+    {
+      "tag": "c:raw_mutton"
+    },
+    {
+      "tag": "c:raw_mutton"
+    },
+    {
+      "tag": "c:raw_mutton"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:stuffed_puzzle_croissant"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "twilightforest:knightmetal_ingot"
+    }
+  },
+  "pattern": [
+    "AB",
+    "BB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:knight_kitchen_knife"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "kaleidoscope_twilight:raw_naga_meat"
+  },
+  "result": {
+    "id": "kaleidoscope_twilight:cooked_naga_meat"
+  }
+}

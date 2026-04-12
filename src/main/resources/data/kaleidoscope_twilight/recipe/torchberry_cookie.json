@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:wheat" },
+    { "item": "twilightforest:torchberries" },
+    { "item": "minecraft:wheat" }
+  ],
+  "result": {
+    "id": "kaleidoscope_twilight:torchberry_cookie",
+    "count": 1
+  }
+}

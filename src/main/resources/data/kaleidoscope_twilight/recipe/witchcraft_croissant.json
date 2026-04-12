@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "tag": "c:foods/bread" },
+    { "item": "kaleidoscope_twilight:witchcraft_bone" }
+  ],
+  "result": {
+    "id": "kaleidoscope_twilight:witchcraft_croissant",
+    "count": 1
+  }
+}

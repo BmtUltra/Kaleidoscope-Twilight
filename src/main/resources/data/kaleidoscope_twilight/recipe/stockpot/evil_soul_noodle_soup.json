@@ -1,0 +1,30 @@
+{
+  "type": "kaleidoscope_cookery:stockpot",
+  "ingredients": [
+    {
+      "item": "kaleidoscope_twilight:evil_soul"
+    },
+    {
+      "item": "kaleidoscope_twilight:evil_soul"
+    },
+    {
+      "tag": "c:foods/jerky"
+    },
+    {
+      "tag": "c:foods/jerky"
+    },
+    {
+      "item": "kaleidoscope_cookery:raw_noodles"
+    },
+    {
+      "item": "kaleidoscope_cookery:raw_noodles"
+    },
+    {
+      "item": "kaleidoscope_cookery:raw_noodles"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "id": "kaleidoscope_twilight:evil_soul_noodle_soup"
+  }
+}

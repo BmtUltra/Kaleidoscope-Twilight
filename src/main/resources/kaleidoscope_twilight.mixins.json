@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "com.bmt.kaleidoscope_twilight.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "LivingEntityAccessor",
+    "PhantomEffectMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  },
+  "client": [
+    "CameraMixin"
+  ]
+}

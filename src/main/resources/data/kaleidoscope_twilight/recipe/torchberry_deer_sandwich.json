@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "c:foods/bread"
+    },
+    "B": {
+      "item": "twilightforest:torchberries"
+    },
+    "C": {
+      "item": "twilightforest:cooked_venison"
+    },
+    "D": {
+      "tag": "c:crops/tomato"
+    }
+  },
+  "pattern": [
+    "AB",
+    "CD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:torchberry_deer_sandwich"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "kaleidoscope_twilight:blazing_iron_kitchen_knife",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_twilight:knight_kitchen_knife",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_twilight:ironwood_kitchen_knife",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_twilight:steelleaf_kitchen_knife",
+      "required": false
+    }
+  ]
+}

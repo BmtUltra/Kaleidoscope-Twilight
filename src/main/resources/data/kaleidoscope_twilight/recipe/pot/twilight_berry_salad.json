@@ -1,0 +1,30 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "twilightforest:raspberry"
+    },
+    {
+      "item": "twilightforest:raspberry"
+    },
+    {
+      "item": "twilightforest:blueberry"
+    },
+    {
+      "item": "twilightforest:blueberry"
+    },
+    {
+      "item": "twilightforest:maloberry"
+    },
+    {
+      "item": "twilightforest:maloberry"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:twilight_berry_salad"
+  }
+}

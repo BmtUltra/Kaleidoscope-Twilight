@@ -1,0 +1,250 @@
+package com.bmt.kaleidoscope_twilight.init;
+
+import com.github.ysbbbbbb.kaleidoscopecookery.init.ModEffects;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
+
+public class KTFoods {
+    // 暮色浆果沙拉
+    public static final FoodProperties TWILIGHT_BERRY_SALAD = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationModifier(0.6f)
+            .effect(() -> new MobEffectInstance(ModEffects.MUSTARD, 300 * 20), 1.0F)
+            .alwaysEdible().build();
+
+    // 暮色猪儿虫
+    public static final FoodProperties TWILIGHT_CATERPILLAR = new FoodProperties.Builder()
+            .nutrition(18)
+            .saturationModifier(0.2f)
+            .alwaysEdible().build();
+
+    // 鹿肉焖土豆
+    public static final FoodProperties DEER_STEW_POTATO = new FoodProperties.Builder()
+            .nutrition(12)
+            .saturationModifier(0.8f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 60 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 鹿肉焖土豆盖饭
+    public static final FoodProperties DEER_STEW_POTATO_RICE_BOWL = new FoodProperties.Builder()
+            .nutrition(16)
+            .saturationModifier(1.0f)
+            .effect(() -> new MobEffectInstance(ModEffects.SATIATED_SHIELD, 180 * 20), 1.0F)
+            .alwaysEdible().build();
+
+    // 米诺陶卷
+    public static final FoodProperties MINOTAUR_ROLL = new FoodProperties.Builder()
+            .nutrition(10)
+            .saturationModifier(0.7f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 180 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 暮光惠灵顿牛排
+    public static final FoodProperties TWILIGHT_WELLINGTON_STEAK = new FoodProperties.Builder()
+            .nutrition(20)
+            .saturationModifier(1.2f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, -1, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, -1, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, -1, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 盐焗娜迦
+    public static final FoodProperties SALT_BAKED_NAGA = new FoodProperties.Builder()
+            .nutrition(18)
+            .saturationModifier(1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 暮初恶魂意面
+    public static final FoodProperties TWILIGHT_GHOST_PASTA = new FoodProperties.Builder()
+            .nutrition(14)
+            .saturationModifier(0.9f)
+            .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 九头蛇肉酱面
+    public static final FoodProperties HYDRA_BOLOGNESE = new FoodProperties.Builder()
+            .nutrition(16)
+            .saturationModifier(1.1f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 240 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 240 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 荧光蘑菇瓦罐汤
+    public static final FoodProperties GLOW_MUSHROOM_POT_SOUP = new FoodProperties.Builder()
+            .nutrition(10)
+            .saturationModifier(0.7f)
+            .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 300 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 浇汁蛇宴
+    public static final FoodProperties SAUCED_SNAKE_FEAST = new FoodProperties.Builder()
+            .nutrition(22)
+            .saturationModifier(1.3f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 360 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 360 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 极光冰淇淋
+    public static final FoodProperties AURORA_ICE_CREAM = new FoodProperties.Builder()
+            .nutrition(6)
+            .saturationModifier(0.5f)
+            .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 180 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 魔豆汤
+    public static final FoodProperties MAGIC_BEAN_SOUP = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationModifier(0.6f)
+            .effect(() -> new MobEffectInstance(MobEffects.JUMP, 300 * 20, 1), 1.0f)
+            .alwaysEdible().build();
+
+    // 冰川蛋糕
+    public static final FoodProperties GLACIER_CAKE = new FoodProperties.Builder()
+            .nutrition(4)
+            .saturationModifier(0.4f)
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 荷花鸡
+    public static final FoodProperties LOTUS_CHICKEN = new FoodProperties.Builder()
+            .nutrition(14)
+            .saturationModifier(0.9f)
+            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 300 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 生娜迦肉
+    public static final FoodProperties RAW_NAGA_MEAT = new FoodProperties.Builder()
+            .nutrition(3)
+            .saturationModifier(0.3f)
+            .alwaysEdible().build();
+
+    // 熟娜迦肉
+    public static final FoodProperties COOKED_NAGA_MEAT = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationModifier(0.8f)
+            .alwaysEdible().build();
+
+    // 战斧牛排
+    public static final FoodProperties TOMAHAWK_STEAK = new FoodProperties.Builder()
+            .nutrition(16)
+            .saturationModifier(1.2f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 240 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 生雪怪肉
+    public static final FoodProperties RAW_YETI_MEAT = new FoodProperties.Builder()
+            .nutrition(4)
+            .saturationModifier(0.3f)
+            .alwaysEdible().build();
+
+    // 熟雪怪肉
+    public static final FoodProperties COOKED_YETI_MEAT = new FoodProperties.Builder()
+            .nutrition(10)
+            .saturationModifier(0.9f)
+            .alwaysEdible().build();
+
+    // 填馅谜题羊角
+    public static final FoodProperties STUFFED_PUZZLE_CROISSANT = new FoodProperties.Builder()
+            .nutrition(12)
+            .saturationModifier(0.8f)
+            .effect(() -> new MobEffectInstance(MobEffects.LUCK, 600 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 巫术大骨汤
+    public static final FoodProperties WITCHCRAFT_BONE_SOUP = new FoodProperties.Builder()
+            .nutrition(10)
+            .saturationModifier(0.7f)
+            .effect(() -> new MobEffectInstance(KTEffects.WITCHCRAFT_PROTECTION, 240 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 巫术可颂
+    public static final FoodProperties WITCHCRAFT_CROISSANT = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationModifier(0.6f)
+            .effect(() -> new MobEffectInstance(KTEffects.WITCHCRAFT_PROTECTION, 120 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 幻影汤面
+    public static final FoodProperties EVIL_SOUL_NOODLE_SOUP = new FoodProperties.Builder()
+            .nutrition(14)
+            .saturationModifier(0.9f)
+            .effect(() -> new MobEffectInstance(KTEffects.PHANTOM, 180 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 冰冻馒头
+    public static final FoodProperties FROZEN_BUN = new FoodProperties.Builder()
+            .nutrition(6)
+            .saturationModifier(0.5f)
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 火炬浆果曲奇
+    public static final FoodProperties TORCHBERRY_COOKIE = new FoodProperties.Builder()
+            .nutrition(4)
+            .saturationModifier(0.4f)
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 180 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 火炬浆果鹿肉三明治
+    public static final FoodProperties TORCHBERRY_DEER_SANDWICH = new FoodProperties.Builder()
+            .nutrition(12)
+            .saturationModifier(0.8F)
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0), 1.0F)
+            .alwaysEdible().build();
+
+    // 试验品115号烤串
+    public static final FoodProperties EXPERIMENT_115_SKEWER = new FoodProperties.Builder()
+            .nutrition(2)
+            .saturationModifier(0.1F)
+            .fast()
+            .alwaysEdible().build();
+
+    // 小炒肥虫
+    public static final FoodProperties STIR_FRIED_FAT_CATERPILLAR = new FoodProperties.Builder()
+            .nutrition(10)
+            .saturationModifier(0.7f)
+            .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 300 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 小炒肥虫盖饭
+    public static final FoodProperties STIR_FRIED_FAT_CATERPILLAR_RICE_BOWL = new FoodProperties.Builder()
+            .nutrition(14)
+            .saturationModifier(1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 600 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.SATURATION, 300 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 暮色蕨菜
+    public static final FoodProperties TWILIGHT_FERN = new FoodProperties.Builder()
+            .nutrition(2)
+            .saturationModifier(0.2f)
+            .alwaysEdible().build();
+
+    // 凉拌蕨菜
+    public static final FoodProperties COLD_TOSSED_FERN = new FoodProperties.Builder()
+            .nutrition(6)
+            .saturationModifier(0.5f)
+            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 60 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 冰晶九头蛇排
+    public static final FoodProperties ICE_CRYSTAL_HYDRA_STEAK = new FoodProperties.Builder()
+            .nutrition(20)
+            .saturationModifier(1.5f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(KTEffects.FROST_CLOUD, 300 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 冰晶慕斯
+    public static final FoodProperties ICE_CRYSTAL_MOUSSE = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationModifier(0.6f)
+            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.JUMP, 300 * 20, 1), 1.0f)
+            .alwaysEdible().build();
+}
