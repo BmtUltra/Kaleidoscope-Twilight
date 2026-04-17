@@ -4,7 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "LivingEntityAccessor",
-    "PhantomEffectMixin"
+    "kaleidoscope_twilight.PhantomEffectMixin"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -13,6 +13,6 @@
     "requireAnnotations": true
   },
   "client": [
-    "CameraMixin"
+    "kaleidoscope_twilight.CameraMixin"
   ]
 }
