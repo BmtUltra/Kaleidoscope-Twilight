@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_twilight.effect;
 
-import com.bmt.kaleidoscope_twilight.mixins.LivingEntityAccessor;
+import com.bmt.kaleidoscope_twilight.mixins.accessor.LivingEntityAccessor;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffect;

@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_twilight.mixins.kaleidoscope_twilight;
+package com.bmt.kaleidoscope_twilight.mixins;
 
 import com.bmt.kaleidoscope_twilight.init.KTEffects;
 import net.minecraft.core.BlockPos;
