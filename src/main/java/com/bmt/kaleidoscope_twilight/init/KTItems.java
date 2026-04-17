@@ -20,6 +20,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.jetbrains.annotations.NotNull;
 
 public class KTItems {
     private static final DeferredRegister<Item> ITEMS =
@@ -162,28 +163,62 @@ public class KTItems {
     public static final DeferredHolder<Item, BowlFoodOnlyItem> STIR_FRIED_FAT_CATERPILLAR_RICE_BOWL_ITEM = ITEMS.register("stir_fried_fat_caterpillar_rice_bowl",
             () -> new BowlFoodOnlyItem(KTFoods.STIR_FRIED_FAT_CATERPILLAR_RICE_BOWL));
 
+    // 暮色风味小鸡炖蘑菇
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> TWILIGHT_CHICKEN_MUSHROOM_STEW_ITEM = ITEMS.register("twilight_chicken_mushroom_stew",
+            () -> new BowlFoodOnlyItem(KTFoods.TWILIGHT_CHICKEN_MUSHROOM_STEW));
+
+    // 迷宫夹心薄饼
+    public static final DeferredHolder<Item, FoodWithEffectsItem> MAZE_STUFFED_PANCAKE_ITEM = ITEMS.register("maze_stuffed_pancake",
+            () -> new FoodWithEffectsItem(KTFoods.MAZE_STUFFED_PANCAKE));
+
+    // 巫术蛋糕
+    public static final DeferredHolder<Item, FoodWithEffectsItem> WITCHCRAFT_CAKE_ITEM = ITEMS.register("witchcraft_cake",
+            () -> new FoodWithEffectsItem(KTFoods.WITCHCRAFT_CAKE));
+
+    // 幻影蕨菜煲
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> PHANTOM_FERN_STEW_ITEM = ITEMS.register("phantom_fern_stew",
+            () -> new BowlFoodOnlyItem(KTFoods.PHANTOM_FERN_STEW));
+
+    // 生暮色恶魂触手
+    public static final DeferredHolder<Item, Item> RAW_TWILIGHT_GHOST_TENTACLE_ITEM = ITEMS.register("raw_twilight_ghost_tentacle",
+            () -> new Item(new Item.Properties().food(KTFoods.RAW_TWILIGHT_GHOST_TENTACLE)));
+
+    // 熟暮色恶魂触手
+    public static final DeferredHolder<Item, Item> COOKED_TWILIGHT_GHOST_TENTACLE_ITEM = ITEMS.register("cooked_twilight_ghost_tentacle",
+            () -> new Item(new Item.Properties().food(KTFoods.COOKED_TWILIGHT_GHOST_TENTACLE)));
+
+    // 牛头人沙拉酱意面
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> MINOTAUR_SALAD_PASTA_ITEM = ITEMS.register("minotaur_salad_pasta",
+            () -> new BowlFoodOnlyItem(KTFoods.MINOTAUR_SALAD_PASTA));
+
+    // 暮色恶魂刺身
+    public static final DeferredHolder<Item, FoodWithEffectsItem> TWILIGHT_GHOST_SASHIMI_ITEM = ITEMS.register("twilight_ghost_sashimi",
+            () -> new FoodWithEffectsItem(KTFoods.TWILIGHT_GHOST_SASHIMI));
+
+    // 彩虹糖
+    public static final DeferredHolder<Item, FoodWithEffectsItem> RAINBOW_CANDY_ITEM = ITEMS.register("rainbow_candy",
+            () -> new FoodWithEffectsItem(KTFoods.RAINBOW_CANDY));
+
+    // 异色炫彩馒头
+    public static final DeferredHolder<Item, FoodWithEffectsItem> RAINBOW_BUN_ITEM = ITEMS.register("rainbow_bun",
+            () -> new FoodWithEffectsItem(KTFoods.RAINBOW_BUN));
+
     // 暮色蕨菜
     public static final DeferredHolder<Item, Item> TWILIGHT_FERN_ITEM = ITEMS.register("twilight_fern",
             () -> new Item(new Item.Properties().food(KTFoods.TWILIGHT_FERN)) {
                 @Override
-                public InteractionResult useOn(UseOnContext context) {
+                public @NotNull InteractionResult useOn(@NotNull UseOnContext context) {
                     Level level = context.getLevel();
                     BlockPos pos = context.getClickedPos();
                     BlockState state = level.getBlockState(pos);
 
-                    // 检查是否可以种植在耕地上
                     if (state.getBlock() instanceof net.minecraft.world.level.block.FarmBlock) {
-                        // 将耕地变成暮色蕨菜作物
                         level.setBlock(pos.above(), KTBlocks.TWILIGHT_FERN_CROP.get().defaultBlockState(), 3);
-
-                        // 消耗物品
-                        if (!context.getPlayer().isCreative()) {
+                        if (context.getPlayer() != null && !context.getPlayer().isCreative()) {
                             context.getItemInHand().shrink(1);
                         }
-
                         return InteractionResult.SUCCESS;
                     }
-
                     return super.useOn(context);
                 }
             });

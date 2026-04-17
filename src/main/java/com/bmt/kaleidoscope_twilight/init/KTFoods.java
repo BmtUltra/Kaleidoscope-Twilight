@@ -247,4 +247,85 @@ public class KTFoods {
             .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300 * 20, 0), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.JUMP, 300 * 20, 1), 1.0f)
             .alwaysEdible().build();
+
+    // 暮色风味小鸡炖蘑菇
+    public static final FoodProperties TWILIGHT_CHICKEN_MUSHROOM_STEW = new FoodProperties.Builder()
+            .nutrition(14)
+            .saturationModifier(0.9f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 120 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 迷宫夹心薄饼
+    public static final FoodProperties MAZE_STUFFED_PANCAKE = new FoodProperties.Builder()
+            .nutrition(10)
+            .saturationModifier(0.7f)
+            .effect(() -> new MobEffectInstance(MobEffects.LUCK, 600 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 300 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 巫术蛋糕
+    public static final FoodProperties WITCHCRAFT_CAKE = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationModifier(0.6f)
+            .effect(() -> new MobEffectInstance(KTEffects.WITCHCRAFT_PROTECTION, 300 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 180 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 幻影蕨菜煲
+    public static final FoodProperties PHANTOM_FERN_STEW = new FoodProperties.Builder()
+            .nutrition(12)
+            .saturationModifier(0.8f)
+            .effect(() -> new MobEffectInstance(KTEffects.PHANTOM, 240 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 120 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 生暮色恶魂触手
+    public static final FoodProperties RAW_TWILIGHT_GHOST_TENTACLE = new FoodProperties.Builder()
+            .nutrition(3)
+            .saturationModifier(0.3f)
+            .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 30 * 20, 0), 0.3f)
+            .alwaysEdible().build();
+
+    // 熟暮色恶魂触手
+    public static final FoodProperties COOKED_TWILIGHT_GHOST_TENTACLE = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationModifier(0.8f)
+            .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 180 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 10 * 20, 0), 0.5f)
+            .alwaysEdible().build();
+
+    // 牛头人沙拉酱意面
+    public static final FoodProperties MINOTAUR_SALAD_PASTA = new FoodProperties.Builder()
+            .nutrition(16)
+            .saturationModifier(1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 120 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 暮色恶魂刺身
+    public static final FoodProperties TWILIGHT_GHOST_SASHIMI = new FoodProperties.Builder()
+            .nutrition(6)
+            .saturationModifier(0.5f)
+            .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 240 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 180 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 彩虹糖
+    public static final FoodProperties RAINBOW_CANDY = new FoodProperties.Builder()
+            .nutrition(2)
+            .saturationModifier(0.2f)
+            .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 60 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.LUCK, 300 * 20, 0), 1.0f)
+            .fast()
+            .alwaysEdible().build();
+
+    // 异色炫彩馒头
+    public static final FoodProperties RAINBOW_BUN = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationModifier(0.7f)
+            .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 180 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.LUCK, 300 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 120 * 20, 0), 1.0f)
+            .alwaysEdible().build();
 }

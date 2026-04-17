@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -57,12 +58,41 @@ public class KTCreativeTabs {
                         output.accept(KTItems.FOUR_LEAF_ICE_CRYSTAL_ITEM.get());
                         output.accept(KTItems.ICE_CRYSTAL_HYDRA_STEAK_ITEM.get());
                         output.accept(KTItems.ICE_CRYSTAL_MOUSSE_ITEM.get());
+                        output.accept(KTItems.TWILIGHT_CHICKEN_MUSHROOM_STEW_ITEM.get());
+                        output.accept(KTItems.MAZE_STUFFED_PANCAKE_ITEM.get());
+                        output.accept(KTItems.WITCHCRAFT_CAKE_ITEM.get());
+                        output.accept(KTItems.PHANTOM_FERN_STEW_ITEM.get());
+                        output.accept(KTItems.RAW_TWILIGHT_GHOST_TENTACLE_ITEM.get());
+                        output.accept(KTItems.COOKED_TWILIGHT_GHOST_TENTACLE_ITEM.get());
+                        output.accept(KTItems.MINOTAUR_SALAD_PASTA_ITEM.get());
+                        output.accept(KTItems.TWILIGHT_GHOST_SASHIMI_ITEM.get());
+                        output.accept(KTItems.RAINBOW_CANDY_ITEM.get());
+                        output.accept(KTItems.RAINBOW_BUN_ITEM.get());
+                        if (ModList.get().isLoaded("kaleidoscope_tavern")) {
+                            output.accept(KTBrewItems.CAVE_FIREFLY_BREW_ITEM.get());
+                            output.accept(KTBrewItems.TWILIGHT_DEW_ITEM.get());
+                            output.accept(KTBrewItems.WITCHCRAFT_SECRET_BREW_ITEM.get());
+                            output.accept(KTBrewItems.SNAKE_SKIN_LIQUOR_ITEM.get());
+                            output.accept(KTBrewItems.ICE_CRYSTAL_FROST_DEW_ITEM.get());
+                            output.accept(KTBrewItems.MAGIC_BEAN_BREW_ITEM.get());
+                            output.accept(KTBrewItems.EMBER_EYE_ITEM.get());
+                            output.accept(KTBrewItems.DEER_SONG_ITEM.get());
+                            output.accept(KTBrewItems.THORN_HEART_ITEM.get());
+                            output.accept(KTBrewItems.DRUID_SECRET_BREW_ITEM.get());
+                            output.accept(KTBrewItems.GLOWING_NIGHT_BIRD_SONG_ITEM.get());
+                            output.accept(KTBrewItems.GLACIER_FROST_DEW_ITEM.get());
+                            output.accept(KTBrewItems.GIANT_SPIRIT_ITEM.get());
+                            output.accept(KTBrewItems.NATURE_SPIRIT_ITEM.get());
+                        }
                         output.accept(KTItems.BLAZING_IRON_KITCHEN_KNIFE.get());
                         output.accept(KTItems.KNIGHT_KITCHEN_KNIFE.get());
                         output.accept(KTItems.IRONWOOD_KITCHEN_KNIFE.get());
                         output.accept(KTItems.STEELLEAF_KITCHEN_KNIFE.get());
 //                        output.accept(KTItems.IRONWOOD_KITCHEN_KNIFE.get().getDefaultInstance(parameters.holders()));
 //                        output.accept(KTItems.STEELLEAF_KITCHEN_KNIFE.get().getDefaultInstance(parameters.holders()));
+                        if (ModList.get().isLoaded("kaleidoscope_tavern")) {
+                            output.accept(KTBrewItems.TORCHBERRY_BUCKET.get());
+                        }
                         output.accept(KTItems.TWILIGHT_STOVE.get());
                     })
                     .build());

@@ -12,6 +12,5 @@ public class TagUtil {
 
     public static class Blocks {
         public static final TagKey<Block> CHEST_LIKE = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("kaleidoscope_twilight", "chest_like"));
-        public static final TagKey<Block> STOVE_ACCELERATABLE = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("kaleidoscope_twilight", "stove_acceleratable"));
     }
 }
