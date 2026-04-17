@@ -68,6 +68,7 @@ public class KTCreativeTabs {
                         output.accept(KTItems.TWILIGHT_GHOST_SASHIMI_ITEM.get());
                         output.accept(KTItems.RAINBOW_CANDY_ITEM.get());
                         output.accept(KTItems.RAINBOW_BUN_ITEM.get());
+
                         if (ModList.get().isLoaded("kaleidoscope_tavern")) {
                             output.accept(KTBrewItems.CAVE_FIREFLY_BREW_ITEM.get());
                             output.accept(KTBrewItems.TWILIGHT_DEW_ITEM.get());
@@ -84,6 +85,7 @@ public class KTCreativeTabs {
                             output.accept(KTBrewItems.GIANT_SPIRIT_ITEM.get());
                             output.accept(KTBrewItems.NATURE_SPIRIT_ITEM.get());
                         }
+
                         output.accept(KTItems.BLAZING_IRON_KITCHEN_KNIFE.get());
                         output.accept(KTItems.KNIGHT_KITCHEN_KNIFE.get());
                         output.accept(KTItems.IRONWOOD_KITCHEN_KNIFE.get());
