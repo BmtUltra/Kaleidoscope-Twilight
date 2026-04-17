@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "kaleidoscope_twilight:four_leaf_ice_crystal"
+    },
+    "B": {
+      "tag": "c:milk"
+    },
+    "C": [
+      {
+        "item": "twilightforest:skyberry"
+      },
+      {
+        "item": "twilightforest:blueberry"
+      }
+    ],
+    "D": {
+      "tag": "c:flour"
+    }
+  },
+  "pattern": [
+    "AB",
+    "CC",
+    "DD"
+  ],
+  "result": {
+    "id":  "kaleidoscope_twilight:ice_crystal_mousse"
+  },
+  "show_notification": true
+}

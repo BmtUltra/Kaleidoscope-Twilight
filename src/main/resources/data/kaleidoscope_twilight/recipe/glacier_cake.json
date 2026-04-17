@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:ice"
+      "item": "minecraft:milk_bucket"
     },
     "B": {
       "item": "twilightforest:ice_bomb"
     },
     "C": {
-      "item": "twilightforest:arctic_fur"
+      "item": "minecraft:ice"
     },
     "D": {
       "tag": "c:flour"

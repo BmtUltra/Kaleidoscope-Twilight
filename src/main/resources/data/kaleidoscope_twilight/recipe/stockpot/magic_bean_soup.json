@@ -1,7 +1,7 @@
 {
   "type": "kaleidoscope_cookery:stockpot",
   "carrier": {
-    "item": "minecraft:flower_pot"
+    "item": "minecraft:bowl"
   },
   "ingredients": [
     {
@@ -11,7 +11,7 @@
       "item": "twilightforest:magic_beans"
     },
     {
-      "item": "twilightforest:magic_beans"
+      "item": "twilightforest:moss_patch"
     },
     {
       "item": "twilightforest:moss_patch"
@@ -21,7 +21,7 @@
     }
   ],
   "result": {
-    "count": 1,
+    "count": 3,
     "id": "kaleidoscope_twilight:magic_bean_soup"
   }
 }

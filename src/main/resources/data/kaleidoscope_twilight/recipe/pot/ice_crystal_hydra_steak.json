@@ -1,0 +1,30 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "kaleidoscope_twilight:four_leaf_ice_crystal"
+    },
+    {
+      "item": "kaleidoscope_twilight:four_leaf_ice_crystal"
+    },
+    {
+      "item": "kaleidoscope_twilight:four_leaf_ice_crystal"
+    },
+    {
+      "item": "twilightforest:hydra_chop"
+    },
+    {
+      "item": "twilightforest:hydra_chop"
+    },
+    {
+      "item": "twilightforest:hydra_chop"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:ice_crystal_hydra_steak"
+  }
+}

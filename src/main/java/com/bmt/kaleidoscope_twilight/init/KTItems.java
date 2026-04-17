@@ -203,7 +203,7 @@ public class KTItems {
     public static final DeferredHolder<Item, FoodWithEffectsItem> RAINBOW_BUN_ITEM = ITEMS.register("rainbow_bun",
             () -> new FoodWithEffectsItem(KTFoods.RAINBOW_BUN));
 
-    // 暮色蕨菜
+    // 蕨菜
     public static final DeferredHolder<Item, Item> TWILIGHT_FERN_ITEM = ITEMS.register("twilight_fern",
             () -> new Item(new Item.Properties().food(KTFoods.TWILIGHT_FERN)) {
                 @Override
