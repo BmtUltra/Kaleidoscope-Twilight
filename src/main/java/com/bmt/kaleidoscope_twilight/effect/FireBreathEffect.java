@@ -6,6 +6,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import twilightforest.entity.boss.HydraMortar;
 import twilightforest.init.TFEntities;
@@ -57,25 +58,18 @@ public class FireBreathEffect extends MobEffect {
         if (!level.isClientSide()) {
             HydraMortar fireball = new HydraMortar(TFEntities.HYDRA_MORTAR.get(), level);
 
-            double x = player.getX();
+            Vec3 lookVec = player.getLookAngle();
+
+            double x = player.getX() + lookVec.x * 0.5;
             double y = player.getY() + player.getEyeHeight() - 0.5;
-            double z = player.getZ();
+            double z = player.getZ() + lookVec.z * 0.5;
 
-            float yRot = player.getYRot();
-            float xRot = player.getXRot();
-            float speed = 0.5F + (amplifier * 0.1F);
-            float xRotRad = xRot * ((float) Math.PI / 180F);
-            float yRotRad = -yRot * ((float) Math.PI / 180F);
-
-            double motionX = Math.sin(yRotRad) * Math.cos(xRotRad);
-            double motionY = -Math.sin(xRotRad);
-            double motionZ = Math.cos(yRotRad) * Math.cos(xRotRad);
-
-            fireball.setPos(x + motionX, y, z + motionZ);
-
+            fireball.setPos(x, y, z);
             fireball.setOwner(player);
 
-            fireball.shoot(motionX, motionY, motionZ, speed, 1.0F);
+            float speed = 0.8F + (amplifier * 0.2F);
+
+            fireball.shoot(lookVec.x, lookVec.y, lookVec.z, speed, 0.0F);
 
             level.addFreshEntity(fireball);
         }
