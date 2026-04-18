@@ -2,10 +2,10 @@ package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 import com.bmt.kaleidoscope_twilight.item.*;
-import com.bmt.kaleidoscope_twilight.tier.BlazingIronTier;
-import com.bmt.kaleidoscope_twilight.tier.IronwoodTier;
-import com.bmt.kaleidoscope_twilight.tier.KnightTier;
-import com.bmt.kaleidoscope_twilight.tier.SteelleafTier;
+import com.bmt.kaleidoscope_twilight.util.tier.BlazingIronTier;
+import com.bmt.kaleidoscope_twilight.util.tier.IronwoodTier;
+import com.bmt.kaleidoscope_twilight.util.tier.KnightTier;
+import com.bmt.kaleidoscope_twilight.util.tier.SteelleafTier;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.BowlFoodOnlyItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.FoodWithEffectsItem;
 

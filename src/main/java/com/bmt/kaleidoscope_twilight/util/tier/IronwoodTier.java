@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_twilight.tier;
+package com.bmt.kaleidoscope_twilight.util.tier;
 
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;

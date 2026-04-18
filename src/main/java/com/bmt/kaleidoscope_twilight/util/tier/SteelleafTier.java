@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_twilight.tier;
+package com.bmt.kaleidoscope_twilight.util.tier;
 
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
 import twilightforest.init.TFItems;
 
-public class KnightTier implements Tier {
+public class SteelleafTier implements Tier {
     @Override
     public int getUses() {
         return 750;
@@ -16,7 +16,7 @@ public class KnightTier implements Tier {
 
     @Override
     public float getSpeed() {
-        return 6.0F;
+        return 4.0F;
     }
 
     @Override
@@ -26,16 +26,16 @@ public class KnightTier implements Tier {
 
     @Override
     public @NotNull TagKey<Block> getIncorrectBlocksForDrops() {
-        return BlockTags.INCORRECT_FOR_IRON_TOOL;
+        return BlockTags.INCORRECT_FOR_STONE_TOOL;
     }
 
     @Override
     public int getEnchantmentValue() {
-        return 12;
+        return 8;
     }
 
     @Override
     public @NotNull Ingredient getRepairIngredient() {
-        return Ingredient.of(TFItems.KNIGHTMETAL_INGOT.get());
+        return Ingredient.of(TFItems.STEELEAF_INGOT.get());
     }
 }

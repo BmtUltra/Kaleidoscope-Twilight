@@ -1,0 +1,12 @@
+{
+  "type": "kaleidoscope_cookery:teapot",
+  "ingredient": {
+    "item": "minecraft:red_mushroom"
+  },
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:minotaur_mushroom_tea"
+  },
+  "tea_fluid": "minecraft:water",
+  "time": 240
+}

@@ -40,7 +40,7 @@ public class EventHandler {
             if (event.getSource().getDirectEntity() instanceof HydraMortar mortar) {
                 if (mortar.getOwner() != null && mortar.getOwner().equals(entity)) {
                     float originalDamage = event.getAmount();
-                    float reducedDamage = originalDamage * 0.2f;
+                    float reducedDamage = originalDamage * 0.1f;
                     event.setAmount(reducedDamage);
                 }
             }

@@ -1,6 +1,7 @@
 package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
+import com.github.ysbbbbbb.kaleidoscopecookery.init.ModEffects;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.TeacupRegistry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -28,27 +29,26 @@ public class KTTeacups {
         // 娜迦茶
         NAGA_TEA = registry.registerTeacupData("naga_tea",
                 TeacupRegistry.TeacupData.create(4)
-                        .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3 * 60 * 20))
-                        .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 2 * 60 * 20))
+                        .addEffect(() -> new MobEffectInstance(KTEffects.STURDY_SCALES, 2 * 60 * 20))
         );
 
         // 巫术茶
         WITCHCRAFT_TEA = registry.registerTeacupData("witchcraft_tea",
                 TeacupRegistry.TeacupData.create(4)
-                        .addEffect(() -> new MobEffectInstance(KTEffects.WITCHCRAFT_PROTECTION, 5 * 60 * 20))
+                        .addEffect(() -> new MobEffectInstance(KTEffects.WITCHCRAFT_PROTECTION, 2 * 60 * 20))
         );
 
         // 米诺菇茶
         MINOTAUR_MUSHROOM_TEA = registry.registerTeacupData("minotaur_mushroom_tea",
                 TeacupRegistry.TeacupData.create(4)
-                        .addEffect(() -> new MobEffectInstance(KTEffects.MUSHROOM_PERCEPTION, 8 * 60 * 20))
+                        .addEffect(() -> new MobEffectInstance(KTEffects.MUSHROOM_PERCEPTION, 5 * 60 * 20))
         );
 
         // 火焰茶
         FIRE_TEA = registry.registerTeacupData("fire_tea",
                 TeacupRegistry.TeacupData.create(4)
                         .addEffect(() -> new MobEffectInstance(KTEffects.FIRE_BREATH, 3 * 60 * 20))
-                        .addEffect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 5 * 60 * 20))
+                        .addEffect(() -> new MobEffectInstance(ModEffects.WARMTH, 5 * 60 * 20))
         );
 
         // 幻影茶
@@ -61,14 +61,14 @@ public class KTTeacups {
         HOT_TEARS_TEA = registry.registerTeacupData("hot_tears_tea",
                 TeacupRegistry.TeacupData.create(4)
                         .addEffect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 8 * 60 * 20))
-                        .addEffect(() -> new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 6 * 60 * 20))
+                        .addEffect(() -> new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 5 * 60 * 20))
         );
 
         // 冰晶茶
         ICE_CRYSTAL_TEA = registry.registerTeacupData("ice_crystal_tea",
                 TeacupRegistry.TeacupData.create(4)
-                        .addEffect(() -> new MobEffectInstance(KTEffects.FROST_CLOUD, 4 * 60 * 20))
-                        .addEffect(() -> new MobEffectInstance(KTEffects.YETI_THROW, 3 * 60 * 20))
+                        .addEffect(() -> new MobEffectInstance(KTEffects.FROST_CLOUD, 60 * 20))
+                        .addEffect(() -> new MobEffectInstance(KTEffects.YETI_THROW,  60 * 20))
         );
     }
 
