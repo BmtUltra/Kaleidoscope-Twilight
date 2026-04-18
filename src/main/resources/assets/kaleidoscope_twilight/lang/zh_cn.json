@@ -68,7 +68,7 @@
   "item.kaleidoscope_twilight.ice_crystal_mousse": "冰晶慕斯",
   "tooltip.kaleidoscope_twilight.ice_crystal_mousse.maxim": "以冰晶为灵感的慕斯蛋糕，口感冰凉细腻，入口即化",
   "item.kaleidoscope_twilight.twilight_chicken_mushroom_stew": "暮色风味小鸡炖蘑菇",
-  "tooltip.kaleidoscope_twilight.twilight_chicken_mushroom_stew.maxim": "暮色森林特有的蘑菇与鸡肉炖制，汤汁鲜美，营养丰富",
+  "tooltip.kaleidoscope_twilight.twilight_chicken_mushroom_stew.maxim": "是小鸡炖蘑菇，我啃(´▽｀)",
   "item.kaleidoscope_twilight.maze_stuffed_pancake": "迷宫夹心薄饼",
   "tooltip.kaleidoscope_twilight.maze_stuffed_pancake.maxim": "以迷宫为灵感的夹心薄饼，每一口都像在探索未知",
   "item.kaleidoscope_twilight.witchcraft_cake": "巫术蛋糕",
@@ -87,7 +87,9 @@
   "tooltip.kaleidoscope_twilight.rainbow_bun.maxim": "抓异色炫彩哈哈",
 
   "item.kaleidoscope_twilight.blazing_iron_kitchen_knife": "炽铁菜刀",
+  "item.kaleidoscope_twilight.blazing_iron_kitchen_knife.tooltip": "灼烧攻击目标",
   "item.kaleidoscope_twilight.knight_kitchen_knife": "骑士菜刀",
+  "item.kaleidoscope_twilight.knight_kitchen_knife.tooltip": "对有护甲的目标造成额外伤害",
   "item.kaleidoscope_twilight.ironwood_kitchen_knife": "铁木菜刀",
   "item.kaleidoscope_twilight.steelleaf_kitchen_knife": "钢叶菜刀",
 
@@ -124,6 +126,8 @@
   "effect.kaleidoscope_twilight.frost_cloud.description": "可以借助寒冰云飘起",
   "effect.kaleidoscope_twilight.fire_breath": "火焰吐息",
   "effect.kaleidoscope_twilight.fire_breath.description": "攻击时喷射火球",
+  "effect.kaleidoscope_twilight.erudition": "博学之识",
+  "effect.kaleidoscope_twilight.erudition.description": "击败生物后必定获得其掉落物",
 
   "block.kaleidoscope_twilight.twilight_stove": "暮色炉灶"
 }

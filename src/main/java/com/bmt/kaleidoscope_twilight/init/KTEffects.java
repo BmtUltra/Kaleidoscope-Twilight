@@ -10,7 +10,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class KTEffects {
-    private static final DeferredRegister<MobEffect> EFFECTS = 
+    private static final DeferredRegister<MobEffect> EFFECTS =
             DeferredRegister.create(net.minecraft.core.registries.Registries.MOB_EFFECT, KaleidoscopeTwilight.MODID);
 
     public static final DeferredHolder<MobEffect, MobEffect> WITCHCRAFT_PROTECTION = EFFECTS.register("witchcraft_protection", () -> new WitchcraftProtectionEffect(MobEffectCategory.BENEFICIAL, 0x8A2BE2));
@@ -20,7 +20,8 @@ public class KTEffects {
     public static final DeferredHolder<MobEffect, MobEffect> YETI_THROW = EFFECTS.register("yeti_throw", () -> new YetiThrowEffect(MobEffectCategory.BENEFICIAL, 0x87CEEB));
     public static final DeferredHolder<MobEffect, MobEffect> FROST_CLOUD = EFFECTS.register("frost_cloud", () -> new FrostCloudEffect(MobEffectCategory.BENEFICIAL, 0x87CEFA));
     public static final DeferredHolder<MobEffect, MobEffect> FIRE_BREATH = EFFECTS.register("fire_breath", () -> new FireBreathEffect(MobEffectCategory.BENEFICIAL, 0xFF4500));
-    
+    public static final DeferredHolder<MobEffect, MobEffect> ERUDITION = EFFECTS.register("erudition", () -> new EruditionEffect(MobEffectCategory.BENEFICIAL, 0x4B0082));
+
     public static void register(IEventBus eventBus) {
         EFFECTS.register(eventBus);
     }

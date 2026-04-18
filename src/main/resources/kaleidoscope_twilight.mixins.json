@@ -3,8 +3,10 @@
   "package": "com.bmt.kaleidoscope_twilight.mixins",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "accessor.LivingEntityAccessor",
-    "PhantomEffectMixin"
+    "AnvilMenuMixin",
+    "PhantomEffectMixin",
+    "accessor.ItemCombinerMenuAccessor",
+    "accessor.LivingEntityAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

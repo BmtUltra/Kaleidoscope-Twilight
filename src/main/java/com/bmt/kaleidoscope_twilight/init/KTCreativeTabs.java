@@ -19,7 +19,7 @@ public class KTCreativeTabs {
             CREATIVE_MODE_TABS.register("kaleidoscope_twilight",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.kaleidoscope_twilight"))
-                    .icon(() -> new ItemStack(KTItems.TWILIGHT_BERRY_SALAD_ITEM.get()))
+                    .icon(() -> new ItemStack(KTItems.TWILIGHT_FERN_ITEM.get()))
                     .displayItems((parameters, output) -> {
                         output.accept(KTItems.TWILIGHT_BERRY_SALAD_ITEM.get());
                         output.accept(KTItems.TWILIGHT_CATERPILLAR_ITEM.get());
