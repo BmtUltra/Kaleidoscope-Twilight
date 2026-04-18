@@ -16,6 +16,7 @@ public class KaleidoscopeTwilight {
         KTCreativeTabs.register(modEventBus);
         KTEffects.register(modEventBus);
         KTBlocks.register(modEventBus);
+        KTTeacups.init();
         if (ModList.get().isLoaded("kaleidoscope_tavern")) {
             KTFluids.FLUID_TYPES.register(modEventBus);
             KTFluids.FLUIDS.register(modEventBus);
@@ -25,5 +26,8 @@ public class KaleidoscopeTwilight {
     }
     public static ResourceLocation id(String name) {
         return ResourceLocation.fromNamespaceAndPath(MODID, name);
+    }
+    public static ResourceLocation fromNamespaceAndPath(String path, String name) {
+        return ResourceLocation.tryBuild(path, name);
     }
 }

@@ -85,6 +85,23 @@
   "tooltip.kaleidoscope_twilight.rainbow_candy.maxim": "色彩缤纷的糖果，每一颗都像一道彩虹，带来快乐与幸运",
   "item.kaleidoscope_twilight.rainbow_bun": "异色炫彩馒头",
   "tooltip.kaleidoscope_twilight.rainbow_bun.maxim": "抓异色炫彩哈哈",
+  "item.kaleidoscope_twilight.tea_date": "茶枣子",
+  "tooltip.kaleidoscope_twilight.tea_date.maxim": "只是一个邪恶的茶香味红枣而已",
+
+  "block.kaleidoscope_twilight.naga_tea": "娜迦茶",
+  "tooltip.kaleidoscope_twilight.naga_tea.maxim": "以娜迦鳞片为主题的茶饮",
+  "block.kaleidoscope_twilight.witchcraft_tea": "巫术茶",
+  "tooltip.kaleidoscope_twilight.witchcraft_tea.maxim": "蕴含巫术魔法的茶饮，提供神秘的保护效果",
+  "block.kaleidoscope_twilight.minotaur_mushroom_tea": "米诺菇茶",
+  "tooltip.kaleidoscope_twilight.minotaur_mushroom_tea.maxim": "米诺陶与蘑菇的结合，增强感知和力量",
+  "block.kaleidoscope_twilight.fire_tea": "火焰茶",
+  "tooltip.kaleidoscope_twilight.fire_tea.maxim": "炽热的茶饮，赋予火焰吐息和火焰抗性",
+  "block.kaleidoscope_twilight.phantom_tea": "幻影茶",
+  "tooltip.kaleidoscope_twilight.phantom_tea.maxim": "虚幻的茶饮，饮用后可暂时幻影化",
+  "block.kaleidoscope_twilight.hot_tears_tea": "热泪茶",
+  "tooltip.kaleidoscope_twilight.hot_tears_tea.maxim": "情感丰富的茶饮，增强水下能力",
+  "block.kaleidoscope_twilight.ice_crystal_tea": "冰晶茶",
+  "tooltip.kaleidoscope_twilight.ice_crystal_tea.maxim": "冰晶制成的茶饮，提供寒冰能力但会减缓移动",
 
   "item.kaleidoscope_twilight.blazing_iron_kitchen_knife": "炽铁菜刀",
   "item.kaleidoscope_twilight.blazing_iron_kitchen_knife.tooltip": "灼烧攻击目标",
@@ -127,7 +144,7 @@
   "effect.kaleidoscope_twilight.fire_breath": "火焰吐息",
   "effect.kaleidoscope_twilight.fire_breath.description": "攻击时喷射火球",
   "effect.kaleidoscope_twilight.erudition": "博学之识",
-  "effect.kaleidoscope_twilight.erudition.description": "击败生物后必定获得其掉落物",
+  "effect.kaleidoscope_twilight.erudition.description": "不会消耗经验值",
 
   "block.kaleidoscope_twilight.twilight_stove": "暮色炉灶"
 }

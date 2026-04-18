@@ -2,6 +2,7 @@ package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 
+import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.TeacupRegistry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -68,6 +69,14 @@ public class KTCreativeTabs {
                         output.accept(KTItems.TWILIGHT_GHOST_SASHIMI_ITEM.get());
                         output.accept(KTItems.RAINBOW_CANDY_ITEM.get());
                         output.accept(KTItems.RAINBOW_BUN_ITEM.get());
+                        output.accept(KTItems.TEA_DATE_ITEM.get());
+                        output.accept(TeacupRegistry.getItem(KTTeacups.NAGA_TEA));
+                        output.accept(TeacupRegistry.getItem(KTTeacups.WITCHCRAFT_TEA));
+                        output.accept(TeacupRegistry.getItem(KTTeacups.MINOTAUR_MUSHROOM_TEA));
+                        output.accept(TeacupRegistry.getItem(KTTeacups.FIRE_TEA));
+                        output.accept(TeacupRegistry.getItem(KTTeacups.PHANTOM_TEA));
+                        output.accept(TeacupRegistry.getItem(KTTeacups.HOT_TEARS_TEA));
+                        output.accept(TeacupRegistry.getItem(KTTeacups.ICE_CRYSTAL_TEA));
 
                         if (ModList.get().isLoaded("kaleidoscope_tavern")) {
                             output.accept(KTBrewItems.CAVE_FIREFLY_BREW_ITEM.get());

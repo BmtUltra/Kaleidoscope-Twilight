@@ -328,4 +328,11 @@ public class KTFoods {
             .effect(() -> new MobEffectInstance(MobEffects.LUCK, 300 * 20, 0), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 120 * 20, 0), 1.0f)
             .alwaysEdible().build();
+
+    // 茶枣子
+    public static final FoodProperties TEA_DATE = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationModifier(0.7f)
+            .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 3 * 60 * 20, 0), 0.5f)
+            .alwaysEdible().build();
 }

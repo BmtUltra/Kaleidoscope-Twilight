@@ -239,6 +239,10 @@ public class KTItems {
     public static final DeferredHolder<Item, FoodWithEffectsItem> ICE_CRYSTAL_MOUSSE_ITEM = ITEMS.register("ice_crystal_mousse",
             () -> new FoodWithEffectsItem(KTFoods.ICE_CRYSTAL_MOUSSE));
 
+    // 茶枣子
+    public static final DeferredHolder<Item, FoodWithEffectsItem> TEA_DATE_ITEM = ITEMS.register("tea_date",
+            () -> new FoodWithEffectsItem(KTFoods.TEA_DATE));
+
     // 炽铁菜刀
     public static final DeferredHolder<Item, BlazingIronKitchenKnifeItem> BLAZING_IRON_KITCHEN_KNIFE = ITEMS.register("blazing_iron_kitchen_knife",
             () -> new BlazingIronKitchenKnifeItem(BLAZING_IRON_TIER,

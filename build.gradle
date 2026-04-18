@@ -45,6 +45,9 @@ repositories {
     maven {
         url "https://cursemaven.com"
     }
+    flatDir {
+        dir 'libs'
+    }
 }
 
 base {
@@ -135,12 +138,13 @@ configurations {
 }
 
 dependencies {
-    implementation "maven.modrinth:kaleidoscope-cookery:1.2.1-neoforge+mc1.21.1"
+//    implementation "maven.modrinth:kaleidoscope-cookery:1.2.1-neoforge+mc1.21.1"
     implementation "curse.maven:the-twilight-forest-227639:7797302"
     compileOnly "maven.modrinth:kaleidoscopetavern:1.0.1-neoforge+mc1.21.1"
     runtimeOnly "maven.modrinth:kaleidoscopetavern:1.0.1-neoforge+mc1.21.1"
 //    compileOnly "curse.maven:kaleidoscope-dimensions-wine-1506363:7934166"
 //    runtimeOnly "curse.maven:kaleidoscope-dimensions-wine-1506363:7934166"
+    implementation fileTree("libs")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
