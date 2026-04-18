@@ -126,8 +126,9 @@
   "block.kaleidoscope_twilight.nature_spirit": "自然葡萄酒",
 
   "item.kaleidoscope_twilight.torchberry_bucket": "火炬浆果桶",
-  "fluid.kaleidoscope_twilight.torchberry_juice": "火炬浆果果汁",
-  "fluid.kaleidoscope_twilight.flowing_torchberry_juice": "火炬浆果果汁",
+  "fluid.kaleidoscope_twilight.torchberry_juice": "火炬浆果汁",
+  "block.kaleidoscope_twilight.torchberry_juice": "火炬浆果汁",
+  "fluid.kaleidoscope_twilight.flowing_torchberry_juice": "火炬浆果汁",
 
   "effect.kaleidoscope_twilight.witchcraft_protection": "巫术庇护",
   "effect.kaleidoscope_twilight.witchcraft_protection.description": "获得巫术护盾",
