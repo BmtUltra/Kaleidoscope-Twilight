@@ -1,0 +1,91 @@
+{
+  "item": "kaleidoscope_twilight:ice_crystal_frost_dew",
+  "effects": [
+    [
+      {
+        "effect": "kaleidoscope_twilight:frost_cloud",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_twilight:frost_cloud",
+        "duration": 60,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_twilight:frost_cloud",
+        "duration": 90,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:slowness",
+        "duration": 10,
+        "amplifier": 0,
+        "probability": 0.3
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_twilight:frost_cloud",
+        "duration": 120,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:slowness",
+        "duration": 15,
+        "amplifier": 0,
+        "probability": 0.4
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_twilight:frost_cloud",
+        "duration": 180,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:slowness",
+        "duration": 20,
+        "amplifier": 0,
+        "probability": 0.5
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_twilight:frost_cloud",
+        "duration": 240,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:slowness",
+        "duration": 25,
+        "amplifier": 0,
+        "probability": 0.6
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_twilight:frost_cloud",
+        "duration": 300,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:slowness",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 0.7
+      }
+    ]
+  ]
+}

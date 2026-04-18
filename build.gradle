@@ -142,6 +142,7 @@ dependencies {
     implementation "curse.maven:the-twilight-forest-227639:7797302"
     compileOnly "maven.modrinth:kaleidoscopetavern:1.0.1-neoforge+mc1.21.1"
     runtimeOnly "maven.modrinth:kaleidoscopetavern:1.0.1-neoforge+mc1.21.1"
+    implementation "maven.modrinth:kubejs:2101.7.2-build.348"
 //    compileOnly "curse.maven:kaleidoscope-dimensions-wine-1506363:7934166"
 //    runtimeOnly "curse.maven:kaleidoscope-dimensions-wine-1506363:7934166"
     implementation fileTree("libs")

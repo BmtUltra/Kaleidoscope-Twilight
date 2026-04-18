@@ -1,0 +1,91 @@
+{
+  "item": "kaleidoscope_twilight:magic_bean_brew",
+  "effects": [
+    [
+      {
+        "effect": "minecraft:jump_boost",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:jump_boost",
+        "duration": 60,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:jump_boost",
+        "duration": 90,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:levitation",
+        "duration": 5,
+        "amplifier": 0,
+        "probability": 0.3
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:jump_boost",
+        "duration": 120,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:levitation",
+        "duration": 10,
+        "amplifier": 0,
+        "probability": 0.4
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:jump_boost",
+        "duration": 180,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:levitation",
+        "duration": 15,
+        "amplifier": 0,
+        "probability": 0.5
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:jump_boost",
+        "duration": 240,
+        "amplifier": 1,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:levitation",
+        "duration": 20,
+        "amplifier": 0,
+        "probability": 0.6
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:jump_boost",
+        "duration": 300,
+        "amplifier": 1,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:levitation",
+        "duration": 25,
+        "amplifier": 0,
+        "probability": 0.7
+      }
+    ]
+  ]
+}

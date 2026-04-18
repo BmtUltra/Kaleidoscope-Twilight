@@ -1,0 +1,91 @@
+{
+  "item": "kaleidoscope_twilight:cave_firefly_brew",
+  "effects": [
+    [
+      {
+        "effect": "minecraft:night_vision",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:night_vision",
+        "duration": 60,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:night_vision",
+        "duration": 90,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:glowing",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 0.5
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:night_vision",
+        "duration": 120,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:glowing",
+        "duration": 60,
+        "amplifier": 0,
+        "probability": 0.7
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:night_vision",
+        "duration": 180,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:glowing",
+        "duration": 90,
+        "amplifier": 0,
+        "probability": 0.8
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:night_vision",
+        "duration": 240,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:glowing",
+        "duration": 120,
+        "amplifier": 0,
+        "probability": 0.9
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:night_vision",
+        "duration": 300,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:glowing",
+        "duration": 180,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ]
+  ]
+}
