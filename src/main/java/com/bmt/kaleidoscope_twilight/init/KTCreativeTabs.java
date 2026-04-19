@@ -105,6 +105,7 @@ public class KTCreativeTabs {
                             output.accept(KTBrewItems.TORCHBERRY_BUCKET.get());
                         }
                         output.accept(KTItems.TWILIGHT_STOVE.get());
+                        output.accept(KTItems.KEEPING_POUCH_ITEM.get());
                     })
                     .build());
 

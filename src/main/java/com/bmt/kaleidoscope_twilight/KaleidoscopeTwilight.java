@@ -17,6 +17,7 @@ public class KaleidoscopeTwilight {
         KTEffects.register(modEventBus);
         KTBlocks.register(modEventBus);
         KTTeacups.init();
+        KTDataComponents.DATA_COMPONENT_TYPES.register(modEventBus);
         if (ModList.get().isLoaded("kaleidoscope_tavern")) {
             KTFluids.FLUID_TYPES.register(modEventBus);
             KTFluids.FLUIDS.register(modEventBus);

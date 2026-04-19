@@ -4,7 +4,10 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "AnvilMenuMixin",
+    "DrinkBlockMixin",
+    "InventoryMixin",
     "PhantomEffectMixin",
+    "accessor.InventoryAccessor",
     "accessor.ItemCombinerMenuAccessor",
     "accessor.LivingEntityAccessor"
   ],

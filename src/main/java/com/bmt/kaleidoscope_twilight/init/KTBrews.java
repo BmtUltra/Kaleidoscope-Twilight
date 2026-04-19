@@ -120,7 +120,7 @@ public class KTBrews {
     
     // 德鲁伊秘酿
     public static final DeferredBlock<Block> DRUID_SECRET_BREW = BLOCKS.register("druid_secret_brew", 
-            () -> DrinkBlock.create().maxCount(4).shapes(
+            () -> DrinkBlock.create().maxCount(2).irregular().shapes(
                     Block.box(6, 0, 6, 10, 16, 10),
                     Block.box(2, 0, 6, 14, 16, 10),
                     Shapes.or(
@@ -156,12 +156,12 @@ public class KTBrews {
     
     // 巨人烈酒
     public static final DeferredBlock<Block> GIANT_SPIRIT = BLOCKS.register("giant_spirit", 
-            () -> DrinkBlock.create().maxCount(3).shapes(
-                    Block.box(4, 0, 4, 12, 15, 12),
-                    Block.box(0, 0, 4, 16, 15, 12),
+            () -> DrinkBlock.create().maxCount(1).irregular().shapes(
+                    Block.box(4, 0, 4, 12, 10, 12),
+                    Block.box(2, 0, 2, 14, 12, 14),
                     Shapes.or(
-                            Block.box(0, 0, 8, 16, 15, 16),
-                            Block.box(4, 0, 0, 12, 15, 16)
+                            Block.box(1, 0, 1, 15, 14, 15),
+                            Block.box(3, 14, 3, 13, 16, 13)
                     ),
                     Block.box(0, 0, 0, 16, 16, 16)
             ).build().get());

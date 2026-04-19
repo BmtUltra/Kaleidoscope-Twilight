@@ -267,6 +267,10 @@ public class KTItems {
                     new Item.Properties()
                             .attributes(SteelleafKitchenKnifeItem.createAttributes(STEELLEAF_TIER, 3.0F, -2.0F))));
 
+    // 保管符袋
+    public static final DeferredHolder<Item, KeepingPouchItem> KEEPING_POUCH_ITEM = ITEMS.register("keeping_pouch",
+            KeepingPouchItem::new);
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

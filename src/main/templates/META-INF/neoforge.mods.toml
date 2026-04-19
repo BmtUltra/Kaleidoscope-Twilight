@@ -97,7 +97,7 @@ config="${mod_id}.mixins.json"
 
 [[dependencies.${mod_id}]]
     modId="kaleidoscope_tavern"
-    type="required"
+    type="optional"
     versionRange="[1.0.0,)"
     ordering="AFTER"
     side="BOTH"
