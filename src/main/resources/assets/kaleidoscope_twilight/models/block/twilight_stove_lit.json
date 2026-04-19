@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "kaleidoscope_twilight:block/twilight_stove_top_lit",
+    "east": "kaleidoscope_twilight:block/twilight_stove_side",
+    "north": "kaleidoscope_twilight:block/twilight_stove_front_lit",
+    "particle": "kaleidoscope_twilight:block/twilight_stove_side",
+    "south": "kaleidoscope_twilight:block/twilight_stove_side",
+    "up": "kaleidoscope_twilight:block/twilight_stove_top_lit",
+    "west": "kaleidoscope_twilight:block/twilight_stove_side"
+  }
+}

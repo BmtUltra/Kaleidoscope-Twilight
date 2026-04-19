@@ -1,0 +1,12 @@
+{
+  "type": "kaleidoscope_cookery:teapot",
+  "ingredient": {
+    "item": "minecraft:fire_charge"
+  },
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:fire_tea"
+  },
+  "tea_fluid": "minecraft:lava",
+  "time": 240
+}

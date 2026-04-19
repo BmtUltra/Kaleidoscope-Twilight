@@ -1,0 +1,27 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "kaleidoscope_cookery:raw_noodles"
+    },
+    {
+      "item": "kaleidoscope_cookery:raw_noodles"
+    },
+    {
+      "item": "kaleidoscope_nether:ghast_tentacle"
+    },
+    {
+      "item": "kaleidoscope_nether:ghast_tentacle"
+    },
+    {
+      "item": "twilightforest:carminite"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:twilight_ghost_pasta"
+  }
+}

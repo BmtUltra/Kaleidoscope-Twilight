@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "twilightforest:steeleaf_ingot"
+    }
+  },
+  "pattern": [
+    "AB",
+    "BB"
+  ],
+  "result": {
+    "components": {
+      "minecraft:enchantments": {
+        "levels": {
+          "minecraft:sharpness": 3
+        }
+      }
+    },
+    "count": 1,
+    "id": "kaleidoscope_twilight:steelleaf_kitchen_knife"
+  },
+  "show_notification": true
+}

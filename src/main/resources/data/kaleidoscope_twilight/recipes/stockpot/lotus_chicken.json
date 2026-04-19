@@ -1,0 +1,18 @@
+{
+  "type": "kaleidoscope_cookery:stockpot",
+  "ingredients": [
+    {
+      "item": "twilightforest:huge_water_lily"
+    },
+    {
+      "tag": "c:foods/raw_chicken"
+    },
+    {
+      "item": "twilightforest:huge_lily_pad"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:lotus_chicken"
+  }
+}

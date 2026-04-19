@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:milk_bucket"
+    },
+    "B": {
+      "item": "twilightforest:ice_bomb"
+    },
+    "C": {
+      "item": "minecraft:ice"
+    },
+    "D": {
+      "tag": "c:flour"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "CCC",
+    "DDD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:glacier_cake"
+  },
+  "show_notification": true
+}

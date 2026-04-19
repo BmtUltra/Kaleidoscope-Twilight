@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "c:foods/bread"
+    },
+    "B": {
+      "item": "twilightforest:cooked_meef"
+    },
+    "C": {
+      "tag": "c:crops/chilipepper"
+    },
+    "D": {
+      "tag": "c:crops/lettuce"
+    }
+  },
+  "pattern": [
+    "AB",
+    "CD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:minotaur_roll"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "kaleidoscope_twilight:raw_yeti_meat"
+  },
+  "result": {
+    "id": "kaleidoscope_twilight:cooked_yeti_meat"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "kaleidoscope_cookery:teapot",
+  "ingredient": {
+    "item": "kaleidoscope_twilight:witchcraft_bone"
+  },
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:witchcraft_tea"
+  },
+  "tea_fluid": "minecraft:water",
+  "time": 240
+}

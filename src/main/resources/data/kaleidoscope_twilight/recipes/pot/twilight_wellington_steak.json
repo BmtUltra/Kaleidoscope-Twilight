@@ -1,0 +1,30 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "c:dough"
+    },
+    {
+      "item": "twilightforest:raw_meef"
+    },
+    {
+      "item": "twilightforest:raw_meef"
+    },
+    {
+      "item": "kaleidoscope_twilight:glow_mushroom_pot_soup"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:eggs"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:twilight_wellington_steak"
+  }
+}

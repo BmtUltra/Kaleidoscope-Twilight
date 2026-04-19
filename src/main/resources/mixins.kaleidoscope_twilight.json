@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "package": "com.bmt.kaleidoscope_twilight.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "kaleidoscope_twilight.refmap.json",
+  "mixins": [
+    "AnvilMenuMixin",
+    "DrinkBlockMixin",
+    "InventoryMixin",
+    "PhantomEffectMixin",
+    "accessor.InventoryAccessor",
+    "accessor.ItemCombinerMenuAccessor",
+    "accessor.LivingEntityAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  },
+  "client": [
+    "CameraMixin"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "c:drinks/milk"
+    },
+    "B": {
+      "item": "twilightforest:blueberry"
+    },
+    "C": {
+      "item": "twilightforest:aurora_block"
+    },
+    "E": {
+      "item": "twilightforest:skyberry"
+    },
+    "D": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "CEC",
+    " D "
+  ],
+  "result": {
+    "id":  "kaleidoscope_twilight:aurora_ice_cream"
+  },
+  "show_notification": true
+}
