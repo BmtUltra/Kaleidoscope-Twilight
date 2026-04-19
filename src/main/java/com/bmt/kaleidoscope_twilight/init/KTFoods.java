@@ -335,4 +335,48 @@ public class KTFoods {
             .saturationModifier(0.7f)
             .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 3 * 60 * 20, 0), 0.5f)
             .alwaysEdible().build();
+
+    // 娜迦绿舌头
+    public static final FoodProperties NAGA_GREEN_TONGUE = new FoodProperties.Builder()
+            .nutrition(6)
+            .saturationModifier(0.5f)
+            .effect(() -> new MobEffectInstance(MobEffects.POISON, 100, 0), 0.3f) // 30%几率中毒
+            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 600 * 20, 0), 1.0f) // 水下呼吸10分钟
+            .alwaysEdible()
+            .build();
+
+    // 波奇布丁
+    public static final FoodProperties POCHI_PUDDING = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationModifier(0.7f)
+//            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0f)
+//            .effect(() -> new MobEffectInstance(MobEffects.LUCK, 600 * 20, 0), 1.0f)
+            .alwaysEdible()
+            .build();
+
+    // 妙脆角
+    public static final FoodProperties MAGIC_CRISPY_CORNER = new FoodProperties.Builder()
+            .nutrition(4)
+            .saturationModifier(0.3f)
+//            .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 300 * 20, 0), 1.0f)
+            .alwaysEdible()
+            .build();
+
+    // 喜多夹心脆
+    public static final FoodProperties KITA_STUFFED_CRISP = new FoodProperties.Builder()
+            .nutrition(6)
+            .saturationModifier(0.5f)
+            .effect(() -> new MobEffectInstance(MobEffects.LUCK, 600 * 20, 0), 1.0f) // 幸运10分钟
+            .effect(() -> new MobEffectInstance(MobEffects.SATURATION, 60 * 20, 0), 1.0f) // 饱食度1分钟
+            .alwaysEdible()
+            .build();
+
+    // 凉山甜筒
+    public static final FoodProperties LIANGSHAN_ICE_CONE = new FoodProperties.Builder()
+            .nutrition(5)
+            .saturationModifier(0.4f)
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300 * 20, 0), 1.0f) // 防火5分钟
+            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 180 * 20, 0), 1.0f) // 速度3分钟
+            .alwaysEdible()
+            .build();
 }

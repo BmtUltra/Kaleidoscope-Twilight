@@ -11,7 +11,7 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import java.util.Objects;
 
 @EventBusSubscriber(modid = KaleidoscopeTwilight.MODID)
-public class CreativeTabEventHandler {
+public class CreativeTabHandler {
 
     @SubscribeEvent
     public static void addItemsToTabs(BuildCreativeModeTabContentsEvent event) {

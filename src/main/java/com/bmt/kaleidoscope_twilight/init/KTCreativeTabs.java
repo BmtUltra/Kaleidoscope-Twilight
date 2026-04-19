@@ -69,6 +69,11 @@ public class KTCreativeTabs {
                         output.accept(KTItems.TWILIGHT_GHOST_SASHIMI_ITEM.get());
                         output.accept(KTItems.RAINBOW_CANDY_ITEM.get());
                         output.accept(KTItems.RAINBOW_BUN_ITEM.get());
+                        output.accept(KTItems.MAGIC_CRISPY_CORNER_ITEM.get());
+                        output.accept(KTItems.POCHI_PUDDING_ITEM.get());
+                        output.accept(KTItems.KITA_STUFFED_CRISP_ITEM.get());
+                        output.accept(KTItems.LIANGSHAN_ICE_CONE_ITEM.get());
+                        output.accept(KTItems.NAGA_GREEN_TONGUE_ITEM.get());
                         output.accept(KTItems.TEA_DATE_ITEM.get());
                         output.accept(TeacupRegistry.getItem(KTTeacups.NAGA_TEA));
                         output.accept(TeacupRegistry.getItem(KTTeacups.WITCHCRAFT_TEA));

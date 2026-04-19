@@ -10,7 +10,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 
 @EventBusSubscriber(modid = KaleidoscopeTwilight.MODID)
-public final class BrewsEventHandler {
+public final class BrewsHandler {
 
     private static final ResourceLocation TAVERN_DRINK_BE = ResourceLocation.tryBuild("kaleidoscope_tavern", "drink");
 

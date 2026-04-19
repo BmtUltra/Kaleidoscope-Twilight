@@ -2,6 +2,7 @@ package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 import com.bmt.kaleidoscope_twilight.item.*;
+import com.bmt.kaleidoscope_twilight.util.TagUtil;
 import com.bmt.kaleidoscope_twilight.util.tier.BlazingIronTier;
 import com.bmt.kaleidoscope_twilight.util.tier.IronwoodTier;
 import com.bmt.kaleidoscope_twilight.util.tier.KnightTier;
@@ -212,7 +213,7 @@ public class KTItems {
                     BlockPos pos = context.getClickedPos();
                     BlockState state = level.getBlockState(pos);
 
-                    if (state.getBlock() instanceof net.minecraft.world.level.block.FarmBlock) {
+                    if (state.is(TagUtil.Blocks.FERN_PLANTABLE)) {
                         level.setBlock(pos.above(), KTBlocks.TWILIGHT_FERN_CROP.get().defaultBlockState(), 3);
                         if (context.getPlayer() != null && !context.getPlayer().isCreative()) {
                             context.getItemInHand().shrink(1);
@@ -242,6 +243,26 @@ public class KTItems {
     // 茶枣子
     public static final DeferredHolder<Item, FoodWithEffectsItem> TEA_DATE_ITEM = ITEMS.register("tea_date",
             () -> new FoodWithEffectsItem(KTFoods.TEA_DATE));
+
+    // 娜迦绿舌头
+    public static final DeferredHolder<Item, FoodWithEffectsItem> NAGA_GREEN_TONGUE_ITEM = ITEMS.register("naga_green_tongue",
+            () -> new FoodWithEffectsItem(KTFoods.NAGA_GREEN_TONGUE));
+
+    // 波奇布丁
+    public static final DeferredHolder<Item, FoodWithEffectsItem> POCHI_PUDDING_ITEM = ITEMS.register("pochi_pudding",
+            () -> new FoodWithEffectsItem(KTFoods.POCHI_PUDDING));
+
+    // 妙脆角
+    public static final DeferredHolder<Item, FoodWithEffectsItem> MAGIC_CRISPY_CORNER_ITEM = ITEMS.register("magic_crispy_corner",
+            () -> new FoodWithEffectsItem(KTFoods.MAGIC_CRISPY_CORNER));
+
+    // 喜多夹心脆
+    public static final DeferredHolder<Item, FoodWithEffectsItem> KITA_STUFFED_CRISP_ITEM = ITEMS.register("kita_stuffed_crisp",
+            () -> new FoodWithEffectsItem(KTFoods.KITA_STUFFED_CRISP));
+
+    // 凉山甜筒
+    public static final DeferredHolder<Item, FoodWithEffectsItem> LIANGSHAN_ICE_CONE_ITEM = ITEMS.register("liangshan_ice_cone",
+            () -> new FoodWithEffectsItem(KTFoods.LIANGSHAN_ICE_CONE));
 
     // 炽铁菜刀
     public static final DeferredHolder<Item, BlazingIronKitchenKnifeItem> BLAZING_IRON_KITCHEN_KNIFE = ITEMS.register("blazing_iron_kitchen_knife",

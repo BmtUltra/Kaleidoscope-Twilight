@@ -21,6 +21,7 @@ public class KTEffects {
     public static final DeferredHolder<MobEffect, MobEffect> FROST_CLOUD = EFFECTS.register("frost_cloud", () -> new FrostCloudEffect(MobEffectCategory.BENEFICIAL, 0x87CEFA));
     public static final DeferredHolder<MobEffect, MobEffect> FIRE_BREATH = EFFECTS.register("fire_breath", () -> new FireBreathEffect(MobEffectCategory.BENEFICIAL, 0xFF4500));
     public static final DeferredHolder<MobEffect, MobEffect> ERUDITION = EFFECTS.register("erudition", () -> new EruditionEffect(MobEffectCategory.BENEFICIAL, 0x4B0082));
+    public static final DeferredHolder<MobEffect, MobEffect> GIANT_BLESSING = EFFECTS.register("giant_blessing", () -> new GiantBlessingEffect(MobEffectCategory.BENEFICIAL, 0x8B4513));
 
     public static void register(IEventBus eventBus) {
         EFFECTS.register(eventBus);
