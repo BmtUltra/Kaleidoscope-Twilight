@@ -2,6 +2,7 @@ package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
+import com.github.ysbbbbbb.kaleidoscopetavern.item.JuiceBucketItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -69,5 +70,5 @@ public class KTBrewItems {
 
     // 火炬浆果桶
     public static final DeferredItem<Item> TORCHBERRY_BUCKET = ITEMS.register("torchberry_bucket",
-            () -> new BucketItem(KTFluids.TORCHBERRY_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+            () -> new JuiceBucketItem(KTFluids.TORCHBERRY_JUICE));
 }
