@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(IntegerProperty.class)
-public class DrinkBlockMixin {
+public class IntegerPropertyMixin {
 
     @Inject(method = "create", at = @At("HEAD"), cancellable = true)
     private static void kaleidoscope_twilight$modifyMaxCount(String name, int min, int max, CallbackInfoReturnable<IntegerProperty> cir) {

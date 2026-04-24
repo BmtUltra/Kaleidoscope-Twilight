@@ -35,8 +35,8 @@ public class GiantBlessingEffect extends MobEffect {
     @Override
     public boolean applyEffectTick(LivingEntity entity, int amplifier) {
         if (!entity.level().isClientSide()) {
-            double scale = amplifier < 4 ? (amplifier + 1) * 0.8 : Math.min(4.0 + (amplifier - 4), 15.0);
-            updateAttribute(entity, Attributes.SCALE, SCALE_MODIFIER, scale, AttributeModifier.Operation.ADD_VALUE);
+//            double scale = amplifier < 4 ? (amplifier + 1) * 0.8 : Math.min(4.0 + (amplifier - 4), 15.0);
+//            updateAttribute(entity, Attributes.SCALE, SCALE_MODIFIER, scale, AttributeModifier.Operation.ADD_VALUE);
 
             updateAttribute(entity, Attributes.STEP_HEIGHT, STEP_HEIGHT_MODIFIER, 0.5 + amplifier * 0.5, AttributeModifier.Operation.ADD_VALUE);
 
