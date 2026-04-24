@@ -4,6 +4,7 @@ import com.github.ysbbbbbb.kaleidoscopecookery.init.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -52,9 +53,9 @@ public class BaseCropBlock extends CropBlock {
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack itemInHand = player.getItemInHand(hand);
-         if (itemInHand.is(ModItems.SICKLE.get())) {
-             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
-         }
+        if (itemInHand.is(ModItems.SICKLE.get())) {
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        }
         if (state.getValue(AGE) >= this.getMaxAge()) {
             Block.popResource(level, pos, this.result.get().getDefaultInstance());
             this.onUseBreakCrop(level, pos);
@@ -83,5 +84,9 @@ public class BaseCropBlock extends CropBlock {
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext collisionContext) {
         return SHAPE_BY_AGE[this.getAge(state)];
+    }
+
+    protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
+        return state.is(BlockTags.DIRT) || super.mayPlaceOn(state, level, pos);
     }
 }
