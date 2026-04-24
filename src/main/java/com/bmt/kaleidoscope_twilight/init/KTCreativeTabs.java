@@ -2,15 +2,20 @@ package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 
+import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.TeacupRegistry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.Objects;
 
 public class KTCreativeTabs {
     private static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -31,7 +36,6 @@ public class KTCreativeTabs {
                         output.accept(KTItems.SALT_BAKED_NAGA_ITEM.get());
                         output.accept(KTItems.TWILIGHT_GHOST_PASTA_ITEM.get());
                         output.accept(KTItems.HYDRA_BOLOGNESE_ITEM.get());
-                        output.accept(KTItems.GLOW_MUSHROOM_POT_SOUP_ITEM.get());
                         output.accept(KTItems.SAUCED_SNAKE_FEAST_ITEM.get());
                         output.accept(KTItems.AURORA_ICE_CREAM_ITEM.get());
                         output.accept(KTItems.MAGIC_BEAN_SOUP_ITEM.get());
@@ -62,6 +66,12 @@ public class KTCreativeTabs {
                         output.accept(KTItems.TWILIGHT_CHICKEN_MUSHROOM_STEW_ITEM.get());
                         output.accept(KTItems.MAZE_STUFFED_PANCAKE_ITEM.get());
                         output.accept(KTItems.WITCHCRAFT_CAKE_ITEM.get());
+                        FoodBiteRegistry.FOOD_DATA_MAP.forEach((resourceLocation, foodData) -> {
+                            if (resourceLocation.getNamespace().equals(KaleidoscopeTwilight.MODID)) {
+                                Item item = BuiltInRegistries.ITEM.get(resourceLocation);
+                                output.accept(Objects.requireNonNull(item));
+                            }
+                        });
                         output.accept(KTItems.PHANTOM_FERN_STEW_ITEM.get());
                         output.accept(KTItems.RAW_TWILIGHT_GHOST_TENTACLE_ITEM.get());
                         output.accept(KTItems.COOKED_TWILIGHT_GHOST_TENTACLE_ITEM.get());

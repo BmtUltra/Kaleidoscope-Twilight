@@ -72,10 +72,6 @@ public class KTItems {
     public static final DeferredHolder<Item, BowlFoodOnlyItem> HYDRA_BOLOGNESE_ITEM = ITEMS.register("hydra_bolognese",
             () -> new BowlFoodOnlyItem(KTFoods.HYDRA_BOLOGNESE));
 
-    // 荧光蘑菇瓦罐汤
-    public static final DeferredHolder<Item, BowlFoodOnlyItem> GLOW_MUSHROOM_POT_SOUP_ITEM = ITEMS.register("glow_mushroom_pot_soup",
-            () -> new BowlFoodOnlyItem(KTFoods.GLOW_MUSHROOM_POT_SOUP));
-
     // 浇汁蛇宴
     public static final DeferredHolder<Item, FoodWithEffectsItem> SAUCED_SNAKE_FEAST_ITEM = ITEMS.register("sauced_snake_feast",
             () -> new FoodWithEffectsItem(KTFoods.SAUCED_SNAKE_FEAST));

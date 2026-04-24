@@ -37,7 +37,7 @@ public class KTFoods {
     public static final FoodProperties MINOTAUR_ROLL = new FoodProperties.Builder()
             .nutrition(10)
             .saturationModifier(0.7f)
-            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 180 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 80 * 20, 0), 1.0f)
             .alwaysEdible().build();
 
     // 暮光惠灵顿牛排
@@ -53,7 +53,7 @@ public class KTFoods {
     public static final FoodProperties SALT_BAKED_NAGA = new FoodProperties.Builder()
             .nutrition(18)
             .saturationModifier(1.0f)
-            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(KTEffects.STURDY_SCALES, 180 * 20, 0), 1.0f)
             .alwaysEdible().build();
 
     // 暮初恶魂意面
@@ -72,9 +72,17 @@ public class KTFoods {
             .alwaysEdible().build();
 
     // 荧光蘑菇瓦罐汤
-    public static final FoodProperties GLOW_MUSHROOM_POT_SOUP = new FoodProperties.Builder()
-            .nutrition(10)
-            .saturationModifier(0.7f)
+    public static final FoodProperties GLOW_MUSHROOM_POT_SOUP_BLOCK = new FoodProperties.Builder()
+            .nutrition(6)
+            .saturationModifier(0.667f)
+            .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 300 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 荧光蘑菇瓦罐汤
+    public static final FoodProperties GLOW_MUSHROOM_POT_SOUP_ITEM = new FoodProperties.Builder()
+            .nutrition(12)
+            .saturationModifier(0.667f)
             .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 300 * 20, 0), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300 * 20, 0), 1.0f)
             .alwaysEdible().build();
@@ -84,7 +92,7 @@ public class KTFoods {
             .nutrition(22)
             .saturationModifier(1.3f)
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 360 * 20, 1), 1.0f)
-            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 360 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(KTEffects.STURDY_SCALES, 180 * 20, 0), 1.0f)
             .alwaysEdible().build();
 
     // 极光冰淇淋
@@ -150,7 +158,7 @@ public class KTFoods {
     public static final FoodProperties STUFFED_PUZZLE_CROISSANT = new FoodProperties.Builder()
             .nutrition(12)
             .saturationModifier(0.8f)
-            .effect(() -> new MobEffectInstance(MobEffects.LUCK, 600 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(KTEffects.ERUDITION, -1, 0), 1.0f)
             .alwaysEdible().build();
 
     // 巫术大骨汤
