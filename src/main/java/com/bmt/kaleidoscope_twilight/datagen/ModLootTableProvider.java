@@ -1,6 +1,7 @@
 package com.bmt.kaleidoscope_twilight.datagen;
 
 import com.bmt.kaleidoscope_twilight.datagen.subLootTables.ModBlockLootTables;
+import com.bmt.kaleidoscope_twilight.datagen.subLootTables.ModEntityLootTables;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
@@ -13,7 +14,8 @@ import java.util.concurrent.CompletableFuture;
 public class ModLootTableProvider extends LootTableProvider {
     public ModLootTableProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> registryProvider) {
         super(packOutput, Set.of(), List.of(
-                new SubProviderEntry(ModBlockLootTables::new, LootContextParamSets.BLOCK)
+                new SubProviderEntry(ModBlockLootTables::new, LootContextParamSets.BLOCK),
+                new SubProviderEntry(ModEntityLootTables::new, LootContextParamSets.ENTITY)
         ), registryProvider);
     }
 }
