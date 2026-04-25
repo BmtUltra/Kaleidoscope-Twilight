@@ -15,6 +15,7 @@
       "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_0",
       "y": 270
     },
+
     "bites=1,facing=east": {
       "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_1",
       "y": 90
@@ -30,6 +31,7 @@
       "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_1",
       "y": 270
     },
+
     "bites=2,facing=east": {
       "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_2",
       "y": 90
@@ -45,6 +47,7 @@
       "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_2",
       "y": 270
     },
+
     "bites=3,facing=east": {
       "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_3",
       "y": 90
@@ -60,6 +63,7 @@
       "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_3",
       "y": 270
     },
+
     "bites=4,facing=east": {
       "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_4",
       "y": 90
@@ -73,6 +77,38 @@
     },
     "bites=4,facing=west": {
       "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_4",
+      "y": 270
+    },
+
+    "bites=5,facing=east": {
+      "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_5",
+      "y": 90
+    },
+    "bites=5,facing=north": {
+      "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_5"
+    },
+    "bites=5,facing=south": {
+      "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_5",
+      "y": 180
+    },
+    "bites=5,facing=west": {
+      "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_5",
+      "y": 270
+    },
+
+    "bites=6,facing=east": {
+      "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_6",
+      "y": 90
+    },
+    "bites=6,facing=north": {
+      "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_6"
+    },
+    "bites=6,facing=south": {
+      "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_6",
+      "y": 180
+    },
+    "bites=6,facing=west": {
+      "model": "kaleidoscope_twilight:block/food/witchcraft_cake/witchcraft_cake_6",
       "y": 270
     }
   }

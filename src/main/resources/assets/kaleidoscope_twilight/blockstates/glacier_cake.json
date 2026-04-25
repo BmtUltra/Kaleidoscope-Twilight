@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_0"
+    },
+    "bites=1": {
+      "model": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_1"
+    },
+    "bites=2": {
+      "model": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_2"
+    },
+    "bites=3": {
+      "model": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_3"
+    },
+    "bites=4": {
+      "model": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_4"
+    },
+    "bites=5": {
+      "model": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_5"
+    },
+    "bites=6": {
+      "model": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_6"
+    }
+  }
+}

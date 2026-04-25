@@ -13,11 +13,11 @@ public class KTFoodBites {
     public static void init() {
         FoodBiteRegistry registry = new FoodBiteRegistry();
         GLACIER_CAKE = registry.registerFoodData(KaleidoscopeTwilight.id("glacier_cake"),
-                FoodBiteRegistry.FoodData.create(4, KTFoods.GLACIER_CAKE_BLOCK, KTFoods.GLACIER_CAKE_ITEM)
+                FoodBiteRegistry.FoodData.create(6, KTFoods.GLACIER_CAKE_BLOCK, KTFoods.GLACIER_CAKE_ITEM)
         );
 
         WITCHCRAFT_CAKE = registry.registerFoodData(KaleidoscopeTwilight.id("witchcraft_cake"),
-                FoodBiteRegistry.FoodData.create(4, KTFoods.WITCHCRAFT_CAKE_BLOCK, KTFoods.WITCHCRAFT_CAKE_ITEM)
+                FoodBiteRegistry.FoodData.create(6, KTFoods.WITCHCRAFT_CAKE_BLOCK, KTFoods.WITCHCRAFT_CAKE_ITEM)
         );
 
         GLOW_MUSHROOM_POT_SOUP = registry.registerFoodData(KaleidoscopeTwilight.id("glow_mushroom_pot_soup"),

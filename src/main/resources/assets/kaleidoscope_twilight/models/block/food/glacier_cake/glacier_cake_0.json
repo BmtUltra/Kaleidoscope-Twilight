@@ -1,0 +1,21 @@
+{
+    "textures": {
+        "particle": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_side",
+        "bottom": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_bottom",
+        "top": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_top",
+        "side": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_side"
+    },
+    "elements": [
+        {   "from": [ 1, 0, 1 ],
+            "to": [ 15, 8, 15 ],
+            "faces": {
+                "down":  { "texture": "#bottom", "cullface": "down" },
+                "up":    { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" },
+                "west":  { "texture": "#side" },
+                "east":  { "texture": "#side" }
+            }
+        }
+    ]
+}
