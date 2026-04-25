@@ -4,6 +4,7 @@ import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 
 public class KTFoodBites {
     public static ResourceLocation GLACIER_CAKE;
@@ -14,10 +15,12 @@ public class KTFoodBites {
         FoodBiteRegistry registry = new FoodBiteRegistry();
         GLACIER_CAKE = registry.registerFoodData(KaleidoscopeTwilight.id("glacier_cake"),
                 FoodBiteRegistry.FoodData.create(6, KTFoods.GLACIER_CAKE_BLOCK, KTFoods.GLACIER_CAKE_ITEM)
+                        .setAABB(Block.box(1, 0, 1, 15, 8, 15))
         );
 
         WITCHCRAFT_CAKE = registry.registerFoodData(KaleidoscopeTwilight.id("witchcraft_cake"),
                 FoodBiteRegistry.FoodData.create(6, KTFoods.WITCHCRAFT_CAKE_BLOCK, KTFoods.WITCHCRAFT_CAKE_ITEM)
+                        .setAABB(Block.box(1, 0, 1, 15, 8, 15))
         );
 
         GLOW_MUSHROOM_POT_SOUP = registry.registerFoodData(KaleidoscopeTwilight.id("glow_mushroom_pot_soup"),

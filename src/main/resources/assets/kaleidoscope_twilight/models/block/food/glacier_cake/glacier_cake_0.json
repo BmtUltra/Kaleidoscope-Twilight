@@ -1,21 +1,23 @@
 {
-    "textures": {
-        "particle": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_side",
-        "bottom": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_bottom",
-        "top": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_top",
-        "side": "kaleidoscope_twilight:block/food/glacier_cake/glacier_cake_side"
-    },
-    "elements": [
-        {   "from": [ 1, 0, 1 ],
-            "to": [ 15, 8, 15 ],
-            "faces": {
-                "down":  { "texture": "#bottom", "cullface": "down" },
-                "up":    { "texture": "#top" },
-                "north": { "texture": "#side" },
-                "south": { "texture": "#side" },
-                "west":  { "texture": "#side" },
-                "east":  { "texture": "#side" }
-            }
-        }
-    ]
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "kaleidoscope_twilight:block/food/glacier_cake",
+		"particle": "kaleidoscope_twilight:block/food/glacier_cake"
+	},
+	"elements": [
+		{
+			"from": [1, 0, 1],
+			"to": [15, 8, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 0, 1]},
+			"faces": {
+				"north": {"uv": [8, 1.5, 15, 5.5], "texture": "#1"},
+				"east": {"uv": [8, 1.5, 15, 5.5], "texture": "#1"},
+				"south": {"uv": [8, 1.5, 15, 5.5], "texture": "#1"},
+				"west": {"uv": [8, 1.5, 15, 5.5], "texture": "#1"},
+				"up": {"uv": [0.5, 0.5, 7.5, 7.5], "texture": "#1"},
+				"down": {"uv": [0.5, 8.5, 7.5, 15.5], "texture": "#1"}
+			}
+		}
+	]
 }

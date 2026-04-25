@@ -6,7 +6,7 @@ import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerXpEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import twilightforest.entity.boss.HydraMortar;
 import twilightforest.init.TFDamageTypes;
 
@@ -37,9 +37,9 @@ public class EventHandler {
 
         if (event.getSource().is(TFDamageTypes.HYDRA_MORTAR)) {
             if (event.getSource().getDirectEntity() instanceof HydraMortar mortar) {
-                if (mortar.getOwner() != null && mortar.getOwner().equals(entity)) {
+                if (mortar.getOwner() != null && mortar.getOwner().equals(entity) && entity.hasEffect(KTEffects.FIRE_BREATH)) {
                     float originalDamage = event.getAmount();
-                    float reducedDamage = originalDamage * 0.1f;
+                    float reducedDamage = originalDamage * 0.2f;
                     event.setAmount(reducedDamage);
                 }
             }
@@ -47,21 +47,11 @@ public class EventHandler {
     }
 
     @SubscribeEvent
-    public static void onExperienceCost(PlayerXpEvent.XpChange event) {
+    public static void onPlayerTick(PlayerTickEvent.Post event) {
         Player player = event.getEntity();
         if (player.hasEffect(KTEffects.ERUDITION)) {
-            if (event.getAmount() < 0) {
-                event.setAmount(0);
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public static void onLevelChange(PlayerXpEvent.LevelChange event) {
-        Player player = event.getEntity();
-        if (player.hasEffect(KTEffects.ERUDITION)) {
-            if (event.getLevels() < 0) {
-                event.setLevels(0);
+            if (player.tickCount % 20 == 0) {
+                player.giveExperiencePoints(1);
             }
         }
     }
