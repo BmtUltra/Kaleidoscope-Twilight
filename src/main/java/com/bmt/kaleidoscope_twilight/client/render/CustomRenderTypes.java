@@ -1,10 +1,8 @@
-package com.bmt.kaleidoscope_twilight.client;
+package com.bmt.kaleidoscope_twilight.client.render;
 
 import com.mojang.blaze3d.vertex.DefaultVertexFormat;
 import com.mojang.blaze3d.vertex.VertexFormat;
 import net.minecraft.client.renderer.RenderType;
-
-import java.util.OptionalDouble;
 
 public class CustomRenderTypes extends RenderType {
 

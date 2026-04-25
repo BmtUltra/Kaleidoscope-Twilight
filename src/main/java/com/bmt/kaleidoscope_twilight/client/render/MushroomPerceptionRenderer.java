@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_twilight.client;
+package com.bmt.kaleidoscope_twilight.client.render;
 
 import com.bmt.kaleidoscope_twilight.init.KTEffects;
 import com.bmt.kaleidoscope_twilight.util.TagUtil;

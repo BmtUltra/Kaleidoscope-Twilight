@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "kaleidoscope_twilight:rainbow_candy"},
+    {"item": "kaleidoscope_cookery:mantou"}
+  ],
+  "result": {
+    "id": "kaleidoscope_twilight:rainbow_bun",
+    "count": 1
+  }
+}
