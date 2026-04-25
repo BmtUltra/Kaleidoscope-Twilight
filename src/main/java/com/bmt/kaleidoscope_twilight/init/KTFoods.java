@@ -110,8 +110,14 @@ public class KTFoods {
             .alwaysEdible().build();
 
     // 冰川蛋糕
-    public static final FoodProperties GLACIER_CAKE = new FoodProperties.Builder()
+    public static final FoodProperties GLACIER_CAKE_BLOCK = new FoodProperties.Builder()
             .nutrition(4)
+            .saturationModifier(0.4f)
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    public static final FoodProperties GLACIER_CAKE_ITEM = new FoodProperties.Builder()
+            .nutrition(16)
             .saturationModifier(0.4f)
             .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600 * 20, 0), 1.0f)
             .alwaysEdible().build();
@@ -273,8 +279,15 @@ public class KTFoods {
             .alwaysEdible().build();
 
     // 巫术蛋糕
-    public static final FoodProperties WITCHCRAFT_CAKE = new FoodProperties.Builder()
+    public static final FoodProperties WITCHCRAFT_CAKE_BLOCK = new FoodProperties.Builder()
             .nutrition(8)
+            .saturationModifier(0.6f)
+            .effect(() -> new MobEffectInstance(KTEffects.WITCHCRAFT_PROTECTION, 300 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 180 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    public static final FoodProperties WITCHCRAFT_CAKE_ITEM = new FoodProperties.Builder()
+            .nutrition(24)
             .saturationModifier(0.6f)
             .effect(() -> new MobEffectInstance(KTEffects.WITCHCRAFT_PROTECTION, 300 * 20, 0), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 180 * 20, 0), 1.0f)

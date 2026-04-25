@@ -84,10 +84,6 @@ public class KTItems {
     public static final DeferredHolder<Item, BowlFoodOnlyItem> MAGIC_BEAN_SOUP_ITEM = ITEMS.register("magic_bean_soup",
             () -> new BowlFoodOnlyItem(KTFoods.MAGIC_BEAN_SOUP));
 
-    // 冰川蛋糕
-    public static final DeferredHolder<Item, FoodWithEffectsItem> GLACIER_CAKE_ITEM = ITEMS.register("glacier_cake",
-            () -> new FoodWithEffectsItem(KTFoods.GLACIER_CAKE));
-
     // 荷花鸡
     public static final DeferredHolder<Item, FoodWithEffectsItem> LOTUS_CHICKEN_ITEM = ITEMS.register("lotus_chicken",
             () -> new FoodWithEffectsItem(KTFoods.LOTUS_CHICKEN));
@@ -167,10 +163,6 @@ public class KTItems {
     // 迷宫夹心薄饼
     public static final DeferredHolder<Item, FoodWithEffectsItem> MAZE_STUFFED_PANCAKE_ITEM = ITEMS.register("maze_stuffed_pancake",
             () -> new FoodWithEffectsItem(KTFoods.MAZE_STUFFED_PANCAKE));
-
-    // 巫术蛋糕
-    public static final DeferredHolder<Item, FoodWithEffectsItem> WITCHCRAFT_CAKE_ITEM = ITEMS.register("witchcraft_cake",
-            () -> new FoodWithEffectsItem(KTFoods.WITCHCRAFT_CAKE));
 
     // 幻影蕨菜煲
     public static final DeferredHolder<Item, BowlFoodOnlyItem> PHANTOM_FERN_STEW_ITEM = ITEMS.register("phantom_fern_stew",

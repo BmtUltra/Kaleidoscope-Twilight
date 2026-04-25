@@ -84,7 +84,7 @@ public class KTBrews {
     
     // 烬瞳
     public static final DeferredBlock<Block> EMBER_EYE = BLOCKS.register("ember_eye", 
-            () -> DrinkBlock.create().maxCount(4).shapes(
+            () -> DrinkBlock.create().maxCount(3).irregular().shapes(
                     Block.box(6, 0, 6, 10, 16, 10),
                     Block.box(2, 0, 6, 14, 16, 10),
                     Shapes.or(

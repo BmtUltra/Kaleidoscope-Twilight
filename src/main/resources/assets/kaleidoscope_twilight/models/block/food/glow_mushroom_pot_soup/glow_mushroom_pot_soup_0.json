@@ -4,7 +4,7 @@
 	"texture_size": [32, 32],
 	"render_type": "minecraft:cutout",
 	"textures": {
-		"0": "kaleidoscope_twilight:block/glow_mushroom_pot_soup",
+		"0": "kaleidoscope_twilight:block/food/glow_mushroom_pot_soup",
 		"particle": "block/flower_pot"
 	},
 	"elements": [

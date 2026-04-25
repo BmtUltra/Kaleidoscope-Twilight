@@ -39,7 +39,6 @@ public class KTCreativeTabs {
                         output.accept(KTItems.SAUCED_SNAKE_FEAST_ITEM.get());
                         output.accept(KTItems.AURORA_ICE_CREAM_ITEM.get());
                         output.accept(KTItems.MAGIC_BEAN_SOUP_ITEM.get());
-                        output.accept(KTItems.GLACIER_CAKE_ITEM.get());
                         output.accept(KTItems.LOTUS_CHICKEN_ITEM.get());
                         output.accept(KTItems.RAW_NAGA_MEAT_ITEM.get());
                         output.accept(KTItems.COOKED_NAGA_MEAT_ITEM.get());
@@ -65,7 +64,6 @@ public class KTCreativeTabs {
                         output.accept(KTItems.ICE_CRYSTAL_MOUSSE_ITEM.get());
                         output.accept(KTItems.TWILIGHT_CHICKEN_MUSHROOM_STEW_ITEM.get());
                         output.accept(KTItems.MAZE_STUFFED_PANCAKE_ITEM.get());
-                        output.accept(KTItems.WITCHCRAFT_CAKE_ITEM.get());
                         FoodBiteRegistry.FOOD_DATA_MAP.forEach((resourceLocation, foodData) -> {
                             if (resourceLocation.getNamespace().equals(KaleidoscopeTwilight.MODID)) {
                                 Item item = BuiltInRegistries.ITEM.get(resourceLocation);

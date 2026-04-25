@@ -3,9 +3,7 @@ package com.bmt.kaleidoscope_twilight.init;
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.JuiceBucketItem;
-import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
