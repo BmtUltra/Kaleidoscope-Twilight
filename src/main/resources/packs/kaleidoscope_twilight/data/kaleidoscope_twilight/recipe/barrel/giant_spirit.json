@@ -12,10 +12,7 @@
   "fluid": "kaleidoscope_twilight:torchberry_juice",
   "ingredients": [
     {
-      "item": "twilightforest:magic_beans"
-    },
-    {
-      "tag": "twilightforest:clouds"
+      "item": "twilightforest:fluffy_cloud"
     }
   ],
   "result": {

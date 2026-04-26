@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
 public class Experiment115SkewerItem extends FoodWithEffectsItem {
-    private static final int COOLDOWN_TICKS = 60;
+    private static final int COOLDOWN_TICKS = 40;
 
     public Experiment115SkewerItem(FoodProperties food) {
         super(food);
