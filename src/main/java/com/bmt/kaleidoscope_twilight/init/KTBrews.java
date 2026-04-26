@@ -60,7 +60,7 @@ public class KTBrews {
     
     // 冰晶霜露
     public static final DeferredBlock<Block> ICE_CRYSTAL_FROST_DEW = BLOCKS.register("ice_crystal_frost_dew", 
-            () -> DrinkBlock.create().maxCount(4).shapes(
+            () -> DrinkBlock.create().maxCount(3).shapes(
                     Block.box(6, 0, 6, 10, 16, 10),
                     Block.box(2, 0, 6, 14, 16, 10),
                     Shapes.or(
