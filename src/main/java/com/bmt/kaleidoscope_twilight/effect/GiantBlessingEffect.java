@@ -35,30 +35,20 @@ public class GiantBlessingEffect extends MobEffect {
     @Override
     public boolean applyEffectTick(LivingEntity entity, int amplifier) {
         if (!entity.level().isClientSide()) {
-//            double scale = amplifier < 4 ? (amplifier + 1) * 0.8 : Math.min(4.0 + (amplifier - 4), 15.0);
-//            updateAttribute(entity, Attributes.SCALE, SCALE_MODIFIER, scale, AttributeModifier.Operation.ADD_VALUE);
-
             updateAttribute(entity, Attributes.STEP_HEIGHT, STEP_HEIGHT_MODIFIER, 0.5 + amplifier * 0.5, AttributeModifier.Operation.ADD_VALUE);
-
             updateAttribute(entity, Attributes.ENTITY_INTERACTION_RANGE, ENTITY_INTERACTION_RANGE_MODIFIER, 1 + amplifier, AttributeModifier.Operation.ADD_VALUE);
-
             updateAttribute(entity, Attributes.BLOCK_INTERACTION_RANGE, BLOCK_INTERACTION_RANGE_MODIFIER, 1 + amplifier, AttributeModifier.Operation.ADD_VALUE);
-
             double attackDamage = Math.min(1.5 + amplifier * 0.5, 100.0);
             updateAttribute(entity, Attributes.ATTACK_DAMAGE, ATTACK_DAMAGE_MODIFIER, attackDamage, AttributeModifier.Operation.ADD_VALUE);
-
             double maxHealth = (amplifier + 1) * 10.0;
             if (maxHealth > 200.0) maxHealth = 200.0;
             updateAttribute(entity, Attributes.MAX_HEALTH, MAX_HEALTH_MODIFIER, maxHealth, AttributeModifier.Operation.ADD_VALUE);
-
-            double movementSpeed = (amplifier + 1) * (-0.025);
-            if (movementSpeed < -0.5) movementSpeed = -0.5;
+            double movementSpeed = (amplifier + 1) * 0.025;
+            if (movementSpeed > 0.5) movementSpeed = 0.5;
             updateAttribute(entity, Attributes.MOVEMENT_SPEED, MOVEMENT_SPEED_MODIFIER, movementSpeed, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
-
-            double jumpStrength = (amplifier + 1) * (-0.005);
-            if (jumpStrength < -0.02) jumpStrength = -0.02;
+            double jumpStrength = (amplifier + 1) * 0.005;
+            if (jumpStrength > 0.02) jumpStrength = 0.02;
             updateAttribute(entity, Attributes.JUMP_STRENGTH, JUMP_STRENGTH_MODIFIER, jumpStrength, AttributeModifier.Operation.ADD_VALUE);
-
             updateAttribute(entity, Attributes.SAFE_FALL_DISTANCE, SAFE_FALL_DISTANCE_MODIFIER, (amplifier + 1) * 0.5, AttributeModifier.Operation.ADD_VALUE);
         }
         return true;
