@@ -3,6 +3,28 @@
   "effects": [
     [
       {
+        "effect": "minecraft:nausea",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 45,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
         "effect": "kaleidoscope_twilight:sturdy_scales",
         "duration": 30,
         "amplifier": 0,
@@ -10,6 +32,12 @@
       }
     ],
     [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      },
       {
         "effect": "kaleidoscope_twilight:sturdy_scales",
         "duration": 60,
@@ -19,72 +47,30 @@
     ],
     [
       {
-        "effect": "kaleidoscope_twilight:sturdy_scales",
-        "duration": 90,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 20,
         "amplifier": 0,
         "probability": 1.0
       },
-      {
-        "effect": "minecraft:poison",
-        "duration": 10,
-        "amplifier": 0,
-        "probability": 0.3
-      }
-    ],
-    [
       {
         "effect": "kaleidoscope_twilight:sturdy_scales",
         "duration": 120,
-        "amplifier": 0,
+        "amplifier": 1,
         "probability": 1.0
-      },
-      {
-        "effect": "minecraft:poison",
-        "duration": 15,
-        "amplifier": 0,
-        "probability": 0.4
       }
     ],
     [
       {
-        "effect": "kaleidoscope_twilight:sturdy_scales",
-        "duration": 180,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 10,
         "amplifier": 0,
         "probability": 1.0
       },
       {
-        "effect": "minecraft:poison",
-        "duration": 20,
-        "amplifier": 0,
-        "probability": 0.5
-      }
-    ],
-    [
-      {
         "effect": "kaleidoscope_twilight:sturdy_scales",
-        "duration": 240,
-        "amplifier": 0,
+        "duration": 360,
+        "amplifier": 1,
         "probability": 1.0
-      },
-      {
-        "effect": "minecraft:poison",
-        "duration": 25,
-        "amplifier": 0,
-        "probability": 0.6
-      }
-    ],
-    [
-      {
-        "effect": "kaleidoscope_twilight:sturdy_scales",
-        "duration": 300,
-        "amplifier": 0,
-        "probability": 1.0
-      },
-      {
-        "effect": "minecraft:poison",
-        "duration": 30,
-        "amplifier": 0,
-        "probability": 0.7
       }
     ]
   ]

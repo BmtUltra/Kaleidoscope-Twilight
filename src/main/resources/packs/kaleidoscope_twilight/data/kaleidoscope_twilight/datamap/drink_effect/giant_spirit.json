@@ -3,7 +3,7 @@
   "effects": [
     [
       {
-        "effect": "minecraft:strength",
+        "effect": "minecraft:nausea",
         "duration": 30,
         "amplifier": 0,
         "probability": 1.0
@@ -11,79 +11,65 @@
     ],
     [
       {
-        "effect": "minecraft:strength",
-        "duration": 60,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 45,
         "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "effect": "minecraft:strength",
-        "duration": 90,
-        "amplifier": 0,
-        "probability": 1.0
-      },
-      {
-        "effect": "minecraft:resistance",
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
         "duration": 30,
         "amplifier": 0,
-        "probability": 0.5
+        "probability": 1.0
+      },
+      {
+        "effect": "kaleidoscope_twilight:giant_blessing",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
       }
     ],
     [
       {
-        "effect": "minecraft:strength",
-        "duration": 120,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
         "amplifier": 0,
         "probability": 1.0
       },
       {
-        "effect": "minecraft:resistance",
+        "effect": "kaleidoscope_twilight:giant_blessing",
         "duration": 60,
-        "amplifier": 0,
-        "probability": 0.7
-      }
-    ],
-    [
-      {
-        "effect": "minecraft:strength",
-        "duration": 180,
-        "amplifier": 0,
-        "probability": 1.0
-      },
-      {
-        "effect": "minecraft:resistance",
-        "duration": 90,
-        "amplifier": 0,
-        "probability": 0.8
-      }
-    ],
-    [
-      {
-        "effect": "minecraft:strength",
-        "duration": 240,
         "amplifier": 1,
         "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 20,
+        "amplifier": 0,
+        "probability": 1.0
       },
       {
-        "effect": "minecraft:resistance",
+        "effect": "kaleidoscope_twilight:giant_blessing",
         "duration": 120,
-        "amplifier": 0,
-        "probability": 0.9
+        "amplifier": 2,
+        "probability": 1.0
       }
     ],
     [
       {
-        "effect": "minecraft:strength",
-        "duration": 300,
-        "amplifier": 1,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 10,
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "effect": "minecraft:resistance",
-        "duration": 180,
-        "amplifier": 0,
+        "effect": "kaleidoscope_twilight:giant_blessing",
+        "duration": 480,
+        "amplifier": 3,
         "probability": 1.0
       }
     ]

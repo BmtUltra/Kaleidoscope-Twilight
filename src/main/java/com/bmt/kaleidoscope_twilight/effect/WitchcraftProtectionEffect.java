@@ -12,7 +12,7 @@ public class WitchcraftProtectionEffect extends MobEffect {
 
     @Override
     public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-        return duration % 160 == 0;
+        return duration % 120 == 0;
     }
 
     @Override

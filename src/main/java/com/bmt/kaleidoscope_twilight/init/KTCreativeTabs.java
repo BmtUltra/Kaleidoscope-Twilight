@@ -4,6 +4,7 @@ import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.TeacupRegistry;
+import com.github.ysbbbbbb.kaleidoscopetavern.item.BottleBlockItem;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -92,20 +93,20 @@ public class KTCreativeTabs {
                         output.accept(TeacupRegistry.getItem(KTTeacups.ICE_CRYSTAL_TEA));
 
                         if (ModList.get().isLoaded("kaleidoscope_tavern")) {
-                            output.accept(KTBrewItems.CAVE_FIREFLY_BREW_ITEM.get());
-                            output.accept(KTBrewItems.TWILIGHT_DEW_ITEM.get());
-                            output.accept(KTBrewItems.WITCHCRAFT_SECRET_BREW_ITEM.get());
-                            output.accept(KTBrewItems.SNAKE_SKIN_LIQUOR_ITEM.get());
-                            output.accept(KTBrewItems.ICE_CRYSTAL_FROST_DEW_ITEM.get());
-                            output.accept(KTBrewItems.MAGIC_BEAN_BREW_ITEM.get());
-                            output.accept(KTBrewItems.EMBER_EYE_ITEM.get());
-                            output.accept(KTBrewItems.DEER_SONG_ITEM.get());
-                            output.accept(KTBrewItems.THORN_HEART_ITEM.get());
-                            output.accept(KTBrewItems.DRUID_SECRET_BREW_ITEM.get());
-                            output.accept(KTBrewItems.GLOWING_NIGHT_BIRD_SONG_ITEM.get());
-                            output.accept(KTBrewItems.GLACIER_FROST_DEW_ITEM.get());
-                            output.accept(KTBrewItems.GIANT_SPIRIT_ITEM.get());
-                            output.accept(KTBrewItems.NATURE_SPIRIT_ITEM.get());
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.CAVE_FIREFLY_BREW_ITEM));
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.TWILIGHT_DEW_ITEM));
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.WITCHCRAFT_SECRET_BREW_ITEM));
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.SNAKE_SKIN_LIQUOR_ITEM));
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.ICE_CRYSTAL_FROST_DEW_ITEM));
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.MAGIC_BEAN_BREW_ITEM));
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.EMBER_EYE_ITEM));
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.DEER_SONG_ITEM));
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.THORN_HEART_ITEM));
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.DRUID_SECRET_BREW_ITEM));
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.GLOWING_NIGHT_BIRD_SONG_ITEM));
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.GLACIER_FROST_DEW_ITEM));
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.GIANT_SPIRIT_ITEM));
+                            output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.NATURE_SPIRIT_ITEM));
                         }
 
                         output.accept(KTItems.BLAZING_IRON_KITCHEN_KNIFE.get());
