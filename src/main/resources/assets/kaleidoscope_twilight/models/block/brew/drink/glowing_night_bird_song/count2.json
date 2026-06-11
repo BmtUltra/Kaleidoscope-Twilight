@@ -4,8 +4,8 @@
 	"render_type": "cutout",
 	"texture_size": [32, 32],
 	"textures": {
-		"2": "kaleidoscope_twilight:block/brew/ice_crystal_frost_dew",
-		"particle": "kaleidoscope_twilight:block/brew/ice_crystal_frost_dew"
+		"2": "kaleidoscope_twilight:block/brew/glowing_night_bird_song",
+		"particle": "kaleidoscope_twilight:block/brew/glowing_night_bird_song"
 	},
 	"elements": [
 		{
