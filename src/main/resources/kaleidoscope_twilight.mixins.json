@@ -8,6 +8,7 @@
     "IntegerPropertyMixin",
     "InventoryMixin",
     "PhantomEffectMixin",
+    "StoveBlockMixin",
     "accessor.FoodBiteBlockAccessor",
     "accessor.InventoryAccessor",
     "accessor.ItemCombinerMenuAccessor",
