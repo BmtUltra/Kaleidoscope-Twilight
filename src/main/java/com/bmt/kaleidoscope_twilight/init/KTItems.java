@@ -58,11 +58,11 @@ public class KTItems {
 
     // 暮光惠灵顿牛排
     public static final DeferredHolder<Item, FoodWithEffectsItem> TWILIGHT_WELLINGTON_STEAK_ITEM = ITEMS.register("twilight_wellington_steak",
-            () -> new FoodWithEffectsItem(KTFoods.TWILIGHT_WELLINGTON_STEAK));
+            () -> new BowlFoodOnlyItem(KTFoods.TWILIGHT_WELLINGTON_STEAK));
 
     // 盐焗娜迦
     public static final DeferredHolder<Item, FoodWithEffectsItem> SALT_BAKED_NAGA_ITEM = ITEMS.register("salt_baked_naga",
-            () -> new FoodWithEffectsItem(KTFoods.SALT_BAKED_NAGA));
+            () -> new BowlFoodOnlyItem(KTFoods.SALT_BAKED_NAGA));
 
     // 暮初恶魂意面
     public static final DeferredHolder<Item, BowlFoodOnlyItem> TWILIGHT_GHOST_PASTA_ITEM = ITEMS.register("twilight_ghost_pasta",
@@ -74,11 +74,11 @@ public class KTItems {
 
     // 浇汁蛇宴
     public static final DeferredHolder<Item, FoodWithEffectsItem> SAUCED_SNAKE_FEAST_ITEM = ITEMS.register("sauced_snake_feast",
-            () -> new FoodWithEffectsItem(KTFoods.SAUCED_SNAKE_FEAST));
+            () -> new BowlFoodOnlyItem(KTFoods.SAUCED_SNAKE_FEAST));
 
     // 极光冰淇淋
     public static final DeferredHolder<Item, FoodWithEffectsItem> AURORA_ICE_CREAM_ITEM = ITEMS.register("aurora_ice_cream",
-            () -> new FoodWithEffectsItem(KTFoods.AURORA_ICE_CREAM));
+            () -> new BowlFoodOnlyItem(KTFoods.AURORA_ICE_CREAM));
 
     // 魔豆汤
     public static final DeferredHolder<Item, BowlFoodOnlyItem> MAGIC_BEAN_SOUP_ITEM = ITEMS.register("magic_bean_soup",
@@ -86,7 +86,7 @@ public class KTItems {
 
     // 荷花鸡
     public static final DeferredHolder<Item, FoodWithEffectsItem> LOTUS_CHICKEN_ITEM = ITEMS.register("lotus_chicken",
-            () -> new FoodWithEffectsItem(KTFoods.LOTUS_CHICKEN));
+            () -> new BowlFoodOnlyItem(KTFoods.LOTUS_CHICKEN));
 
     // 生娜迦肉
     public static final DeferredHolder<Item, Item> RAW_NAGA_MEAT_ITEM = ITEMS.register("raw_naga_meat",
@@ -98,7 +98,7 @@ public class KTItems {
 
     // 战斧牛排
     public static final DeferredHolder<Item, FoodWithEffectsItem> TOMAHAWK_STEAK_ITEM = ITEMS.register("tomahawk_steak",
-            () -> new FoodWithEffectsItem(KTFoods.TOMAHAWK_STEAK));
+            () -> new BowlFoodOnlyItem(KTFoods.TOMAHAWK_STEAK));
 
     // 生雪怪肉
     public static final DeferredHolder<Item, Item> RAW_YETI_MEAT_ITEM = ITEMS.register("raw_yeti_meat",
@@ -182,7 +182,7 @@ public class KTItems {
 
     // 暮色恶魂刺身
     public static final DeferredHolder<Item, FoodWithEffectsItem> TWILIGHT_GHOST_SASHIMI_ITEM = ITEMS.register("twilight_ghost_sashimi",
-            () -> new FoodWithEffectsItem(KTFoods.TWILIGHT_GHOST_SASHIMI));
+            () -> new BowlFoodOnlyItem(KTFoods.TWILIGHT_GHOST_SASHIMI));
 
     // 彩虹糖
     public static final DeferredHolder<Item, FoodWithEffectsItem> RAINBOW_CANDY_ITEM = ITEMS.register("rainbow_candy",
@@ -222,7 +222,7 @@ public class KTItems {
 
     // 冰晶九头蛇排
     public static final DeferredHolder<Item, FoodWithEffectsItem> ICE_CRYSTAL_HYDRA_STEAK_ITEM = ITEMS.register("ice_crystal_hydra_steak",
-            () -> new FoodWithEffectsItem(KTFoods.ICE_CRYSTAL_HYDRA_STEAK));
+            () -> new BowlFoodOnlyItem(KTFoods.ICE_CRYSTAL_HYDRA_STEAK));
 
     // 冰晶慕斯
     public static final DeferredHolder<Item, FoodWithEffectsItem> ICE_CRYSTAL_MOUSSE_ITEM = ITEMS.register("ice_crystal_mousse",

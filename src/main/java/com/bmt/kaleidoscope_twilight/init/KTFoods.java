@@ -37,7 +37,7 @@ public class KTFoods {
     public static final FoodProperties MINOTAUR_ROLL = new FoodProperties.Builder()
             .nutrition(10)
             .saturationModifier(0.7f)
-            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 80 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 80 * 20, 1), 1.0f)
             .alwaysEdible().build();
 
     // 暮光惠灵顿牛排

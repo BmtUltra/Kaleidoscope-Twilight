@@ -21,7 +21,7 @@ public class BlazingIronTier implements Tier {
 
     @Override
     public float getAttackDamageBonus() {
-        return 5.0F;
+        return 7.0F;
     }
 
     @Override

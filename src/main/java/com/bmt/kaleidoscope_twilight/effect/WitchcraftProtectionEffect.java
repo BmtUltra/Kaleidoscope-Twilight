@@ -3,6 +3,7 @@ package com.bmt.kaleidoscope_twilight.effect;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
+import twilightforest.init.TFDataAttachments;
 
 public class WitchcraftProtectionEffect extends MobEffect {
 
@@ -18,7 +19,7 @@ public class WitchcraftProtectionEffect extends MobEffect {
     @Override
     public boolean applyEffectTick(LivingEntity entity, int amplifier) {
         if (!entity.level().isClientSide()) {
-                var fortificationShields = twilightforest.init.TFDataAttachments.FORTIFICATION_SHIELDS;
+                var fortificationShields = TFDataAttachments.FORTIFICATION_SHIELDS;
                 var shieldsData = entity.getData(fortificationShields);
                 shieldsData.setShields(entity, 3, true);
                 return true;

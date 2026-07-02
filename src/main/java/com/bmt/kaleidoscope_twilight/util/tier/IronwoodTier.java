@@ -21,7 +21,7 @@ public class IronwoodTier implements Tier {
 
     @Override
     public float getAttackDamageBonus() {
-        return 3.0F;
+        return 5.0F;
     }
 
     @Override

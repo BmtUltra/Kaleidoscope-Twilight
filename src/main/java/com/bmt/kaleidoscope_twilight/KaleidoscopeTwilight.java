@@ -2,6 +2,7 @@ package com.bmt.kaleidoscope_twilight;
 
 import com.bmt.kaleidoscope_twilight.init.*;
 
+import com.bmt.kaleidoscope_twilight.integration.KaleidoscopeDollIntegrationImpl;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
@@ -24,6 +25,9 @@ public class KaleidoscopeTwilight {
             KTFluids.FLUIDS.register(modEventBus);
             KTBrews.BLOCKS.register(modEventBus);
             KTBrewItems.ITEMS.register(modEventBus);
+        }
+        if (ModList.get().isLoaded("kaleidoscope_doll")) {
+            KaleidoscopeDollIntegrationImpl.register(modEventBus);
         }
     }
     public static ResourceLocation id(String name) {

@@ -21,7 +21,7 @@ public class SteelleafTier implements Tier {
 
     @Override
     public float getAttackDamageBonus() {
-        return 4.0F;
+        return 6.0F;
     }
 
     @Override
