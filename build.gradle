@@ -140,8 +140,8 @@ configurations {
 dependencies {
     implementation "maven.modrinth:kaleidoscope-cookery:1.4.0-neoforge+mc1.21.1"
     implementation "curse.maven:the-twilight-forest-227639:7797302"
-    compileOnly "maven.modrinth:kaleidoscopetavern:1.1.2-neoforge+mc1.21.1"
-    runtimeOnly "maven.modrinth:kaleidoscopetavern:1.1.2-neoforge+mc1.21.1"
+    compileOnly "maven.modrinth:kaleidoscopetavern:1.2.0-neoforge+mc1.21.1"
+    runtimeOnly "maven.modrinth:kaleidoscopetavern:1.2.0-neoforge+mc1.21.1"
     compileOnly "maven.modrinth:kaleidoscope-doll:1.4.1-neoforge+mc1.21.1"
     runtimeOnly "maven.modrinth:kaleidoscope-doll:1.4.1-neoforge+mc1.21.1"
 //    implementation "maven.modrinth:kubejs:2101.7.2-build.348"

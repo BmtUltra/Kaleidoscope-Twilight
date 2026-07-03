@@ -252,6 +252,18 @@ public class KTItems {
     public static final DeferredHolder<Item, FoodWithEffectsItem> LIANGSHAN_ICE_CONE_ITEM = ITEMS.register("liangshan_ice_cone",
             () -> new FoodWithEffectsItem(KTFoods.LIANGSHAN_ICE_CONE));
 
+    // 炽铁炒锅
+    public static final DeferredHolder<Item, Item> FIERY_POT = ITEMS.register("fiery_pot",
+            () -> new BlockItem(KTBlocks.FIERY_POT.get(), new Item.Properties()));
+
+    // 炽铁汤锅
+    public static final DeferredHolder<Item, Item> FIERY_STOCKPOT = ITEMS.register("fiery_stockpot",
+            () -> new BlockItem(KTBlocks.FIERY_STOCKPOT.get(), new Item.Properties()));
+
+    // 炽铁汤锅盖
+    public static final DeferredHolder<Item, Item> FIERY_STOCKPOT_LID = ITEMS.register("fiery_stockpot_lid",
+            FieryStockpotLidItem::new);
+
     // 炽铁菜刀
     public static final DeferredHolder<Item, BlazingIronKitchenKnifeItem> BLAZING_IRON_KITCHEN_KNIFE = ITEMS.register("blazing_iron_kitchen_knife",
             () -> new BlazingIronKitchenKnifeItem(BLAZING_IRON_TIER,

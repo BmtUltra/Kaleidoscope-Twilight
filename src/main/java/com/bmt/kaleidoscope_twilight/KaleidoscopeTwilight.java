@@ -17,6 +17,7 @@ public class KaleidoscopeTwilight {
         KTCreativeTabs.register(modEventBus);
         KTEffects.register(modEventBus);
         KTBlocks.register(modEventBus);
+        KTBlockEntities.register(modEventBus);
         KTTeacups.init();
         KTFoodBites.init();
         KTDataComponents.DATA_COMPONENT_TYPES.register(modEventBus);
@@ -26,9 +27,9 @@ public class KaleidoscopeTwilight {
             KTBrews.BLOCKS.register(modEventBus);
             KTBrewItems.ITEMS.register(modEventBus);
         }
-        if (ModList.get().isLoaded("kaleidoscope_doll")) {
-            KaleidoscopeDollIntegrationImpl.register(modEventBus);
-        }
+//        if (ModList.get().isLoaded("kaleidoscope_doll")) {
+//            KaleidoscopeDollIntegrationImpl.register(modEventBus);
+//        }
     }
     public static ResourceLocation id(String name) {
         return ResourceLocation.fromNamespaceAndPath(MODID, name);

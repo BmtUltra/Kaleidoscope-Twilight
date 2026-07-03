@@ -1,0 +1,8 @@
+{
+  "parent": "kaleidoscope_cookery:block/stockpot_base_has_lid",
+  "textures": {
+    "1": "kaleidoscope_twilight:block/fiery_stockpot_base",
+    "2": "kaleidoscope_twilight:block/fiery_stockpot",
+    "particle": "kaleidoscope_twilight:block/fiery_stockpot"
+  }
+}

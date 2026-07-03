@@ -140,6 +140,7 @@
   "fluid.kaleidoscope_twilight.torchberry_juice": "火炬浆果汁",
   "block.kaleidoscope_twilight.torchberry_juice": "火炬浆果汁",
   "fluid.kaleidoscope_twilight.flowing_torchberry_juice": "火炬浆果汁",
+  "tooltip.kaleidoscope_twilight.torchberry_bucket": "用于酿造多色饮品",
 
   "effect.kaleidoscope_twilight.witchcraft_protection": "巫术庇护",
   "effect.kaleidoscope_twilight.witchcraft_protection.description": "获得巫术护盾",
@@ -161,6 +162,13 @@
   "effect.kaleidoscope_twilight.giant_blessing.description": "获得属性提升",
 
   "block.kaleidoscope_twilight.twilight_stove": "暮色炉灶",
+  "block.kaleidoscope_twilight.fiery_pot": "炽铁炒锅",
+  "item.kaleidoscope_twilight.fiery_pot": "炽铁炒锅",
+  "tooltip.kaleidoscope_twilight.fiery_pot": "无需热源，翻炒后立即烹饪完成",
+  "block.kaleidoscope_twilight.fiery_stockpot": "炽铁汤锅",
+  "tooltip.kaleidoscope_twilight.fiery_stockpot": "无需热源，盖上锅盖后快速烹饪",
+  "item.kaleidoscope_twilight.fiery_stockpot_lid": "炽铁汤锅盖",
+  "tooltip.kaleidoscope_twilight.fiery_stockpot_lid": "仅限炽铁汤锅使用",
 
   "tooltip.kaleidoscope_doll.doll.twilight_contributor": "暮色森林"
 }

@@ -21,6 +21,15 @@ public class EventHandler {
     public static void onLivingDamage(LivingIncomingDamageEvent event) {
         LivingEntity entity = event.getEntity();
 
+        if (entity instanceof Player player) {
+            ItemStack activeItem = player.getUseItem();
+            if (activeItem.getItem() == KTItems.FIERY_STOCKPOT_LID.get()) {
+                if (event.getSource().getEntity() instanceof LivingEntity attacker) {
+                    attacker.setRemainingFireTicks(100);
+                }
+            }
+        }
+
         if (entity.hasEffect(KTEffects.PHANTOM)) {
             if (event.getSource().type().msgId().equals("inWall")) {
                 event.setCanceled(true);

@@ -8,11 +8,16 @@
     "IntegerPropertyMixin",
     "InventoryMixin",
     "PhantomEffectMixin",
+    "PotBlockEntityMixin",
+    "StockpotBlockEntityMixin",
+    "StockpotLidItemMixin",
     "StoveBlockMixin",
     "accessor.FoodBiteBlockAccessor",
     "accessor.InventoryAccessor",
     "accessor.ItemCombinerMenuAccessor",
-    "accessor.LivingEntityAccessor"
+    "accessor.LivingEntityAccessor",
+    "accessor.PotBlockEntityAccessor",
+    "accessor.StockpotBlockEntityAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -21,6 +26,7 @@
     "requireAnnotations": true
   },
   "client": [
-    "CameraMixin"
+    "CameraMixin",
+    "accessor.GuiAccessor"
   ]
 }

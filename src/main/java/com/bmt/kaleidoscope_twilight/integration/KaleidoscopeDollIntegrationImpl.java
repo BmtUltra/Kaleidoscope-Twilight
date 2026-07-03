@@ -98,33 +98,30 @@ public class KaleidoscopeDollIntegrationImpl {
         }
     }
 
-    @SubscribeEvent
-    public static void addToCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        if (isDollModLoaded()) {
-            return;
-        }
-
-        // 添加到暮色森林自己的创造模式标签页
-        if (event.getTab() == KTCreativeTabs.KALEIDOSCOPE_TWILIGHT.get()) {
-            // 添加普通玩偶
-            SPONSOR_DOLL_DEFINITIONS.keySet().forEach(dollId -> {
-                ResourceLocation id = ResourceLocation.fromNamespaceAndPath(KaleidoscopeTwilight.MODID, dollId);
-                Item item = DOLL_ITEMS.get(id);
-                if (item != null) {
-                    event.accept(item);
-                }
-            });
-
-            // 添加实体玩偶
-            ENTITY_DOLL_DEFINITIONS.forEach((entityDollId, blockDollId) -> {
-                ResourceLocation blockId = ResourceLocation.fromNamespaceAndPath(KaleidoscopeTwilight.MODID, blockDollId);
-                Block block = DOLL_BLOCKS.get(blockId);
-
-                if (block != null) {
-                    ItemStack stack = DollEntityItem.createItemWithBlockState(block.defaultBlockState());
-                    event.accept(stack);
-                }
-            });
-        }
-    }
+//    @SubscribeEvent
+//    public static void addToCreativeTab(BuildCreativeModeTabContentsEvent event) {
+//        if (isDollModLoaded()) {
+//            return;
+//        }
+//
+//        if (event.getTab() == KTCreativeTabs.KALEIDOSCOPE_TWILIGHT.get()) {
+//            SPONSOR_DOLL_DEFINITIONS.keySet().forEach(dollId -> {
+//                ResourceLocation id = ResourceLocation.fromNamespaceAndPath(KaleidoscopeTwilight.MODID, dollId);
+//                Item item = DOLL_ITEMS.get(id);
+//                if (item != null) {
+//                    event.accept(item);
+//                }
+//            });
+//
+//            ENTITY_DOLL_DEFINITIONS.forEach((entityDollId, blockDollId) -> {
+//                ResourceLocation blockId = ResourceLocation.fromNamespaceAndPath(KaleidoscopeTwilight.MODID, blockDollId);
+//                Block block = DOLL_BLOCKS.get(blockId);
+//
+//                if (block != null) {
+//                    ItemStack stack = DollEntityItem.createItemWithBlockState(block.defaultBlockState());
+//                    event.accept(stack);
+//                }
+//            });
+//        }
+//    }
 }

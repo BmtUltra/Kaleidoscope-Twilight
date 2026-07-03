@@ -5,7 +5,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
-@SuppressWarnings("all")
 public class TagUtil {
     public static class Items {
     }
