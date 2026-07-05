@@ -113,16 +113,16 @@ public class KTCreativeTabs {
                         output.accept(KTItems.KNIGHT_KITCHEN_KNIFE.get());
                         output.accept(KTItems.IRONWOOD_KITCHEN_KNIFE.get());
                         output.accept(KTItems.STEELLEAF_KITCHEN_KNIFE.get());
-//                        output.accept(KTItems.IRONWOOD_KITCHEN_KNIFE.get().getDefaultInstance(parameters.holders()));
-//                        output.accept(KTItems.STEELLEAF_KITCHEN_KNIFE.get().getDefaultInstance(parameters.holders()));
+
                         if (ModList.get().isLoaded("kaleidoscope_tavern")) {
                             output.accept(KTBrewItems.TORCHBERRY_BUCKET.get());
                         }
+
                         output.accept(KTItems.TWILIGHT_STOVE.get());
+                        output.accept(KTItems.KEEPING_POUCH_ITEM.get());
                         output.accept(KTItems.FIERY_POT.get());
                         output.accept(KTItems.FIERY_STOCKPOT.get());
                         output.accept(KTItems.FIERY_STOCKPOT_LID.get());
-                        output.accept(KTItems.KEEPING_POUCH_ITEM.get());
                     })
                     .build());
 

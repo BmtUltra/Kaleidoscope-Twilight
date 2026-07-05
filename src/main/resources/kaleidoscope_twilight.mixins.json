@@ -3,6 +3,7 @@
   "package": "com.bmt.kaleidoscope_twilight.mixins",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "AdvanceEntityMatchToolMixin",
     "AnvilMenuMixin",
     "FoodBiteBlockMixin",
     "IntegerPropertyMixin",
