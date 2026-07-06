@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "A": {
-      "tag": "c:foods/bread"
+      "item": "minecraft:bread"
     },
     "B": {
       "item": "twilightforest:torchberries"
@@ -12,7 +12,7 @@
       "item": "twilightforest:cooked_venison"
     },
     "D": {
-      "tag": "c:crops/tomato"
+      "tag": "forge:crops/tomato"
     }
   },
   "pattern": [

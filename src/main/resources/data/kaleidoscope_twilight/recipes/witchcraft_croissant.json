@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    { "tag": "c:foods/bread" },
+    { "item": "minecraft:bread" },
     { "item": "kaleidoscope_twilight:witchcraft_bone" }
   ],
   "result": {

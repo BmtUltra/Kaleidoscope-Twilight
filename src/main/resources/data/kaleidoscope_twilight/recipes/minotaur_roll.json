@@ -3,16 +3,16 @@
   "category": "misc",
   "key": {
     "A": {
-      "tag": "c:foods/bread"
+      "item": "minecraft:bread"
     },
     "B": {
       "item": "twilightforest:cooked_meef"
     },
     "C": {
-      "tag": "c:crops/chilipepper"
+      "tag": "forge:crops/chilipepper"
     },
     "D": {
-      "tag": "c:crops/lettuce"
+      "tag": "forge:crops/lettuce"
     }
   },
   "pattern": [

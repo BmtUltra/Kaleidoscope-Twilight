@@ -12,7 +12,7 @@
       "item": "minecraft:ice"
     },
     "D": {
-      "tag": "c:flour"
+      "tag": "forge:flour"
     }
   },
   "pattern": [

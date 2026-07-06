@@ -2,13 +2,13 @@
   "type": "kaleidoscope_cookery:stockpot",
   "ingredients": [
     {
-      "tag": "c:foods/raw_chicken"
+      "tag": "forge:raw_chicken"
     },
     {
-      "tag": "c:foods/raw_chicken"
+      "tag": "forge:raw_chicken"
     },
     {
-      "tag": "c:foods/raw_chicken"
+      "tag": "forge:raw_chicken"
     },
     {
       "item": "twilightforest:mushgloom"
