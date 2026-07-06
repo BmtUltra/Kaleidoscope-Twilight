@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "twilightforest:maze_wafer"},
+    {"item": "kaleidoscope_twilight:twilight_fern"},
+    {"item": "kaleidoscope_cookery:lettuce"},
+    {"item": "kaleidoscope_cookery:green_chili"}
+  ],
+  "result": {
+    "item": "kaleidoscope_twilight:maze_stuffed_pancake",
+    "count": 1
+  }
+}

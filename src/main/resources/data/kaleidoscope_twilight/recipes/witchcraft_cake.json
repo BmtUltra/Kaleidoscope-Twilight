@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:milk_bucket"
+    },
+    "B": {
+      "item": "kaleidoscope_twilight:witchcraft_bone"
+    },
+    "C": {
+      "item": "twilightforest:blueberry"
+    },
+    "D": {
+      "tag": "c:flour"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "CCC",
+    "DDD"
+  ],
+  "result": {
+    "count": 1,
+    "item": "kaleidoscope_twilight:witchcraft_cake"
+  },
+  "show_notification": true
+}

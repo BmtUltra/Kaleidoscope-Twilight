@@ -11,10 +11,10 @@
       "item": "kaleidoscope_cookery:raw_noodles"
     },
     {
-      "item": "kaleidoscope_nether:ghast_tentacle"
+      "item": "kaleidoscope_twilight:raw_twilight_ghost_tentacle"
     },
     {
-      "item": "kaleidoscope_nether:ghast_tentacle"
+      "item": "kaleidoscope_twilight:raw_twilight_ghost_tentacle"
     },
     {
       "item": "twilightforest:carminite"
@@ -22,6 +22,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "kaleidoscope_twilight:twilight_ghost_pasta"
+    "item": "kaleidoscope_twilight:twilight_ghost_pasta"
   }
 }

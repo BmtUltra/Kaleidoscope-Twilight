@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "twilightforest:fiery_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "III"
+  ],
+  "result": {
+    "count": 1,
+    "item": "kaleidoscope_twilight:fiery_stockpot_lid"
+  }
+}

@@ -6,7 +6,7 @@
     { "item": "twilightforest:torchberries" }
   ],
   "result": {
-    "id": "kaleidoscope_twilight:torchberry_cookie",
+    "item": "kaleidoscope_twilight:torchberry_cookie",
     "count": 1
   }
 }

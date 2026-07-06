@@ -1,0 +1,27 @@
+{
+  "type": "kaleidoscope_cookery:stockpot",
+  "ingredients": [
+    {
+      "tag": "c:foods/raw_chicken"
+    },
+    {
+      "tag": "c:foods/raw_chicken"
+    },
+    {
+      "tag": "c:foods/raw_chicken"
+    },
+    {
+      "item": "twilightforest:mushgloom"
+    },
+    {
+      "item": "twilightforest:mushgloom"
+    },
+    {
+      "item": "twilightforest:mushgloom"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "kaleidoscope_twilight:twilight_chicken_mushroom_stew"
+  }
+}
