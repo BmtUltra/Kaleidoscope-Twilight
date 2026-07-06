@@ -17,6 +17,9 @@ public class KaleidoscopeTwilight {
         KTCreativeTabs.register(modEventBus);
         KTEffects.register(modEventBus);
         KTBlocks.register(modEventBus);
+        KTBlockEntities.register(modEventBus);
+        KTEnchantments.register(modEventBus);
+        KTFoodBites.init();
         KTTeacups.init();
         if (ModList.get().isLoaded("kaleidoscope_tavern")) {
             KTFluids.FLUID_TYPES.register(modEventBus);

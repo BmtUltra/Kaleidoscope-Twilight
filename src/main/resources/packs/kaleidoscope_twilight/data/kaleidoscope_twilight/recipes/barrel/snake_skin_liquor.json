@@ -1,0 +1,22 @@
+{
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_twilight:torchberry_juice",
+  "ingredients": [
+    {
+      "item": "twilightforest:naga_scale"
+    },
+    {
+      "item": "twilightforest:blackberry"
+    },
+    {
+      "item": "minecraft:blue_ice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:snake_skin_liquor"
+  }
+}

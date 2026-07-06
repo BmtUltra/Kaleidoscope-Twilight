@@ -125,15 +125,23 @@ repositories {
         name = "Modrinth"
         url = "https://api.modrinth.com/maven"
     }
+    maven {
+        url "https://maven.blamejared.com"
+        content { includeGroup "mezz.jei" }
+    }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
 //    implementation fg.deobf("curse.maven:the-twilight-forest-227639:4635921")
-    implementation fg.deobf("blank:kaleidoscopecookery:1.3.0-forge+mc1.20.1")
+//    implementation fg.deobf("blank:kaleidoscopecookery:1.4.1-forge+mc1.20.1")
+    implementation fg.deobf("maven.modrinth:kaleidoscope-cookery:1.4.1-forge+mc1.20.1")
     implementation fg.deobf("blank:twilightforest:1.20.1-4.3.2508-universal")
-    implementation fg.deobf("maven.modrinth:kaleidoscopetavern:1.0.1-forge+mc1.20.1")
+    implementation fg.deobf("maven.modrinth:kaleidoscopetavern:1.2.0-forge+mc1.20.1")
+    compileOnly fg.deobf("mezz.jei:jei-1.20.1-forge:15.20.0.105")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.20.1-forge:15.20.0.105")
+    implementation fg.deobf("curse.maven:jade-324717:6855440")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.7:processor'
 }

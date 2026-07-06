@@ -1,15 +1,21 @@
 package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
+import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.TeacupRegistry;
+import com.github.ysbbbbbb.kaleidoscopetavern.item.BottleBlockItem;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Objects;
 
 public class KTCreativeTabs {
     private static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -30,11 +36,9 @@ public class KTCreativeTabs {
                                 output.accept(KTItems.SALT_BAKED_NAGA_ITEM.get());
                                 output.accept(KTItems.TWILIGHT_GHOST_PASTA_ITEM.get());
                                 output.accept(KTItems.HYDRA_BOLOGNESE_ITEM.get());
-                                output.accept(KTItems.GLOW_MUSHROOM_POT_SOUP_ITEM.get());
                                 output.accept(KTItems.SAUCED_SNAKE_FEAST_ITEM.get());
                                 output.accept(KTItems.AURORA_ICE_CREAM_ITEM.get());
                                 output.accept(KTItems.MAGIC_BEAN_SOUP_ITEM.get());
-                                output.accept(KTItems.GLACIER_CAKE_ITEM.get());
                                 output.accept(KTItems.LOTUS_CHICKEN_ITEM.get());
                                 output.accept(KTItems.RAW_NAGA_MEAT_ITEM.get());
                                 output.accept(KTItems.COOKED_NAGA_MEAT_ITEM.get());
@@ -60,7 +64,12 @@ public class KTCreativeTabs {
                                 output.accept(KTItems.ICE_CRYSTAL_MOUSSE_ITEM.get());
                                 output.accept(KTItems.TWILIGHT_CHICKEN_MUSHROOM_STEW_ITEM.get());
                                 output.accept(KTItems.MAZE_STUFFED_PANCAKE_ITEM.get());
-                                output.accept(KTItems.WITCHCRAFT_CAKE_ITEM.get());
+                                FoodBiteRegistry.FOOD_DATA_MAP.forEach((resourceLocation, foodData) -> {
+                                    if (resourceLocation.getNamespace().equals(KaleidoscopeTwilight.MODID)) {
+                                        Item item = BuiltInRegistries.ITEM.get(resourceLocation);
+                                        output.accept(Objects.requireNonNull(item));
+                                    }
+                                });
                                 output.accept(KTItems.PHANTOM_FERN_STEW_ITEM.get());
                                 output.accept(KTItems.RAW_TWILIGHT_GHOST_TENTACLE_ITEM.get());
                                 output.accept(KTItems.COOKED_TWILIGHT_GHOST_TENTACLE_ITEM.get());
@@ -68,6 +77,11 @@ public class KTCreativeTabs {
                                 output.accept(KTItems.TWILIGHT_GHOST_SASHIMI_ITEM.get());
                                 output.accept(KTItems.RAINBOW_CANDY_ITEM.get());
                                 output.accept(KTItems.RAINBOW_BUN_ITEM.get());
+                                output.accept(KTItems.MAGIC_CRISPY_CORNER_ITEM.get());
+                                output.accept(KTItems.POCHI_PUDDING_ITEM.get());
+                                output.accept(KTItems.KITA_STUFFED_CRISP_ITEM.get());
+                                output.accept(KTItems.LIANGSHAN_ICE_CONE_ITEM.get());
+                                output.accept(KTItems.NAGA_GREEN_TONGUE_ITEM.get());
                                 output.accept(KTItems.TEA_DATE_ITEM.get());
                                 output.accept(TeacupRegistry.getItem(KTTeacups.NAGA_TEA));
                                 output.accept(TeacupRegistry.getItem(KTTeacups.WITCHCRAFT_TEA));
@@ -78,20 +92,20 @@ public class KTCreativeTabs {
                                 output.accept(TeacupRegistry.getItem(KTTeacups.ICE_CRYSTAL_TEA));
 
                                 if (ModList.get().isLoaded("kaleidoscope_tavern")) {
-                                    output.accept(KTBrewItems.CAVE_FIREFLY_BREW_ITEM.get());
-                                    output.accept(KTBrewItems.TWILIGHT_DEW_ITEM.get());
-                                    output.accept(KTBrewItems.WITCHCRAFT_SECRET_BREW_ITEM.get());
-                                    output.accept(KTBrewItems.SNAKE_SKIN_LIQUOR_ITEM.get());
-                                    output.accept(KTBrewItems.ICE_CRYSTAL_FROST_DEW_ITEM.get());
-                                    output.accept(KTBrewItems.MAGIC_BEAN_BREW_ITEM.get());
-                                    output.accept(KTBrewItems.EMBER_EYE_ITEM.get());
-                                    output.accept(KTBrewItems.DEER_SONG_ITEM.get());
-                                    output.accept(KTBrewItems.THORN_HEART_ITEM.get());
-                                    output.accept(KTBrewItems.DRUID_SECRET_BREW_ITEM.get());
-                                    output.accept(KTBrewItems.GLOWING_NIGHT_BIRD_SONG_ITEM.get());
-                                    output.accept(KTBrewItems.GLACIER_FROST_DEW_ITEM.get());
-                                    output.accept(KTBrewItems.GIANT_SPIRIT_ITEM.get());
-                                    output.accept(KTBrewItems.NATURE_SPIRIT_ITEM.get());
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.CAVE_FIREFLY_BREW_ITEM));
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.TWILIGHT_DEW_ITEM));
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.WITCHCRAFT_SECRET_BREW_ITEM));
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.SNAKE_SKIN_LIQUOR_ITEM));
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.ICE_CRYSTAL_FROST_DEW_ITEM));
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.MAGIC_BEAN_BREW_ITEM));
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.EMBER_EYE_ITEM));
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.DEER_SONG_ITEM));
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.THORN_HEART_ITEM));
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.DRUID_SECRET_BREW_ITEM));
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.GLOWING_NIGHT_BIRD_SONG_ITEM));
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.GLACIER_FROST_DEW_ITEM));
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.GIANT_SPIRIT_ITEM));
+                                    output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.NATURE_SPIRIT_ITEM));
                                 }
 
                                 output.accept(KTItems.BLAZING_IRON_KITCHEN_KNIFE.get());
@@ -102,8 +116,12 @@ public class KTCreativeTabs {
                                 if (ModList.get().isLoaded("kaleidoscope_tavern")) {
                                     output.accept(KTBrewItems.TORCHBERRY_BUCKET.get());
                                 }
+
                                 output.accept(KTItems.TWILIGHT_STOVE.get());
                                 output.accept(KTItems.KEEPING_POUCH_ITEM.get());
+                                output.accept(KTItems.FIERY_POT.get());
+                                output.accept(KTItems.FIERY_STOCKPOT.get());
+                                output.accept(KTItems.FIERY_STOCKPOT_LID.get());
                             })
                             .build());
 

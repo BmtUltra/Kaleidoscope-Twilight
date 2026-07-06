@@ -1,0 +1,8 @@
+{
+  "parent": "kaleidoscope_cookery:block/stockpot_chains",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "2": "kaleidoscope_twilight:block/fiery_stockpot",
+    "particle": "kaleidoscope_twilight:block/fiery_stockpot"
+  }
+}

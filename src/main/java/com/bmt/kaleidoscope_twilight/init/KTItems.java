@@ -36,6 +36,18 @@ public class KTItems {
     public static final RegistryObject<Item> TWILIGHT_STOVE = ITEMS.register("twilight_stove",
             () -> new BlockItem(KTBlocks.TWILIGHT_STOVE.get(), new Item.Properties()));
 
+    // 炽铁炒锅
+    public static final RegistryObject<Item> FIERY_POT = ITEMS.register("fiery_pot",
+            () -> new BlockItem(KTBlocks.FIERY_POT.get(), new Item.Properties()));
+
+    // 炽铁汤锅
+    public static final RegistryObject<Item> FIERY_STOCKPOT = ITEMS.register("fiery_stockpot",
+            () -> new BlockItem(KTBlocks.FIERY_STOCKPOT.get(), new Item.Properties()));
+
+    // 炽铁汤锅盖
+    public static final RegistryObject<Item> FIERY_STOCKPOT_LID = ITEMS.register("fiery_stockpot_lid",
+            FieryStockpotLidItem::new);
+
     // 暮色浆果沙拉
     public static final RegistryObject<BowlFoodOnlyItem> TWILIGHT_BERRY_SALAD_ITEM = ITEMS.register("twilight_berry_salad",
             () -> new BowlFoodOnlyItem(KTFoods.TWILIGHT_BERRY_SALAD));
@@ -72,10 +84,6 @@ public class KTItems {
     public static final RegistryObject<BowlFoodOnlyItem> HYDRA_BOLOGNESE_ITEM = ITEMS.register("hydra_bolognese",
             () -> new BowlFoodOnlyItem(KTFoods.HYDRA_BOLOGNESE));
 
-    // 荧光蘑菇瓦罐汤
-    public static final RegistryObject<BowlFoodOnlyItem> GLOW_MUSHROOM_POT_SOUP_ITEM = ITEMS.register("glow_mushroom_pot_soup",
-            () -> new BowlFoodOnlyItem(KTFoods.GLOW_MUSHROOM_POT_SOUP));
-
     // 浇汁蛇宴
     public static final RegistryObject<FoodWithEffectsItem> SAUCED_SNAKE_FEAST_ITEM = ITEMS.register("sauced_snake_feast",
             () -> new FoodWithEffectsItem(KTFoods.SAUCED_SNAKE_FEAST));
@@ -87,10 +95,6 @@ public class KTItems {
     // 魔豆汤
     public static final RegistryObject<BowlFoodOnlyItem> MAGIC_BEAN_SOUP_ITEM = ITEMS.register("magic_bean_soup",
             () -> new BowlFoodOnlyItem(KTFoods.MAGIC_BEAN_SOUP));
-
-    // 冰川蛋糕
-    public static final RegistryObject<FoodWithEffectsItem> GLACIER_CAKE_ITEM = ITEMS.register("glacier_cake",
-            () -> new FoodWithEffectsItem(KTFoods.GLACIER_CAKE));
 
     // 荷花鸡
     public static final RegistryObject<FoodWithEffectsItem> LOTUS_CHICKEN_ITEM = ITEMS.register("lotus_chicken",
@@ -172,10 +176,6 @@ public class KTItems {
     public static final RegistryObject<FoodWithEffectsItem> MAZE_STUFFED_PANCAKE_ITEM = ITEMS.register("maze_stuffed_pancake",
             () -> new FoodWithEffectsItem(KTFoods.MAZE_STUFFED_PANCAKE));
 
-    // 巫术蛋糕
-    public static final RegistryObject<FoodWithEffectsItem> WITCHCRAFT_CAKE_ITEM = ITEMS.register("witchcraft_cake",
-            () -> new FoodWithEffectsItem(KTFoods.WITCHCRAFT_CAKE));
-
     // 幻影蕨菜煲
     public static final RegistryObject<BowlFoodOnlyItem> PHANTOM_FERN_STEW_ITEM = ITEMS.register("phantom_fern_stew",
             () -> new BowlFoodOnlyItem(KTFoods.PHANTOM_FERN_STEW));
@@ -243,6 +243,26 @@ public class KTItems {
     // 茶枣子
     public static final RegistryObject<FoodWithEffectsItem> TEA_DATE_ITEM = ITEMS.register("tea_date",
             () -> new FoodWithEffectsItem(KTFoods.TEA_DATE));
+
+    // 娜迦绿舌头
+    public static final RegistryObject<FoodWithEffectsItem> NAGA_GREEN_TONGUE_ITEM = ITEMS.register("naga_green_tongue",
+            () -> new FoodWithEffectsItem(KTFoods.NAGA_GREEN_TONGUE));
+
+    // 波奇布丁
+    public static final RegistryObject<FoodWithEffectsItem> POCHI_PUDDING_ITEM = ITEMS.register("pochi_pudding",
+            () -> new FoodWithEffectsItem(KTFoods.POCHI_PUDDING));
+
+    // 妙脆角
+    public static final RegistryObject<FoodWithEffectsItem> MAGIC_CRISPY_CORNER_ITEM = ITEMS.register("magic_crispy_corner",
+            () -> new FoodWithEffectsItem(KTFoods.MAGIC_CRISPY_CORNER));
+
+    // 喜多夹心脆
+    public static final RegistryObject<FoodWithEffectsItem> KITA_STUFFED_CRISP_ITEM = ITEMS.register("kita_stuffed_crisp",
+            () -> new FoodWithEffectsItem(KTFoods.KITA_STUFFED_CRISP));
+
+    // 凉山甜筒
+    public static final RegistryObject<FoodWithEffectsItem> LIANGSHAN_ICE_CONE_ITEM = ITEMS.register("liangshan_ice_cone",
+            () -> new FoodWithEffectsItem(KTFoods.LIANGSHAN_ICE_CONE));
 
     // 炽铁菜刀
     public static final RegistryObject<BlazingIronKitchenKnifeItem> BLAZING_IRON_KITCHEN_KNIFE = ITEMS.register("blazing_iron_kitchen_knife",

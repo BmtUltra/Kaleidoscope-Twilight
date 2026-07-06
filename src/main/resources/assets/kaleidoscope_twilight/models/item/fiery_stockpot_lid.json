@@ -1,0 +1,16 @@
+{
+  "overrides": [
+    {
+      "model": "kaleidoscope_twilight:item/fiery_stockpot_lid_normal",
+      "predicate": {
+        "kaleidoscope_twilight:using": 0.0
+      }
+    },
+    {
+      "model": "kaleidoscope_twilight:item/fiery_stockpot_lid_using",
+      "predicate": {
+        "kaleidoscope_twilight:using": 1.0
+      }
+    }
+  ]
+}

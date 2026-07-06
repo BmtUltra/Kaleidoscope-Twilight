@@ -3,7 +3,7 @@
   "effects": [
     [
       {
-        "effect": "minecraft:glowing",
+        "effect": "minecraft:nausea",
         "duration": 30,
         "amplifier": 0,
         "probability": 1.0
@@ -11,78 +11,64 @@
     ],
     [
       {
-        "effect": "minecraft:glowing",
-        "duration": 60,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 45,
         "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "effect": "minecraft:glowing",
-        "duration": 90,
-        "amplifier": 0,
-        "probability": 1.0
-      },
-      {
-        "effect": "minecraft:night_vision",
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
         "duration": 30,
         "amplifier": 0,
-        "probability": 0.5
+        "probability": 1.0
+      },
+      {
+        "effect": "kaleidoscope_twilight:mushroom_perception",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
       }
     ],
     [
       {
-        "effect": "minecraft:glowing",
-        "duration": 120,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
         "amplifier": 0,
         "probability": 1.0
       },
       {
-        "effect": "minecraft:night_vision",
+        "effect": "kaleidoscope_twilight:mushroom_perception",
         "duration": 60,
         "amplifier": 0,
-        "probability": 0.7
+        "probability": 1.0
       }
     ],
     [
       {
-        "effect": "minecraft:glowing",
-        "duration": 180,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 20,
         "amplifier": 0,
         "probability": 1.0
       },
       {
-        "effect": "minecraft:night_vision",
-        "duration": 90,
-        "amplifier": 0,
-        "probability": 0.8
-      }
-    ],
-    [
-      {
-        "effect": "minecraft:glowing",
-        "duration": 240,
-        "amplifier": 0,
-        "probability": 1.0
-      },
-      {
-        "effect": "minecraft:night_vision",
-        "duration": 120,
-        "amplifier": 0,
-        "probability": 0.9
-      }
-    ],
-    [
-      {
-        "effect": "minecraft:glowing",
+        "effect": "kaleidoscope_twilight:mushroom_perception",
         "duration": 300,
         "amplifier": 0,
         "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 10,
+        "amplifier": 0,
+        "probability": 1.0
       },
       {
-        "effect": "minecraft:night_vision",
-        "duration": 180,
+        "effect": "kaleidoscope_twilight:mushroom_perception",
+        "duration": 2160,
         "amplifier": 0,
         "probability": 1.0
       }
