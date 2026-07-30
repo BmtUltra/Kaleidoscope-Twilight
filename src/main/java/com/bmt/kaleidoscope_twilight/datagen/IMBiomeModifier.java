@@ -15,7 +15,7 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import twilightforest.data.tags.BiomeTagGenerator;
 
 public class IMBiomeModifier {
-    public static final ResourceKey<BiomeModifier> TWILIGHT_FERN_CROP = create("twilight_fern_crop");
+    public static final ResourceKey<BiomeModifier> TWILIGHT_FERN_CROP = create();
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         HolderGetter<Biome> biomes = context.lookup(Registries.BIOME);
@@ -29,10 +29,10 @@ public class IMBiomeModifier {
         );
     }
 
-    private static ResourceKey<BiomeModifier> create(String id) {
+    private static ResourceKey<BiomeModifier> create() {
         return ResourceKey.create(
                 NeoForgeRegistries.Keys.BIOME_MODIFIERS,
-                KaleidoscopeTwilight.id(id)
+                KaleidoscopeTwilight.id("twilight_fern_crop")
         );
     }
 }

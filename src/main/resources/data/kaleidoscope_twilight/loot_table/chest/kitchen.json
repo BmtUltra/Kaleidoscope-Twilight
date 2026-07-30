@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "kaleidoscope_cookery:chest/village_hide_chest",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "twilightforest:chests/tower_foyer",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "twilightforest:chests/tower_room",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "kaleidoscope_twilight:oil_blade": 1
+              }
+            }
+          ],
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

@@ -144,6 +144,8 @@ dependencies {
     runtimeOnly "maven.modrinth:kaleidoscopetavern:1.2.0-neoforge+mc1.21.1"
     compileOnly "maven.modrinth:kaleidoscope-doll:1.4.1-neoforge+mc1.21.1"
     runtimeOnly "maven.modrinth:kaleidoscope-doll:1.4.1-neoforge+mc1.21.1"
+    compileOnly "maven.modrinth:kaleidoscopedimensions-wine:1.5.3-mc1.21.1-neoforge"
+    runtimeOnly "maven.modrinth:kaleidoscopedimensions-wine:1.5.3-mc1.21.1-neoforge"
 //    implementation "maven.modrinth:kubejs:2101.7.2-build.348"
 //    implementation "curse.maven:rhino-416294:7104526"
 //    compileOnly "curse.maven:kaleidoscope-dimensions-wine-1506363:7934166"

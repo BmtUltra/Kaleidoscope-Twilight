@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 978293456,
+    "spacing": 64,
+    "separation": 10,
+    "spread_type": "triangular"
+  },
+  "structures": [
+    {
+      "structure": "kaleidoscope_twilight:kitchen",
+      "weight": 1
+    }
+  ]
+}

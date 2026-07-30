@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#twilightforest:valid_naga_courtyard_biomes",
+    "#twilightforest:valid_lich_tower_biomes"
+  ]
+}

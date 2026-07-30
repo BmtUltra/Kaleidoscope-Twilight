@@ -157,7 +157,7 @@
   "effect.kaleidoscope_twilight.fire_breath": "火焰吐息",
   "effect.kaleidoscope_twilight.fire_breath.description": "攻击时喷射火球",
   "effect.kaleidoscope_twilight.erudition": "博学之识",
-  "effect.kaleidoscope_twilight.erudition.description": "不会消耗经验值",
+  "effect.kaleidoscope_twilight.erudition.description": "持续获得经验值",
   "effect.kaleidoscope_twilight.giant_blessing": "巨人祝福",
   "effect.kaleidoscope_twilight.giant_blessing.description": "获得属性提升",
 
@@ -169,6 +169,8 @@
   "tooltip.kaleidoscope_twilight.fiery_stockpot": "无需热源，盖上锅盖后快速烹饪",
   "item.kaleidoscope_twilight.fiery_stockpot_lid": "炽铁汤锅盖",
   "tooltip.kaleidoscope_twilight.fiery_stockpot_lid": "仅限炽铁汤锅使用",
+
+  "entity.kaleidoscope_twilight.umbral_sunflower": "向日葵",
 
   "enchantment.kaleidoscope_twilight.oil_blade": "油刃有余",
 
