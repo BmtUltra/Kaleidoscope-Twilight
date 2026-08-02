@@ -33,18 +33,23 @@ public abstract class StockpotBlockEntityMixin {
         }
     }
 
-    @Inject(method = "tick", at = @At(value = "INVOKE", target = "Lcom/github/ysbbbbbb/kaleidoscopecookery/blockentity/kitchen/StockpotBlockEntity;setRecipe(Lnet/minecraft/world/level/Level;)V", shift = At.Shift.AFTER))
+    @Inject(method = "tick", at = @At(value = "INVOKE",
+            target = "Lcom/github/ysbbbbbb/kaleidoscopecookery/blockentity/kitchen/StockpotBlockEntity;setRecipe(Lnet/minecraft/world/level/Level;)V",
+            shift = At.Shift.AFTER))
     private void onTickAfterSetRecipe(Level level, CallbackInfo ci) {
         StockpotBlockEntity self = (StockpotBlockEntity) (Object) this;
         BlockPos pos = self.getBlockPos();
         BlockState state = level.getBlockState(pos);
-        
+
         if (!(state.getBlock() instanceof FieryStockPotBlock)) {
             return;
         }
 
         if (self instanceof FieryStockpotBlockEntity) {
-            ((StockpotBlockEntityAccessor) self).kaleidoscope_twilight$setCurrentTick(FieryStockpotBlockEntity.getCookingTime());
+            StockpotBlockEntityAccessor accessor = (StockpotBlockEntityAccessor) self;
+            int originalTime = accessor.kaleidoscope_twilight$getCurrentTick();
+            int newTime = FieryStockpotBlockEntity.getCookingTime(originalTime);
+            accessor.kaleidoscope_twilight$setCurrentTick(newTime);
         }
     }
 

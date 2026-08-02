@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_twilight.block.crops;
+package com.bmt.kaleidoscope_twilight.block.crop;
 
 import com.bmt.kaleidoscope_twilight.init.KTItems;
 import net.minecraft.world.level.ItemLike;

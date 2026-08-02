@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kaleidoscope_twilight:umbral_sunflower_trophy"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "kaleidoscope_twilight:entities/umbral_sunflower"
+}

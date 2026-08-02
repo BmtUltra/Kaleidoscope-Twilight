@@ -7,5 +7,8 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 @Mixin(StockpotBlockEntity.class)
 public interface StockpotBlockEntityAccessor {
     @Accessor("currentTick")
+    int kaleidoscope_twilight$getCurrentTick();
+
+    @Accessor("currentTick")
     void kaleidoscope_twilight$setCurrentTick(int currentTick);
 }

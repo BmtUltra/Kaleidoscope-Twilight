@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_twilight.client.render;
 
 import com.bmt.kaleidoscope_twilight.init.KTEffects;
-import com.bmt.kaleidoscope_twilight.util.TagUtil;
+import com.bmt.kaleidoscope_twilight.util.TagUtils;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.Minecraft;
@@ -17,7 +17,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
 
 @EventBusSubscriber(modid = "kaleidoscope_twilight", value = Dist.CLIENT)
-public class MushroomPerceptionRenderer {
+public class MushroomPerceptionRender {
 
     @SubscribeEvent
     public static void onRenderLevelStage(RenderLevelStageEvent event) {
@@ -57,7 +57,7 @@ public class MushroomPerceptionRenderer {
                     BlockPos pos = playerPos.offset(x, y, z);
                     BlockState blockState = mc.level.getBlockState(pos);
 
-                    if (blockState.is(TagUtil.Blocks.CHEST_LIKE)) {
+                    if (blockState.is(TagUtils.Blocks.CHEST_LIKE)) {
                         AABB aabb = new AABB(pos).inflate(0.002);
                         LevelRenderer.renderLineBox(poseStack, vertexConsumer, aabb, 1.0f, 1.0f, 1.0f, 0.8f);
                     }
