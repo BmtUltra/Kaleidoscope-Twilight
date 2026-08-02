@@ -2,11 +2,8 @@ package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 import com.bmt.kaleidoscope_twilight.item.*;
-import com.bmt.kaleidoscope_twilight.util.TagUtil;
-import com.bmt.kaleidoscope_twilight.util.tier.BlazingIronTier;
-import com.bmt.kaleidoscope_twilight.util.tier.IronwoodTier;
-import com.bmt.kaleidoscope_twilight.util.tier.KnightTier;
-import com.bmt.kaleidoscope_twilight.util.tier.SteelleafTier;
+import com.bmt.kaleidoscope_twilight.util.ItemTiers;
+import com.bmt.kaleidoscope_twilight.util.TagUtils;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.BowlFoodOnlyItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.FoodWithEffectsItem;
 
@@ -15,6 +12,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -27,14 +25,8 @@ public class KTItems {
     private static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(Registries.ITEM, KaleidoscopeTwilight.MODID);
 
-    public static final BlazingIronTier BLAZING_IRON_TIER = new BlazingIronTier();
-    public static final KnightTier KNIGHT_TIER = new KnightTier();
-    public static final IronwoodTier IRONWOOD_TIER = new IronwoodTier();
-    public static final SteelleafTier STEELLEAF_TIER = new SteelleafTier();
-
-    // 暮色炉灶
-    public static final DeferredHolder<Item, Item> TWILIGHT_STOVE = ITEMS.register("twilight_stove",
-            () -> new BlockItem(KTBlocks.TWILIGHT_STOVE.get(), new Item.Properties()));
+    public static final DeferredHolder<Item, UmbralSunflowerTrophyItem> UMBRAL_SUNFLOWER_TROPHY = ITEMS.register("umbral_sunflower_trophy", () -> new UmbralSunflowerTrophyItem(KTBlocks.UMBRAL_SUNFLOWER_TROPHY.get(), KTBlocks.UMBRAL_SUNFLOWER_WALL_TROPHY.get(), new Item.Properties().rarity(Rarity.valueOf("TWILIGHTFOREST_TWILIGHT"))));
+    public static final DeferredHolder<Item, Item> TWILIGHT_STOVE = ITEMS.register("twilight_stove", () -> new BlockItem(KTBlocks.TWILIGHT_STOVE.get(), new Item.Properties()));
 
     // 暮色浆果沙拉
     public static final DeferredHolder<Item, BowlFoodOnlyItem> TWILIGHT_BERRY_SALAD_ITEM = ITEMS.register("twilight_berry_salad",
@@ -201,7 +193,7 @@ public class KTItems {
                     BlockPos pos = context.getClickedPos();
                     BlockState state = level.getBlockState(pos);
 
-                    if (state.is(TagUtil.Blocks.FERN_PLANTABLE)) {
+                    if (state.is(TagUtils.Blocks.FERN_PLANTABLE)) {
                         level.setBlock(pos.above(), KTBlocks.TWILIGHT_FERN_CROP.get().defaultBlockState(), 3);
                         if (context.getPlayer() != null && !context.getPlayer().isCreative()) {
                             context.getItemInHand().shrink(1);
@@ -266,27 +258,27 @@ public class KTItems {
 
     // 炽铁菜刀
     public static final DeferredHolder<Item, BlazingIronKitchenKnifeItem> BLAZING_IRON_KITCHEN_KNIFE = ITEMS.register("blazing_iron_kitchen_knife",
-            () -> new BlazingIronKitchenKnifeItem(BLAZING_IRON_TIER,
-                    new Item.Properties()
-                            .attributes(BlazingIronKitchenKnifeItem.createAttributes(BLAZING_IRON_TIER, 3.0F, -2.0F))));
+                    () -> new BlazingIronKitchenKnifeItem(ItemTiers.BLAZING_IRON,
+                            new Item.Properties()
+                                    .attributes(BlazingIronKitchenKnifeItem.createAttributes(ItemTiers.BLAZING_IRON, 3.0F, -2.0F))));
 
     // 骑士菜刀
     public static final DeferredHolder<Item, KnightKitchenKnifeItem> KNIGHT_KITCHEN_KNIFE = ITEMS.register("knight_kitchen_knife",
-            () -> new KnightKitchenKnifeItem(KNIGHT_TIER,
+            () -> new KnightKitchenKnifeItem(ItemTiers.KNIGHT,
                     new Item.Properties()
-                            .attributes(KnightKitchenKnifeItem.createAttributes(KNIGHT_TIER, 3.0F, -2.0F))));
+                            .attributes(KnightKitchenKnifeItem.createAttributes(ItemTiers.KNIGHT, 3.0F, -2.0F))));
 
     // 铁木菜刀
     public static final DeferredHolder<Item, IronwoodKitchenKnifeItem> IRONWOOD_KITCHEN_KNIFE = ITEMS.register("ironwood_kitchen_knife",
-            () -> new IronwoodKitchenKnifeItem(IRONWOOD_TIER,
+            () -> new IronwoodKitchenKnifeItem(ItemTiers.IRONWOOD,
                     new Item.Properties()
-                            .attributes(IronwoodKitchenKnifeItem.createAttributes(IRONWOOD_TIER, 3.0F, -2.0F))));
+                            .attributes(IronwoodKitchenKnifeItem.createAttributes(ItemTiers.IRONWOOD, 3.0F, -2.0F))));
 
     // 钢叶菜刀
     public static final DeferredHolder<Item, SteelleafKitchenKnifeItem> STEELLEAF_KITCHEN_KNIFE = ITEMS.register("steelleaf_kitchen_knife",
-            () -> new SteelleafKitchenKnifeItem(STEELLEAF_TIER,
+            () -> new SteelleafKitchenKnifeItem(ItemTiers.STEELLEAF,
                     new Item.Properties()
-                            .attributes(SteelleafKitchenKnifeItem.createAttributes(STEELLEAF_TIER, 3.0F, -2.0F))));
+                            .attributes(SteelleafKitchenKnifeItem.createAttributes(ItemTiers.STEELLEAF, 3.0F, -2.0F))));
 
     // 保管符袋
     public static final DeferredHolder<Item, KeepingPouchItem> KEEPING_POUCH_ITEM = ITEMS.register("keeping_pouch",

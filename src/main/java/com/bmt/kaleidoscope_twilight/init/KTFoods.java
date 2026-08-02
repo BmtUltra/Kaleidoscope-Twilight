@@ -362,25 +362,25 @@ public class KTFoods {
     public static final FoodProperties RAINBOW_BUN = new FoodProperties.Builder()
             .nutrition(8)
             .saturationModifier(0.7f)
-            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.JUMP, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.SATURATION, 1, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.LUCK, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.CONDUIT_POWER, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 300 * 20, 0), 1 / 26f)
-            .effect(() -> new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 300 * 20, 0), 1 / 26f)
+            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.JUMP, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.SATURATION, 1, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.LUCK, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.CONDUIT_POWER, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 300 * 20, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 300 * 20, 0), 1)
             .alwaysEdible().build();
 
     // 茶枣子
@@ -394,8 +394,8 @@ public class KTFoods {
     public static final FoodProperties NAGA_GREEN_TONGUE = new FoodProperties.Builder()
             .nutrition(6)
             .saturationModifier(0.5f)
-            .effect(() -> new MobEffectInstance(MobEffects.POISON, 100, 0), 0.3f) // 30%几率中毒
-            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 600 * 20, 0), 1.0f) // 水下呼吸10分钟
+            .effect(() -> new MobEffectInstance(MobEffects.POISON, 100, 0), 0.3f)
+            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 600 * 20, 0), 1.0f)
             .alwaysEdible()
             .build();
 
@@ -420,8 +420,8 @@ public class KTFoods {
     public static final FoodProperties KITA_STUFFED_CRISP = new FoodProperties.Builder()
             .nutrition(6)
             .saturationModifier(0.5f)
-            .effect(() -> new MobEffectInstance(MobEffects.LUCK, 600 * 20, 0), 1.0f) // 幸运10分钟
-            .effect(() -> new MobEffectInstance(MobEffects.SATURATION, 60 * 20, 0), 1.0f) // 饱食度1分钟
+            .effect(() -> new MobEffectInstance(MobEffects.LUCK, 600 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.SATURATION, 60 * 20, 0), 1.0f)
             .alwaysEdible()
             .build();
 
@@ -429,8 +429,8 @@ public class KTFoods {
     public static final FoodProperties LIANGSHAN_ICE_CONE = new FoodProperties.Builder()
             .nutrition(5)
             .saturationModifier(0.4f)
-            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300 * 20, 0), 1.0f) // 防火5分钟
-            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 180 * 20, 0), 1.0f) // 速度3分钟
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 180 * 20, 0), 1.0f)
             .alwaysEdible()
             .build();
 }

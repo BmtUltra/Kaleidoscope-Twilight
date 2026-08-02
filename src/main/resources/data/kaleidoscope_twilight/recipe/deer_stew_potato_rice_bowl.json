@@ -1,0 +1,11 @@
+{
+  "type": "kaleidoscope_cookery:rice_bowl",
+  "category": "misc",
+  "ingredient": {
+    "item": "kaleidoscope_twilight:deer_stew_potato"
+  },
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_twilight:deer_stew_potato_rice_bowl"
+  }
+}

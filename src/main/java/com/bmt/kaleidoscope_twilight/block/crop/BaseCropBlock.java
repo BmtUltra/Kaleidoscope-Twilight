@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_twilight.block.crops;
+package com.bmt.kaleidoscope_twilight.block.crop;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.init.ModItems;
 import net.minecraft.core.BlockPos;

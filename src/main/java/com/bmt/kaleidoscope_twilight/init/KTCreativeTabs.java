@@ -91,7 +91,6 @@ public class KTCreativeTabs {
                         output.accept(TeacupRegistry.getItem(KTTeacups.PHANTOM_TEA));
                         output.accept(TeacupRegistry.getItem(KTTeacups.HOT_TEARS_TEA));
                         output.accept(TeacupRegistry.getItem(KTTeacups.ICE_CRYSTAL_TEA));
-
                         if (ModList.get().isLoaded("kaleidoscope_tavern")) {
                             output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.CAVE_FIREFLY_BREW_ITEM));
                             output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.TWILIGHT_DEW_ITEM));
@@ -108,21 +107,19 @@ public class KTCreativeTabs {
                             output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.GIANT_SPIRIT_ITEM));
                             output.accept(BottleBlockItem.getMaxLevelDrink(KTBrewItems.NATURE_SPIRIT_ITEM));
                         }
-
                         output.accept(KTItems.BLAZING_IRON_KITCHEN_KNIFE.get());
                         output.accept(KTItems.KNIGHT_KITCHEN_KNIFE.get());
                         output.accept(KTItems.IRONWOOD_KITCHEN_KNIFE.get());
                         output.accept(KTItems.STEELLEAF_KITCHEN_KNIFE.get());
-
                         if (ModList.get().isLoaded("kaleidoscope_tavern")) {
                             output.accept(KTBrewItems.TORCHBERRY_BUCKET.get());
                         }
-
                         output.accept(KTItems.TWILIGHT_STOVE.get());
                         output.accept(KTItems.KEEPING_POUCH_ITEM.get());
                         output.accept(KTItems.FIERY_POT.get());
                         output.accept(KTItems.FIERY_STOCKPOT.get());
                         output.accept(KTItems.FIERY_STOCKPOT_LID.get());
+                        output.accept(KTItems.UMBRAL_SUNFLOWER_TROPHY.get());
                     })
                     .build());
 

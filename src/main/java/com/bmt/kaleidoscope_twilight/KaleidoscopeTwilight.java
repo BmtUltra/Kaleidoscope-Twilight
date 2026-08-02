@@ -1,5 +1,6 @@
 package com.bmt.kaleidoscope_twilight;
 
+import com.bmt.kaleidoscope_twilight.entity.ThrownSwordEntity;
 import com.bmt.kaleidoscope_twilight.entity.UmbralSunflower;
 import com.bmt.kaleidoscope_twilight.init.*;
 
@@ -42,5 +43,6 @@ public class KaleidoscopeTwilight {
     }
     private static void registerEntityAttributes(EntityAttributeCreationEvent event) {
         event.put(KTEntities.UMBRAL_SUNFLOWER.get(), UmbralSunflower.createAttributes().build());
+        event.put(KTEntities.THROWN_SWORD.get(), ThrownSwordEntity.createAttributes().build());
     }
 }
