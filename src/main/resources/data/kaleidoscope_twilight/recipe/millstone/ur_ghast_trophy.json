@@ -1,0 +1,10 @@
+{
+  "type": "kaleidoscope_cookery:millstone",
+  "ingredient": {
+    "item": "twilightforest:ur_ghast_trophy"
+  },
+  "result": {
+    "count": 3,
+    "id": "twilightforest:fiery_tears"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "kaleidoscope_cookery:millstone",
+  "ingredient": {
+    "item": "twilightforest:hydra_trophy"
+  },
+  "result": {
+    "count": 5,
+    "id": "twilightforest:hydra_chop"
+  }
+}

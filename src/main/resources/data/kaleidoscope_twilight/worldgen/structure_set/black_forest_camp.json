@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 978293457,
+    "spacing": 64,
+    "separation": 10,
+    "spread_type": "triangular"
+  },
+  "structures": [
+    {
+      "structure": "kaleidoscope_twilight:black_forest_camp",
+      "weight": 1
+    }
+  ]
+}

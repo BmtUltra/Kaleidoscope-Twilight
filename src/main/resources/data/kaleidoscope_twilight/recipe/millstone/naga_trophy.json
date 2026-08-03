@@ -1,0 +1,10 @@
+{
+  "type": "kaleidoscope_cookery:millstone",
+  "ingredient": {
+    "item": "twilightforest:naga_trophy"
+  },
+  "result": {
+    "count": 3,
+    "id": "twilightforest:naga_scale"
+  }
+}

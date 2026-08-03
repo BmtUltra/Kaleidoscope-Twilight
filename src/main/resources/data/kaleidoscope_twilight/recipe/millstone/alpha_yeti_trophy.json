@@ -1,0 +1,10 @@
+{
+  "type": "kaleidoscope_cookery:millstone",
+  "ingredient": {
+    "item": "twilightforest:alpha_yeti_trophy"
+  },
+  "result": {
+    "count": 4,
+    "id": "twilightforest:alpha_yeti_fur"
+  }
+}

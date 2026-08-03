@@ -2,7 +2,7 @@ package com.bmt.kaleidoscope_twilight.client.model;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 import com.bmt.kaleidoscope_twilight.client.animation.*;
-import com.bmt.kaleidoscope_twilight.entity.UmbralSunflower;
+import com.bmt.kaleidoscope_twilight.entity.boss.UmbralSunflower;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.HierarchicalModel;

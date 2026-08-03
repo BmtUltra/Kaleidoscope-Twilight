@@ -17,7 +17,6 @@
     "accessor.FoodBiteBlockAccessor",
     "accessor.InventoryAccessor",
     "accessor.ItemCombinerMenuAccessor",
-    "accessor.LivingEntityAccessor",
     "accessor.PotBlockEntityAccessor",
     "accessor.StockpotBlockEntityAccessor"
   ],

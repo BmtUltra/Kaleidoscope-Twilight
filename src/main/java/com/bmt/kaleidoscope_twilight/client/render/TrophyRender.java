@@ -14,10 +14,10 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.block.state.BlockState;
 import twilightforest.enums.BossVariant;
 
-public class TrophyRenderer implements BlockEntityRenderer<UmbralSunflowerTrophyBlockEntity> {
+public class TrophyRender implements BlockEntityRenderer<UmbralSunflowerTrophyBlockEntity> {
     private final UmbralSunflowerTrophyModel model;
 
-    public TrophyRenderer(BlockEntityRendererProvider.Context context) {
+    public TrophyRender(BlockEntityRendererProvider.Context context) {
         this.model = new UmbralSunflowerTrophyModel(context.bakeLayer(UmbralSunflowerModel.LAYER_LOCATION));
     }
 

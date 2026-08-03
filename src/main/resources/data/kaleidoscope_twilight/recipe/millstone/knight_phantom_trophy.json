@@ -1,0 +1,10 @@
+{
+  "type": "kaleidoscope_cookery:millstone",
+  "ingredient": {
+    "item": "twilightforest:knight_phantom_trophy"
+  },
+  "result": {
+    "count": 4,
+    "id": "kaleidoscope_twilight:evil_soul"
+  }
+}

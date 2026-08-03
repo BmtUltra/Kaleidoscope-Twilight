@@ -2,7 +2,7 @@ package com.bmt.kaleidoscope_twilight.client.animation;
 
 import com.bmt.kaleidoscope_twilight.api.IAnimation;
 import com.bmt.kaleidoscope_twilight.client.model.UmbralSunflowerModel;
-import com.bmt.kaleidoscope_twilight.entity.UmbralSunflower;
+import com.bmt.kaleidoscope_twilight.entity.boss.UmbralSunflower;
 
 public class UmbralSunflowerAnimations {
     private static final IAnimation STANDBY = new StandbyAnimation();

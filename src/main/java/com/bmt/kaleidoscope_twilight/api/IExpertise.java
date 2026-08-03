@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_twilight.api;
 
-import com.bmt.kaleidoscope_twilight.entity.UmbralSunflower;
+import com.bmt.kaleidoscope_twilight.entity.boss.UmbralSunflower;
 import net.minecraft.nbt.CompoundTag;
 
 public interface IExpertise {
