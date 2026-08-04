@@ -30,11 +30,8 @@ public class KTCreativeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(KTItems.TWILIGHT_BERRY_SALAD_ITEM.get());
                         output.accept(KTItems.TWILIGHT_CATERPILLAR_ITEM.get());
-                        output.accept(KTItems.DEER_STEW_POTATO_ITEM.get());
                         output.accept(KTItems.DEER_STEW_POTATO_RICE_BOWL_ITEM.get());
                         output.accept(KTItems.MINOTAUR_ROLL_ITEM.get());
-                        output.accept(KTItems.TWILIGHT_WELLINGTON_STEAK_ITEM.get());
-                        output.accept(KTItems.SALT_BAKED_NAGA_ITEM.get());
                         output.accept(KTItems.TWILIGHT_GHOST_PASTA_ITEM.get());
                         output.accept(KTItems.HYDRA_BOLOGNESE_ITEM.get());
                         output.accept(KTItems.SAUCED_SNAKE_FEAST_ITEM.get());

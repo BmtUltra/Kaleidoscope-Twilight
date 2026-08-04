@@ -24,14 +24,11 @@ public class KTBlocks {
 
     public static final DeferredHolder<Block, UmbralSunflowerTrophyBlock> UMBRAL_SUNFLOWER_TROPHY =
             BLOCKS.register("umbral_sunflower_trophy", () ->
-                    new UmbralSunflowerTrophyBlock(BlockBehaviour.Properties.of().instabreak(),
-                            KTBlockEntities.UMBRAL_SUNFLOWER_TROPHY));
+                    new UmbralSunflowerTrophyBlock(BlockBehaviour.Properties.of().instabreak()));
 
     public static final DeferredHolder<Block, WallUmbralSunflowerTrophyBlock> UMBRAL_SUNFLOWER_WALL_TROPHY =
             BLOCKS.register("umbral_sunflower_wall_trophy",
-                    () -> new WallUmbralSunflowerTrophyBlock(
-                            BlockBehaviour.Properties.of().instabreak(),
-                            KTBlockEntities.UMBRAL_SUNFLOWER_TROPHY));
+                    () -> new WallUmbralSunflowerTrophyBlock(BlockBehaviour.Properties.of().instabreak()));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

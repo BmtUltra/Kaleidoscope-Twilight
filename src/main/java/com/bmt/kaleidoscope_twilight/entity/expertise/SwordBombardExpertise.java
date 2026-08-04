@@ -109,7 +109,7 @@ public class SwordBombardExpertise extends AbstractSunflowerExpertise {
         sword.setFixedDamage(false);
 
         if (sword.getAttribute(Attributes.ATTACK_DAMAGE) != null) {
-            Objects.requireNonNull(sword.getAttribute(Attributes.ATTACK_DAMAGE)).setBaseValue(12.0D);
+            Objects.requireNonNull(sword.getAttribute(Attributes.ATTACK_DAMAGE)).setBaseValue(4.0D);
         }
 
         sword.launchFromRotation(boss, 1.6F, 0.0F, target);

@@ -20,8 +20,14 @@ public class KTFoods {
             .alwaysEdible().build();
 
     // 鹿肉焖土豆
-    public static final FoodProperties DEER_STEW_POTATO = new FoodProperties.Builder()
+    public static final FoodProperties DEER_STEW_POTATO_ITEM = new FoodProperties.Builder()
             .nutrition(12)
+            .saturationModifier(0.8f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 60 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    public static final FoodProperties DEER_STEW_POTATO_BLOCK = new FoodProperties.Builder()
+            .nutrition(4)
             .saturationModifier(0.8f)
             .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 60 * 20, 0), 1.0f)
             .alwaysEdible().build();
@@ -41,7 +47,7 @@ public class KTFoods {
             .alwaysEdible().build();
 
     // 暮光惠灵顿牛排
-    public static final FoodProperties TWILIGHT_WELLINGTON_STEAK = new FoodProperties.Builder()
+    public static final FoodProperties TWILIGHT_WELLINGTON_STEAK_ITEM = new FoodProperties.Builder()
             .nutrition(20)
             .saturationModifier(1.2f)
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, -1, 0), 1.0f)
@@ -49,9 +55,23 @@ public class KTFoods {
             .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, -1, 0), 1.0f)
             .alwaysEdible().build();
 
+    public static final FoodProperties TWILIGHT_WELLINGTON_STEAK_BLOCK = new FoodProperties.Builder()
+            .nutrition(5)
+            .saturationModifier(1.2f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, -1, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, -1, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, -1, 0), 1.0f)
+            .alwaysEdible().build();
+
     // 盐焗娜迦
-    public static final FoodProperties SALT_BAKED_NAGA = new FoodProperties.Builder()
+    public static final FoodProperties SALT_BAKED_NAGA_ITEM = new FoodProperties.Builder()
             .nutrition(18)
+            .saturationModifier(1.0f)
+            .effect(() -> new MobEffectInstance(KTEffects.STURDY_SCALES, 180 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    public static final FoodProperties SALT_BAKED_NAGA_BLOCK = new FoodProperties.Builder()
+            .nutrition(6)
             .saturationModifier(1.0f)
             .effect(() -> new MobEffectInstance(KTEffects.STURDY_SCALES, 180 * 20, 0), 1.0f)
             .alwaysEdible().build();

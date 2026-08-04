@@ -63,6 +63,8 @@ public class KTClient {
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(KTBlockEntities.UMBRAL_SUNFLOWER_TROPHY.get(),
                 TrophyRender::new);
+        event.registerBlockEntityRenderer(KTBlockEntities.WALL_UMBRAL_SUNFLOWER_TROPHY.get(),
+                TrophyRender::new);
         event.registerEntityRenderer(KTEntities.THROWN_SWORD.get(), ThrownSwordRender::new);
     }
 

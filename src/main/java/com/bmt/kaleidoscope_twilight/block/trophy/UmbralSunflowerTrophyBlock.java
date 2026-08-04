@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_twilight.block.trophy;
 
-import com.bmt.kaleidoscope_twilight.blockentity.trophy.UmbralSunflowerTrophyBlockEntity;
+import com.bmt.kaleidoscope_twilight.blockentity.trophy.NormalUmbralSunflowerTrophyBlockEntity;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
@@ -14,7 +14,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -27,17 +26,13 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.function.Supplier;
-
 public class UmbralSunflowerTrophyBlock extends BaseEntityBlock {
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
     public static final IntegerProperty ROTATION = BlockStateProperties.ROTATION_16;
     protected static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D);
-    public final Supplier<BlockEntityType<UmbralSunflowerTrophyBlockEntity>> blockEntityType;
 
-    public UmbralSunflowerTrophyBlock(Properties properties, Supplier<BlockEntityType<UmbralSunflowerTrophyBlockEntity>> blockEntityType) {
+    public UmbralSunflowerTrophyBlock(Properties properties) {
         super(properties);
-        this.blockEntityType = blockEntityType;
         this.registerDefaultState(this.getStateDefinition().any().setValue(POWERED, false).setValue(ROTATION, 0));
     }
 
@@ -75,7 +70,7 @@ public class UmbralSunflowerTrophyBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new UmbralSunflowerTrophyBlockEntity(pos, state);
+        return new NormalUmbralSunflowerTrophyBlockEntity(pos, state);
     }
 
     @Override
@@ -90,10 +85,6 @@ public class UmbralSunflowerTrophyBlock extends BaseEntityBlock {
 
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {
-        return simpleCodec(this::createFromProperties);
-    }
-
-    private UmbralSunflowerTrophyBlock createFromProperties(Properties properties) {
-        return new UmbralSunflowerTrophyBlock(properties, this.blockEntityType);
+        return simpleCodec(UmbralSunflowerTrophyBlock::new);
     }
 }

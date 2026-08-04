@@ -27,7 +27,8 @@
     "requireAnnotations": true
   },
   "client": [
-    "CameraMixin",
-    "accessor.GuiAccessor"
+    "accessor.GuiAccessor",
+    "client.CameraMixin",
+    "client.PhantomVisualMixin"
   ]
 }

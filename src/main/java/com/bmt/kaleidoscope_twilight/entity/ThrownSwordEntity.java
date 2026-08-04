@@ -353,6 +353,11 @@ public class ThrownSwordEntity extends PathfinderMob implements ItemSupplier {
         }
         boolean success = this.doHurtTarget(target);
 
+        if (!this.fixedDamage && this.getOwner() != null) {
+            float percentDamage = target.getMaxHealth() * 0.1F;
+            target.hurt(this.damageSources().mobAttack(this.getOwner()), percentDamage);
+        }
+
         ItemStack weapon = this.getMainHandItem();
 
         if (weapon.getItem() instanceof SwordItem sword) {

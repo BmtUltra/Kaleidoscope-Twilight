@@ -20,8 +20,7 @@ public abstract class PhantomEffectMixin {
     @Inject(method = "getCollisionShape(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;",
             at = @At("RETURN"),
             cancellable = true)
-    private void kaleidoscope_twilight$phantomPhase(BlockGetter level, BlockPos pos, CollisionContext context,
-                                                     CallbackInfoReturnable<VoxelShape> cir) {
+    private void kaleidoscope_twilight$phantomPhase(BlockGetter level, BlockPos pos, CollisionContext context, CallbackInfoReturnable<VoxelShape> cir) {
         if (!(context instanceof EntityCollisionContext entityContext)) {
             return;
         }

@@ -1,14 +1,13 @@
 package com.bmt.kaleidoscope_twilight.client.render;
 
 import com.bmt.kaleidoscope_twilight.init.KTEffects;
-import com.bmt.kaleidoscope_twilight.util.TagUtils;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.RandomizableContainer;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.api.distmarker.Dist;
@@ -55,9 +54,8 @@ public class MushroomPerceptionRender {
             for (int y = -range; y <= range; y++) {
                 for (int z = -range; z <= range; z++) {
                     BlockPos pos = playerPos.offset(x, y, z);
-                    BlockState blockState = mc.level.getBlockState(pos);
 
-                    if (blockState.is(TagUtils.Blocks.CHEST_LIKE)) {
+                    if (mc.level.getBlockEntity(pos) instanceof RandomizableContainer) {
                         AABB aabb = new AABB(pos).inflate(0.002);
                         LevelRenderer.renderLineBox(poseStack, vertexConsumer, aabb, 1.0f, 1.0f, 1.0f, 0.8f);
                     }

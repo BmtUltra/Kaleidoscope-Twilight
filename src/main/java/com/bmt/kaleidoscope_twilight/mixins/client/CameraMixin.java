@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_twilight.mixins;
+package com.bmt.kaleidoscope_twilight.mixins.client;
 
 import com.bmt.kaleidoscope_twilight.init.KTEffects;
 import net.minecraft.client.Camera;
