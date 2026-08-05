@@ -1,6 +1,7 @@
 package com.bmt.kaleidoscope_twilight.entity.boss;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
+import com.bmt.kaleidoscope_twilight.init.KTBlocks;
 import com.bmt.kaleidoscope_twilight.entity.expertise.FlashStrikeExpertise;
 import com.bmt.kaleidoscope_twilight.entity.expertise.AbstractSunflowerExpertise;
 import com.bmt.kaleidoscope_twilight.entity.expertise.ShieldExpertise;
@@ -34,7 +35,6 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.phys.Vec3;
@@ -114,7 +114,7 @@ public class UmbralSunflower extends BaseTFBoss {
 
     @Override
     public @NotNull Block getBossSpawner() {
-        return Blocks.SPAWNER;
+        return KTBlocks.UMBRAL_SUNFLOWER_SPAWNER.get();
     }
 
     @Override
