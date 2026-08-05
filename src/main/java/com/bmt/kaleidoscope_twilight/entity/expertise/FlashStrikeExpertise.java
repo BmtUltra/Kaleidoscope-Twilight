@@ -37,7 +37,7 @@ public class FlashStrikeExpertise extends AbstractSunflowerExpertise {
         double len = Math.sqrt(dx * dx + dz * dz);
         double ux = len > 0.1 ? dx / len : 0.0;
         double uz = len > 0.1 ? dz / len : 0.0;
-        boss.teleportTo(target.getX() - ux * 1.5, target.getY(), target.getZ() - uz * 1.5);
+        boss.teleportTo(target.getX() - ux * 4.0, target.getY(), target.getZ() - uz * 4.0);
         float yaw = (float) (Mth.atan2(dz, dx) * Mth.RAD_TO_DEG) - 90.0F;
         this.lockedYaw = yaw;
         boss.setYRot(yaw);

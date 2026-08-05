@@ -1,6 +1,7 @@
 package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
+import com.bmt.kaleidoscope_twilight.entity.SwordAuraEntity;
 import com.bmt.kaleidoscope_twilight.entity.ThrownSwordEntity;
 import com.bmt.kaleidoscope_twilight.entity.boss.UmbralSunflower;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -27,5 +28,13 @@ public class KTEntities {
                             .sized(0.5F, 0.5F)
                             .clientTrackingRange(10)
                             .build("thrown_sword")
+            );
+
+    public static final Supplier<EntityType<SwordAuraEntity>> SWORD_AURA =
+            ENTITIES.register("sword_aura",
+                    () -> EntityType.Builder.of(SwordAuraEntity::new, MobCategory.MISC)
+                            .sized(1.0F, 0.5F)
+                            .clientTrackingRange(10)
+                            .build("sword_aura")
             );
 }

@@ -1,9 +1,10 @@
 package com.bmt.kaleidoscope_twilight.entity.boss;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
-import com.bmt.kaleidoscope_twilight.entity.expertise.FireballBombardExpertise;
 import com.bmt.kaleidoscope_twilight.entity.expertise.FlashStrikeExpertise;
 import com.bmt.kaleidoscope_twilight.entity.expertise.AbstractSunflowerExpertise;
+import com.bmt.kaleidoscope_twilight.entity.expertise.ShieldExpertise;
+import com.bmt.kaleidoscope_twilight.entity.expertise.SwordAuraExpertise;
 import com.bmt.kaleidoscope_twilight.entity.expertise.SwordBombardExpertise;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
@@ -38,9 +39,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
+import twilightforest.components.entity.FortificationShieldAttachment;
 import twilightforest.entity.boss.BaseTFBoss;
-import twilightforest.entity.boss.HydraMortar;
 import twilightforest.init.TFBlocks;
+import twilightforest.init.TFDataAttachments;
 
 import java.util.List;
 
@@ -67,25 +69,29 @@ public class UmbralSunflower extends BaseTFBoss {
     private static final int HEAL_INTERVAL = 20;
     private static final float HEAL_PERCENT = 0.02F;
 
-    private static final EntityDataAccessor<Integer> DATA_FIREBALL_ANIM_TIME =
-            SynchedEntityData.defineId(UmbralSunflower.class, EntityDataSerializers.INT);
-
     private int attackAnimationTime = 0;
     private static final int ATTACK_ANIMATION_DURATION = 10;
 
     private static final EntityDataAccessor<Integer> DATA_FLASH_ANIM_TIME =
             SynchedEntityData.defineId(UmbralSunflower.class, EntityDataSerializers.INT);
 
+    private static final EntityDataAccessor<Integer> DATA_SWORD_AURA_ANIM_TIME =
+            SynchedEntityData.defineId(UmbralSunflower.class, EntityDataSerializers.INT);
+
+    private static final EntityDataAccessor<Integer> DATA_SHIELD_ANIM_TIME =
+            SynchedEntityData.defineId(UmbralSunflower.class, EntityDataSerializers.INT);
+
     private final List<AbstractSunflowerExpertise> skills = List.of(
-            new FireballBombardExpertise(DATA_FIREBALL_ANIM_TIME),
             new FlashStrikeExpertise(DATA_FLASH_ANIM_TIME),
-            new SwordBombardExpertise(DATA_SWORD_ANIM_TIME));
+            new SwordBombardExpertise(DATA_SWORD_ANIM_TIME),
+            new SwordAuraExpertise(DATA_SWORD_AURA_ANIM_TIME),
+            new ShieldExpertise(DATA_SHIELD_ANIM_TIME));
 
     private static final EntityDataAccessor<Boolean> DATA_PHASE_TWO =
             SynchedEntityData.defineId(UmbralSunflower.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Integer> DATA_RESURRECTION_ANIM_TIME =
             SynchedEntityData.defineId(UmbralSunflower.class, EntityDataSerializers.INT);
-    private static final int RESURRECTION_ANIMATION_DURATION = 56;
+    private static final int RESURRECTION_ANIMATION_DURATION = 36;
     private static final int PHASE_ONE_BAR_COLOR = 0x4CBB17;
     private static final int PHASE_TWO_BAR_COLOR = 0xFF8C00;
     private static final ResourceLocation PHASE_TWO_SPEED_ID = KaleidoscopeTwilight.id("phase_two_speed");
@@ -132,7 +138,7 @@ public class UmbralSunflower extends BaseTFBoss {
                 .add(Attributes.ATTACK_DAMAGE, 8.0D)
                 .add(Attributes.MOVEMENT_SPEED, 0.4D)
                 .add(Attributes.FOLLOW_RANGE, 60.0D)
-                .add(Attributes.ARMOR, 6.0D)
+                .add(Attributes.ARMOR, 12.0D)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 9999.0D);
     }
 
@@ -149,11 +155,12 @@ public class UmbralSunflower extends BaseTFBoss {
     protected void defineSynchedData(SynchedEntityData.@NotNull Builder builder) {
         super.defineSynchedData(builder);
         builder.define(DATA_STAND_ANIM_TIME, 0);
-        builder.define(DATA_FIREBALL_ANIM_TIME, 0);
         builder.define(DATA_FLASH_ANIM_TIME, 0);
         builder.define(DATA_PHASE_TWO, false);
         builder.define(DATA_RESURRECTION_ANIM_TIME, 0);
         builder.define(DATA_SWORD_ANIM_TIME, 0);
+        builder.define(DATA_SWORD_AURA_ANIM_TIME, 0);
+        builder.define(DATA_SHIELD_ANIM_TIME, 0);
     }
 
     @Override
@@ -196,9 +203,6 @@ public class UmbralSunflower extends BaseTFBoss {
         if (source.getEntity() == this) {
             return false;
         }
-        if (source.getDirectEntity() instanceof HydraMortar mortar && mortar.getOwner() == this) {
-            return false;
-        }
 
         if (this.getResurrectionAnimationTime() > 0 && !source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
             return false;
@@ -238,7 +242,7 @@ public class UmbralSunflower extends BaseTFBoss {
             return false;
         }
 
-        amount = Math.min(amount, 10.0F);
+        amount = Math.min(amount, 15.0F);
 
         if (!this.level().isClientSide() && !this.isPhaseTwo()
                 && !source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)
@@ -250,9 +254,10 @@ public class UmbralSunflower extends BaseTFBoss {
 
         if (this.isDeadOrDying()
                 || this.getStandAnimationTime() > 0
-                || this.getFireballAnimationTime() > 0
                 || this.getFlashAnimationTime() > 0
-                || this.getSwordAnimationTime() > 0) {
+                || this.getSwordAnimationTime() > 0
+                || this.getSwordAuraAnimationTime() > 0
+                || this.getShieldAnimationTime() > 0) {
             return this.hurtWithPhaseImmunity(source, amount);
         }
 
@@ -315,20 +320,28 @@ public class UmbralSunflower extends BaseTFBoss {
 
     @Override
     public boolean isWithinMeleeAttackRange(@NotNull LivingEntity target) {
-        return this.getBoundingBox().inflate(2.5D, 1.0D, 2.5D).intersects(target.getBoundingBox());
+        return this.getBoundingBox().inflate(1.5D, 1.0D, 1.5D).intersects(target.getBoundingBox());
     }
 
     @Override
     public boolean doHurtTarget(@NotNull Entity target) {
         boolean hit = super.doHurtTarget(target);
-        if (hit && !this.level().isClientSide()) {
-            if (target instanceof LivingEntity living && living.isAlive()) {
-                living.invulnerableTime = 0;
-                living.hurt(this.damageSources().mobAttack(this), living.getMaxHealth() * 0.1F);
-            }
+        if (!this.level().isClientSide()) {
             this.attackAnimationTime = ATTACK_ANIMATION_DURATION;
             this.animLockYaw = this.getYRot();
             this.level().broadcastEntityEvent(this, (byte) 66);
+            
+            if (hit && target instanceof LivingEntity living && living.isAlive()) {
+                living.invulnerableTime = 0;
+                living.hurt(this.damageSources().mobAttack(this), living.getMaxHealth() * 0.1F);
+
+                if (living.hasData(TFDataAttachments.FORTIFICATION_SHIELDS)) {
+                    FortificationShieldAttachment shields = living.getData(TFDataAttachments.FORTIFICATION_SHIELDS);
+                    if (shields.shieldsLeft() > 0) {
+                        shields.breakShield(living, false);
+                    }
+                }
+            }
         }
         return hit;
     }
@@ -357,6 +370,7 @@ public class UmbralSunflower extends BaseTFBoss {
     protected void tickDeath() {
         ++this.deathAnimationTime;
         this.setDeltaMovement(0, this.getDeltaMovement().y, 0);
+        this.getNavigation().stop();
         if (this.deathAnimationTime >= DEATH_ANIMATION_DURATION
                 && !this.level().isClientSide() && !this.isRemoved()) {
             this.level().broadcastEntityEvent(this, (byte) 60);
@@ -483,10 +497,6 @@ public class UmbralSunflower extends BaseTFBoss {
         return this.entityData.get(DATA_RESURRECTION_ANIM_TIME);
     }
 
-    public int getFireballAnimationTime() {
-        return this.entityData.get(DATA_FIREBALL_ANIM_TIME);
-    }
-
     public boolean canStartSkill() {
         return !this.isDeadOrDying()
                 && this.getStandAnimationTime() == 0
@@ -494,19 +504,6 @@ public class UmbralSunflower extends BaseTFBoss {
                 && this.deflectAnimationTime == 0
                 && this.bounceAnimationTime == 0
                 && this.skills.stream().noneMatch(skill -> skill.isActive(this));
-    }
-
-    public float getFireballAnimPhase() {
-        int ft = this.entityData.get(DATA_FIREBALL_ANIM_TIME);
-        if (ft <= 0) return 0.0F;
-        int elapsed = FireballBombardExpertise.DURATION - ft;
-        if (elapsed < FireballBombardExpertise.RISE_TICKS) {
-            return (elapsed / (float) FireballBombardExpertise.RISE_TICKS) * 1.75F;
-        }
-        if (ft > 15) {
-            return 1.75F;
-        }
-        return 1.75F + (1.0F - ft / 15.0F) * (1.8333F - 1.75F);
     }
 
     public int getFlashAnimationTime() {
@@ -535,6 +532,26 @@ public class UmbralSunflower extends BaseTFBoss {
             return 1.75F;
         }
         return 1.75F + (1.0F - ft / 15.0F) * (1.8333F - 1.75F);
+    }
+
+    public int getSwordAuraAnimationTime() {
+        return this.entityData.get(DATA_SWORD_AURA_ANIM_TIME);
+    }
+
+    public float getSwordAuraAnimPhase() {
+        int ft = this.entityData.get(DATA_SWORD_AURA_ANIM_TIME);
+        if (ft <= 0) return 0.0F;
+        return (SwordAuraExpertise.DURATION - ft) / 30.0F;
+    }
+
+    public int getShieldAnimationTime() {
+        return this.entityData.get(DATA_SHIELD_ANIM_TIME);
+    }
+
+    public float getShieldAnimPhase() {
+        int ft = this.entityData.get(DATA_SHIELD_ANIM_TIME);
+        if (ft <= 0) return 0.0F;
+        return (ShieldExpertise.DURATION - ft) / 20.0F;
     }
 
     private void startResurrection() {

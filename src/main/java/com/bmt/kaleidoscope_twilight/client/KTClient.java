@@ -2,6 +2,7 @@ package com.bmt.kaleidoscope_twilight.client;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 import com.bmt.kaleidoscope_twilight.client.gui.FieryPotOverlay;
+import com.bmt.kaleidoscope_twilight.client.model.SwordAuraModel;
 import com.bmt.kaleidoscope_twilight.client.model.UmbralSunflowerModel;
 import com.bmt.kaleidoscope_twilight.client.render.*;
 import com.bmt.kaleidoscope_twilight.client.tooltip.KeepingPouchTooltipComponent;
@@ -57,6 +58,7 @@ public class KTClient {
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(UmbralSunflowerModel.LAYER_LOCATION, UmbralSunflowerModel::createBodyLayer);
+        event.registerLayerDefinition(SwordAuraModel.LAYER_LOCATION, SwordAuraModel::createBodyLayer);
     }
 
     @SubscribeEvent
@@ -66,6 +68,7 @@ public class KTClient {
         event.registerBlockEntityRenderer(KTBlockEntities.WALL_UMBRAL_SUNFLOWER_TROPHY.get(),
                 TrophyRender::new);
         event.registerEntityRenderer(KTEntities.THROWN_SWORD.get(), ThrownSwordRender::new);
+        event.registerEntityRenderer(KTEntities.SWORD_AURA.get(), SwordAuraRender::new);
     }
 
     @SubscribeEvent
