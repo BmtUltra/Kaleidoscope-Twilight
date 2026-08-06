@@ -5,6 +5,7 @@ import com.bmt.kaleidoscope_twilight.blockentity.trophy.NormalUmbralSunflowerTro
 import com.bmt.kaleidoscope_twilight.blockentity.trophy.WallUmbralSunflowerTrophyBlockEntity;
 import com.bmt.kaleidoscope_twilight.blockentity.FieryPotBlockEntity;
 import com.bmt.kaleidoscope_twilight.blockentity.FieryStockpotBlockEntity;
+import com.bmt.kaleidoscope_twilight.blockentity.UmbralSunflowerSpawnerBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
@@ -32,6 +33,11 @@ public class KTBlockEntities {
             BLOCK_ENTITIES.register("wall_umbral_sunflower_trophy", () ->
                     BlockEntityType.Builder.of(WallUmbralSunflowerTrophyBlockEntity::new,
                             KTBlocks.UMBRAL_SUNFLOWER_WALL_TROPHY.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<UmbralSunflowerSpawnerBlockEntity>> UMBRAL_SUNFLOWER_SPAWNER =
+            BLOCK_ENTITIES.register("umbral_sunflower_spawner", () ->
+                    BlockEntityType.Builder.of(UmbralSunflowerSpawnerBlockEntity::new,
+                            KTBlocks.UMBRAL_SUNFLOWER_SPAWNER.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

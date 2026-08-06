@@ -24,6 +24,7 @@ public class SwordAuraEntity extends ThrowableItemProjectile {
 
     private static final float BASE_DAMAGE = 10.0F;
     private static final float MAX_HEALTH_PERCENT = 0.2F;
+    private static final int MAX_LIFE_TICKS = 20;
 
     private int life = 0;
     private final List<UUID> attackedEntityUUID = new ArrayList<>();
@@ -58,13 +59,12 @@ public class SwordAuraEntity extends ThrowableItemProjectile {
             this.setXRot(targetPitch);
         }
 
-        Vec3 motion = this.getDeltaMovement();
-        if (Math.abs(motion.x + motion.y + motion.z) < 0.01) {
+        if (vel.lengthSqr() < 1.0E-4) {
             this.discard();
             return;
         }
 
-        if (life >= 80) {
+        if (life >= MAX_LIFE_TICKS) {
             this.discard();
             return;
         }

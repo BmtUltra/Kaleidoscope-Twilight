@@ -17,6 +17,7 @@ public class SwordAuraExpertise extends AbstractSunflowerExpertise {
     private static final float AURA_SPEED = 1.5F;
     private static final int FIRST_SLASH_TICK = 48;
     private static final int SECOND_SLASH_TICK = 57;
+    private static final float YAW_LERP_FACTOR = 0.35F;
 
     public SwordAuraExpertise(EntityDataAccessor<Integer> animTimeData) {
         super("SwordAura", DURATION, 150, animTimeData);
@@ -34,29 +35,28 @@ public class SwordAuraExpertise extends AbstractSunflowerExpertise {
 
     @Override
     protected void onStart(UmbralSunflower boss, LivingEntity target) {
-        double dx = target.getX() - boss.getX();
-        double dz = target.getZ() - boss.getZ();
-        float lockedYaw = (float) (Mth.atan2(dz, dx) * Mth.RAD_TO_DEG) - 90.0F;
-        boss.setYRot(lockedYaw);
-        boss.yBodyRot = lockedYaw;
-        boss.yHeadRot = lockedYaw;
+        boss.getNavigation().stop();
+        boss.setDeltaMovement(0, boss.getDeltaMovement().y, 0);
         boss.playSound(SoundEvents.PLAYER_ATTACK_SWEEP, 1.0F, 0.8F);
     }
 
     @Override
     protected void tick(UmbralSunflower boss, int remaining) {
         int elapsed = this.elapsed(remaining);
-        boss.setDeltaMovement(0, boss.getDeltaMovement().y, 0);
-        boss.getNavigation().stop();
+        if (!boss.getNavigation().isDone()) {
+            boss.getNavigation().stop();
+            boss.setDeltaMovement(0, boss.getDeltaMovement().y, 0);
+        }
 
         LivingEntity target = boss.getTarget();
         if (target != null && target.isAlive()) {
             double dx = target.getX() - boss.getX();
             double dz = target.getZ() - boss.getZ();
             float targetYaw = (float) (Mth.atan2(dz, dx) * Mth.RAD_TO_DEG) - 90.0F;
-            boss.setYRot(targetYaw);
-            boss.yBodyRot = targetYaw;
-            boss.yHeadRot = targetYaw;
+            float newYaw = boss.getYRot() + Mth.wrapDegrees(targetYaw - boss.getYRot()) * YAW_LERP_FACTOR;
+            boss.setYRot(newYaw);
+            boss.yBodyRot = newYaw;
+            boss.yHeadRot = newYaw;
         }
 
         if (elapsed == FIRST_SLASH_TICK || elapsed == SECOND_SLASH_TICK) {
@@ -75,7 +75,7 @@ public class SwordAuraExpertise extends AbstractSunflowerExpertise {
         float dirZ = Mth.cos(yawRad);
 
         double spawnX = boss.getX() + dirX * 1.5;
-        double spawnY = boss.getY() + boss.getBbHeight() * 0.15;
+        double spawnY = boss.getY() + boss.getBbHeight() * 0.6;
         double spawnZ = boss.getZ() + dirZ * 1.5;
 
         aura.setPos(spawnX, spawnY, spawnZ);
@@ -84,9 +84,10 @@ public class SwordAuraExpertise extends AbstractSunflowerExpertise {
         LivingEntity target = boss.getTarget();
         Vec3 velocity;
         if (target != null && target.isAlive()) {
+            double targetCenterY = target.getY() + target.getBbHeight() * 0.5;
             Vec3 toTarget = new Vec3(
                     target.getX() - spawnX,
-                    target.getEyeY() - spawnY,
+                    targetCenterY - spawnY,
                     target.getZ() - spawnZ
             ).normalize();
             velocity = toTarget.scale(AURA_SPEED);

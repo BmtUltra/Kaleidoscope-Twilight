@@ -174,5 +174,8 @@
 
   "enchantment.kaleidoscope_twilight.oil_blade": "Oil Blade",
 
+  "item.kaleidoscope_twilight.umbral_sunflower_spawn_egg": "Sunflower Spawn Egg",
+  "block.kaleidoscope_twilight.umbral_sunflower_spawner": "Sunflower Spawner",
+
   "tooltip.kaleidoscope_doll.doll.twilight_contributor": "Twilight Forest"
 }

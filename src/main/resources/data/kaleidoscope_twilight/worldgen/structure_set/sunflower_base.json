@@ -1,0 +1,11 @@
+{
+  "placement": {
+    "type": "twilightforest:landmark_grid"
+  },
+  "structures": [
+    {
+      "structure": "kaleidoscope_twilight:sunflower_base",
+      "weight": 1
+    }
+  ]
+}

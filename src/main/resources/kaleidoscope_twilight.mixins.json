@@ -8,6 +8,7 @@
     "FoodBiteBlockMixin",
     "IntegerPropertyMixin",
     "InventoryMixin",
+    "LegacyLandmarkPlacementsMixin",
     "PhantomEffectMixin",
     "PotBlockEntityMixin",
     "StockpotBlockEntityMixin",
