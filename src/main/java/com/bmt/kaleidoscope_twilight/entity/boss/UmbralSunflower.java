@@ -49,7 +49,7 @@ import java.util.List;
 public class UmbralSunflower extends BaseTFBoss {
 
     public static final ResourceKey<Structure> KITCHEN_STRUCTURE =
-            ResourceKey.create(Registries.STRUCTURE, KaleidoscopeTwilight.id("1145"));
+            ResourceKey.create(Registries.STRUCTURE, KaleidoscopeTwilight.id("sunflower_base"));
     private static final EntityDataAccessor<Integer> DATA_STAND_ANIM_TIME =
             SynchedEntityData.defineId(UmbralSunflower.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Integer> DATA_SWORD_ANIM_TIME =
