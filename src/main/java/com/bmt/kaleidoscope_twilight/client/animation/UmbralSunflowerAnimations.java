@@ -49,6 +49,12 @@ public class UmbralSunflowerAnimations {
             return;
         }
 
+        int groundSpikeTime = entity.getGroundSpikeAnimationTime();
+        if (groundSpikeTime > 0) {
+            RESURRECTION.apply(model, entity.getGroundSpikeAnimPhase(), netHeadYaw);
+            return;
+        }
+
         int shieldTime = entity.getShieldAnimationTime();
         if (shieldTime > 0) {
             SHIELD.apply(model, entity.getShieldAnimPhase(), netHeadYaw);

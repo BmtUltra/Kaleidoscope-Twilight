@@ -69,6 +69,8 @@ public class KTClient {
                 TrophyRender::new);
         event.registerEntityRenderer(KTEntities.THROWN_SWORD.get(), ThrownSwordRender::new);
         event.registerEntityRenderer(KTEntities.SWORD_AURA.get(), SwordAuraRender::new);
+        event.registerEntityRenderer(KTEntities.GROUND_SPIKE.get(), GroundSpikeRender::new);
+        event.registerEntityRenderer(KTEntities.GIANT_SWORD.get(), GiantSwordRender::new);
     }
 
     @SubscribeEvent

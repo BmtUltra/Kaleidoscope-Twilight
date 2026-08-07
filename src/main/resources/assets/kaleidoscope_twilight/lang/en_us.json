@@ -6,15 +6,15 @@
   "item.kaleidoscope_twilight.twilight_berry_salad": "Twilight Berry Salad",
   "tooltip.kaleidoscope_twilight.twilight_berry_salad.maxim": "Fresh and crisp, carrying the fragrance of the forest",
   "item.kaleidoscope_twilight.twilight_caterpillar": "Twilight Caterpillar",
-  "item.kaleidoscope_twilight.deer_stew_potato": "Venison Stew with Potatoes",
+  "block.kaleidoscope_twilight.deer_stew_potato": "Venison Stew with Potatoes",
   "tooltip.kaleidoscope_twilight.deer_stew_potato.maxim": "Slow-braised until tender, the meat is juicy and the potatoes are flavorful",
   "item.kaleidoscope_twilight.deer_stew_potato_rice_bowl": "Venison Stew Potato Rice Bowl",
   "tooltip.kaleidoscope_twilight.deer_stew_potato_rice_bowl.maxim": "Venison stew with potatoes over fragrant rice, every bite is satisfying",
   "item.kaleidoscope_twilight.minotaur_roll": "Minotaur Roll",
   "tooltip.kaleidoscope_twilight.minotaur_roll.maxim": "Dense and hearty, brimming with strength",
-  "item.kaleidoscope_twilight.twilight_wellington_steak": "Twilight Wellington Steak",
+  "block.kaleidoscope_twilight.twilight_wellington_steak": "Twilight Wellington Steak",
   "tooltip.kaleidoscope_twilight.twilight_wellington_steak.maxim": "Crispy crust on the outside, tender and juicy within",
-  "item.kaleidoscope_twilight.salt_baked_naga": "Salt-Baked Naga",
+  "block.kaleidoscope_twilight.salt_baked_naga": "Salt-Baked Naga",
   "tooltip.kaleidoscope_twilight.salt_baked_naga.maxim": "Pure and natural flavor, the meat is firm and delicious",
   "item.kaleidoscope_twilight.twilight_ghost_pasta": "Twilight Ghost Pasta",
   "tooltip.kaleidoscope_twilight.twilight_ghost_pasta.maxim": "Light and airy, with a hint of mystery",
@@ -172,10 +172,16 @@
   "item.kaleidoscope_twilight.fiery_stockpot_lid": "Fiery Stockpot Lid",
   "tooltip.kaleidoscope_twilight.fiery_stockpot_lid": "Only for use with the Fiery Stockpot",
 
-  "enchantment.kaleidoscope_twilight.oil_blade": "Oil Blade",
+  "entity.kaleidoscope_twilight.umbral_sunflower": "Umbral Sunflower",
+  "block.kaleidoscope_twilight.umbral_sunflower_trophy": "Umbral Sunflower Trophy",
+  "item.kaleidoscope_twilight.umbral_sunflower_spawn_egg": "Umbral Sunflower Spawn Egg",
+  "block.kaleidoscope_twilight.umbral_sunflower_spawner": "Umbral Sunflower Boss Spawner",
+  "entity.kaleidoscope_twilight.thrown_sword": "Thrown Sword",
+  "entity.kaleidoscope_twilight.ground_spike": "Ground Spike",
+  "entity.kaleidoscope_twilight.giant_sword": "Giant Sword",
 
-  "item.kaleidoscope_twilight.umbral_sunflower_spawn_egg": "Sunflower Spawn Egg",
-  "block.kaleidoscope_twilight.umbral_sunflower_spawner": "Sunflower Spawner",
+  "enchantment.kaleidoscope_twilight.oil_blade": "Oil Blade",
+  "enchantment.kaleidoscope_twilight.oil_blade.desc": "Killing mobs is treated as defeating them with a cleaver",
 
   "tooltip.kaleidoscope_doll.doll.twilight_contributor": "Twilight Forest"
 }

@@ -4,9 +4,13 @@ import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 import com.bmt.kaleidoscope_twilight.init.KTBlocks;
 import com.bmt.kaleidoscope_twilight.entity.expertise.FlashStrikeExpertise;
 import com.bmt.kaleidoscope_twilight.entity.expertise.AbstractSunflowerExpertise;
+import com.bmt.kaleidoscope_twilight.entity.expertise.GroundSpikeExpertise;
 import com.bmt.kaleidoscope_twilight.entity.expertise.ShieldExpertise;
 import com.bmt.kaleidoscope_twilight.entity.expertise.SwordAuraExpertise;
+import com.bmt.kaleidoscope_twilight.entity.GiantSwordEntity;
 import com.bmt.kaleidoscope_twilight.entity.expertise.SwordBombardExpertise;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
@@ -81,11 +85,15 @@ public class UmbralSunflower extends BaseTFBoss {
     private static final EntityDataAccessor<Integer> DATA_SHIELD_ANIM_TIME =
             SynchedEntityData.defineId(UmbralSunflower.class, EntityDataSerializers.INT);
 
+    private static final EntityDataAccessor<Integer> DATA_GROUND_SPIKE_ANIM_TIME =
+            SynchedEntityData.defineId(UmbralSunflower.class, EntityDataSerializers.INT);
+
     private final List<AbstractSunflowerExpertise> skills = List.of(
             new FlashStrikeExpertise(DATA_FLASH_ANIM_TIME),
             new SwordBombardExpertise(DATA_SWORD_ANIM_TIME),
             new SwordAuraExpertise(DATA_SWORD_AURA_ANIM_TIME),
-            new ShieldExpertise(DATA_SHIELD_ANIM_TIME));
+            new ShieldExpertise(DATA_SHIELD_ANIM_TIME),
+            new GroundSpikeExpertise(DATA_GROUND_SPIKE_ANIM_TIME));
 
     private static final EntityDataAccessor<Boolean> DATA_PHASE_TWO =
             SynchedEntityData.defineId(UmbralSunflower.class, EntityDataSerializers.BOOLEAN);
@@ -135,8 +143,8 @@ public class UmbralSunflower extends BaseTFBoss {
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, 500.0D)
-                .add(Attributes.ATTACK_DAMAGE, 8.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.4D)
+                .add(Attributes.ATTACK_DAMAGE, 6.0D)
+                .add(Attributes.MOVEMENT_SPEED, 0.3D)
                 .add(Attributes.FOLLOW_RANGE, 60.0D)
                 .add(Attributes.ARMOR, 12.0D)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 9999.0D);
@@ -161,6 +169,7 @@ public class UmbralSunflower extends BaseTFBoss {
         builder.define(DATA_SWORD_ANIM_TIME, 0);
         builder.define(DATA_SWORD_AURA_ANIM_TIME, 0);
         builder.define(DATA_SHIELD_ANIM_TIME, 0);
+        builder.define(DATA_GROUND_SPIKE_ANIM_TIME, 0);
     }
 
     @Override
@@ -257,7 +266,8 @@ public class UmbralSunflower extends BaseTFBoss {
                 || this.getFlashAnimationTime() > 0
                 || this.getSwordAnimationTime() > 0
                 || this.getSwordAuraAnimationTime() > 0
-                || this.getShieldAnimationTime() > 0) {
+                || this.getShieldAnimationTime() > 0
+                || this.getGroundSpikeAnimationTime() > 0) {
             return this.hurtWithPhaseImmunity(source, amount);
         }
 
@@ -554,6 +564,16 @@ public class UmbralSunflower extends BaseTFBoss {
         return (ShieldExpertise.DURATION - ft) / 20.0F;
     }
 
+    public int getGroundSpikeAnimationTime() {
+        return this.entityData.get(DATA_GROUND_SPIKE_ANIM_TIME);
+    }
+
+    public float getGroundSpikeAnimPhase() {
+        int ft = this.entityData.get(DATA_GROUND_SPIKE_ANIM_TIME);
+        if (ft <= 0) return 0.0F;
+        return (GroundSpikeExpertise.DURATION - ft) * 1.79F / GroundSpikeExpertise.DURATION;
+    }
+
     private void startResurrection() {
         this.entityData.set(DATA_PHASE_TWO, true);
         this.setHealth(this.getMaxHealth());
@@ -570,6 +590,10 @@ public class UmbralSunflower extends BaseTFBoss {
 
         this.level().broadcastEntityEvent(this, (byte) 35);
         this.playSound(SoundEvents.WITHER_SPAWN, 1.0F, 1.3F);
+
+        if (!this.level().isClientSide && this.getTarget() != null && this.getTarget().isAlive()) {
+            GiantSwordEntity.summon(this.level(), this.getTarget(), this, new ItemStack(Items.NETHERITE_SWORD));
+        }
     }
 
     private class SunflowerMeleeGoal extends MeleeAttackGoal {

@@ -75,7 +75,7 @@ public class SwordAuraExpertise extends AbstractSunflowerExpertise {
         float dirZ = Mth.cos(yawRad);
 
         double spawnX = boss.getX() + dirX * 1.5;
-        double spawnY = boss.getY() + boss.getBbHeight() * 0.6;
+        double spawnY = boss.getY() + 0.5;
         double spawnZ = boss.getZ() + dirZ * 1.5;
 
         aura.setPos(spawnX, spawnY, spawnZ);
@@ -84,10 +84,9 @@ public class SwordAuraExpertise extends AbstractSunflowerExpertise {
         LivingEntity target = boss.getTarget();
         Vec3 velocity;
         if (target != null && target.isAlive()) {
-            double targetCenterY = target.getY() + target.getBbHeight() * 0.5;
             Vec3 toTarget = new Vec3(
                     target.getX() - spawnX,
-                    targetCenterY - spawnY,
+                    0.0D,
                     target.getZ() - spawnZ
             ).normalize();
             velocity = toTarget.scale(AURA_SPEED);

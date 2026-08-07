@@ -22,8 +22,8 @@ import java.util.UUID;
 
 public class SwordAuraEntity extends ThrowableItemProjectile {
 
-    private static final float BASE_DAMAGE = 10.0F;
-    private static final float MAX_HEALTH_PERCENT = 0.2F;
+    private static final float BASE_DAMAGE = 5.0F;
+    private static final float MAX_HEALTH_PERCENT = 0.15F;
     private static final int MAX_LIFE_TICKS = 20;
 
     private int life = 0;
@@ -54,9 +54,8 @@ public class SwordAuraEntity extends ThrowableItemProjectile {
         double horizDist = Math.sqrt(vel.x * vel.x + vel.z * vel.z);
         if (horizDist > 1.0E-7) {
             float targetYaw = (float) Mth.atan2(vel.x, vel.z) * Mth.RAD_TO_DEG;
-            float targetPitch = (float) Mth.atan2(vel.y, horizDist) * Mth.RAD_TO_DEG;
             this.setYRot(targetYaw);
-            this.setXRot(targetPitch);
+            this.setXRot(0.0F);
         }
 
         if (vel.lengthSqr() < 1.0E-4) {

@@ -177,8 +177,11 @@
   "item.kaleidoscope_twilight.umbral_sunflower_spawn_egg": "向日葵刷怪蛋",
   "block.kaleidoscope_twilight.umbral_sunflower_spawner": "向日葵Boss刷怪笼",
   "entity.kaleidoscope_twilight.thrown_sword": "飞剑",
+  "entity.kaleidoscope_twilight.ground_spike": "地刺",
+  "entity.kaleidoscope_twilight.giant_sword": "巨型飞剑",
 
   "enchantment.kaleidoscope_twilight.oil_blade": "油刃有余",
+  "enchantment.kaleidoscope_twilight.oil_blade.desc": "击败生物被视为使用菜刀击败",
 
   "tooltip.kaleidoscope_doll.doll.twilight_contributor": "暮色森林"
 }
