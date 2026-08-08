@@ -9,7 +9,7 @@ import twilightforest.init.TFDataAttachments;
 
 public class ShieldExpertise extends AbstractSunflowerExpertise {
     public static final int DURATION = 35;
-    private static final int COOLDOWN_BASE = 400;
+    private static final int COOLDOWN_BASE = 600;
     private static final int SHIELD_COUNT = 5;
 
     private float lockedYaw;

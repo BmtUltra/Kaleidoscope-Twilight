@@ -31,8 +31,6 @@ public class GiantSwordEntity extends Entity {
     private static final double SPAWN_HEIGHT = 25.0D;
     private static final int HOVER_TICKS = 30;
     private static final double IMPACT_RADIUS = 2.5D;
-    private static final float BASE_DAMAGE = 1000.0F;
-    private static final float MAX_HEALTH_PERCENT = 0.5F;
     private static final int MAX_LIFE = 200;
 
     private static final EntityDataAccessor<ItemStack> DATA_ITEM =
@@ -165,13 +163,9 @@ public class GiantSwordEntity extends Entity {
                 target.setLastHurtByPlayer(player);
             }
 
-            float damage = BASE_DAMAGE + target.getMaxHealth() * MAX_HEALTH_PERCENT;
             DamageSource source = this.damageSources().indirectMagic(this, this.owner);
-
-            if (target.hurt(source, damage)) {
-                target.setDeltaMovement(target.getDeltaMovement().add(0.0D, 0.8D, 0.0D));
-                target.hasImpulse = true;
-            }
+            target.setHealth(0);
+            target.die(source);
         }
     }
 
