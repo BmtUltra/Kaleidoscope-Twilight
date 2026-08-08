@@ -1,9 +1,7 @@
 {
-  "replace": false,
   "values": [
-    {
-      "id": "kaleidoscope_twilight:twilight_stove",
-      "required": false
-    }
+    "kaleidoscope_twilight:twilight_stove",
+    "kaleidoscope_twilight:fiery_pot",
+    "kaleidoscope_twilight:fiery_stockpot"
   ]
 }
