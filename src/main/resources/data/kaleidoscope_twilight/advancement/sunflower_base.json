@@ -1,0 +1,30 @@
+{
+  "parent": "kaleidoscope_twilight:root",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_twilight:umbral_sunflower_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_twilight.sunflower_base.title"
+    },
+    "description": {
+      "translate": "advancements.kaleidoscope_twilight.sunflower_base.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "see_umbral_sunflower": {
+      "trigger": "kaleidoscope_twilight:sunflower_seen"
+    }
+  },
+  "requirements": [
+    [
+      "see_umbral_sunflower"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
