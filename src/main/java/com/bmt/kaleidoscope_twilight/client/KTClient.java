@@ -2,6 +2,7 @@ package com.bmt.kaleidoscope_twilight.client;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 import com.bmt.kaleidoscope_twilight.client.gui.FieryPotOverlay;
+import com.bmt.kaleidoscope_twilight.client.gui.KeepingPouchScreen;
 import com.bmt.kaleidoscope_twilight.client.model.SwordAuraModel;
 import com.bmt.kaleidoscope_twilight.client.model.UmbralSunflowerModel;
 import com.bmt.kaleidoscope_twilight.client.render.*;
@@ -10,6 +11,7 @@ import com.bmt.kaleidoscope_twilight.init.KTBlockEntities;
 import com.bmt.kaleidoscope_twilight.init.KTEffects;
 import com.bmt.kaleidoscope_twilight.init.KTEntities;
 import com.bmt.kaleidoscope_twilight.init.KTItems;
+import com.bmt.kaleidoscope_twilight.init.KTInventory;
 import com.bmt.kaleidoscope_twilight.item.FieryStockpotLidItem;
 import com.bmt.kaleidoscope_twilight.item.KeepingPouchItem;
 import com.bmt.kaleidoscope_twilight.network.FireBreathPacket;
@@ -28,6 +30,7 @@ import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.network.PacketDistributor;
@@ -41,6 +44,11 @@ public class KTClient {
     @SubscribeEvent
     public static void registerTooltipComponents(RegisterClientTooltipComponentFactoriesEvent event) {
         event.register(KeepingPouchItem.KeepingPouchTooltip.class, KeepingPouchTooltipComponent::new);
+    }
+
+    @SubscribeEvent
+    public static void registerMenuScreens(RegisterMenuScreensEvent event) {
+        event.register(KTInventory.KEEPING_POUCH.get(), KeepingPouchScreen::new);
     }
 
     @SubscribeEvent

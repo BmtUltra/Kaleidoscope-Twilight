@@ -1,6 +1,7 @@
 package com.bmt.kaleidoscope_twilight.item;
 
 import com.bmt.kaleidoscope_twilight.init.KTDataComponents;
+import com.bmt.kaleidoscope_twilight.inventory.KeepingPouchMenu;
 import com.google.common.collect.Lists;
 import com.mojang.serialization.Codec;
 import net.minecraft.ChatFormatting;
@@ -9,11 +10,15 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.SlotAccess;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ClickAction;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
@@ -21,13 +26,13 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.neoforged.neoforge.items.ItemStackHandler;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Optional;
 
-@SuppressWarnings("all")
 public class KeepingPouchItem extends Item {
-    private static final int MAX_SIZE = 8;
+    public static final int MAX_SIZE = 27;
 
     public KeepingPouchItem() {
         super((new Item.Properties()).stacksTo(1));
@@ -66,7 +71,21 @@ public class KeepingPouchItem extends Item {
         if (player.isSecondaryUseActive()) {
             return InteractionResultHolder.pass(itemInHand);
         }
-        return InteractionResultHolder.fail(itemInHand);
+        if (!level.isClientSide && player instanceof ServerPlayer serverPlayer) {
+            serverPlayer.openMenu(new MenuProvider() {
+                @Override
+                public @NotNull Component getDisplayName() {
+                    return itemInHand.getHoverName();
+                }
+
+                @Override
+                public @NotNull AbstractContainerMenu createMenu(int containerId, @NotNull Inventory inventory, @NotNull Player p) {
+                    return new KeepingPouchMenu(containerId, inventory);
+                }
+            });
+            player.playSound(SoundEvents.BARREL_OPEN, 0.8F, 0.9F + player.level().getRandom().nextFloat() * 0.2F);
+        }
+        return InteractionResultHolder.sidedSuccess(itemInHand, level.isClientSide());
     }
 
     @Override
@@ -134,9 +153,6 @@ public class KeepingPouchItem extends Item {
     }
 
     private static int add(ItemStack pouch, ItemStack item, boolean simulate) {
-        if (item.isEmpty() || !item.getItem().canFitInsideContainerItems()) {
-            return 0;
-        }
         int totalCount = item.getCount();
 
         ItemStackHandler items = getItems(pouch);

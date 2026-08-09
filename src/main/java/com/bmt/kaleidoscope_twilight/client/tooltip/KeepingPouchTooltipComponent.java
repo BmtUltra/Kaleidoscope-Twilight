@@ -23,7 +23,7 @@ public class KeepingPouchTooltipComponent implements ClientTooltipComponent {
                 if (!stack.isEmpty()) {
                     this.items.add(stack.copy());
 
-                    if (this.items.size() >= 64) {
+                    if (this.items.size() >= 9) {
                         break;
                     }
                 }
@@ -36,7 +36,7 @@ public class KeepingPouchTooltipComponent implements ClientTooltipComponent {
         if (items.isEmpty()) {
             return 0;
         }
-        int row = (items.size() - 1) / 8 + 1;
+        int row = (items.size() - 1) / 9 + 1;
         return 20 * row;
     }
 
@@ -45,7 +45,7 @@ public class KeepingPouchTooltipComponent implements ClientTooltipComponent {
         if (items.isEmpty()) {
             return 0;
         }
-        int maxInRow = Math.min(items.size(), 8);
+        int maxInRow = Math.min(items.size(), 9);
         return maxInRow * 20;
     }
 
@@ -54,8 +54,8 @@ public class KeepingPouchTooltipComponent implements ClientTooltipComponent {
         if (!items.isEmpty()) {
             int i = 0;
             for (ItemStack stack : this.items) {
-                int xOffset = pX + (i % 8) * 20;
-                int yOffset = pY + (i / 8) * 20;
+                int xOffset = pX + (i % 9) * 20;
+                int yOffset = pY + (i / 9) * 20;
 
                 guiGraphics.renderFakeItem(stack, xOffset, yOffset);
 
