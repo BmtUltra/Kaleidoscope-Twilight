@@ -183,5 +183,16 @@
   "enchantment.kaleidoscope_twilight.oil_blade": "Oil Blade",
   "enchantment.kaleidoscope_twilight.oil_blade.desc": "Killing mobs is treated as defeating them with a cleaver",
 
-  "tooltip.kaleidoscope_doll.doll.twilight_contributor": "Twilight Forest"
+  "tooltip.kaleidoscope_doll.doll.twilight_contributor": "Twilight Forest",
+
+  "advancements.kaleidoscope_twilight.root.title": "Kaleidoscope: Twilight",
+  "advancements.kaleidoscope_twilight.root.description": "Bring fantastical vitality to the Twilight Forest!",
+  "advancements.kaleidoscope_twilight.umbral_sunflower.title": "The Arrogant Flower Beneath the Dusk",
+  "advancements.kaleidoscope_twilight.umbral_sunflower.description": "Defeat the Umbral Sunflower",
+  "advancements.kaleidoscope_twilight.naga_meat.title": "First Taste of the Serpent",
+  "advancements.kaleidoscope_twilight.naga_meat.description": "Obtain a piece of Raw Naga Meat",
+  "advancements.kaleidoscope_twilight.naga_slayer.title": "Naga Slayer",
+  "advancements.kaleidoscope_twilight.naga_slayer.description": "Defeat the Naga 20 times",
+  "advancements.kaleidoscope_twilight.twilight_chef.title": "Twilight Chef",
+  "advancements.kaleidoscope_twilight.twilight_chef.description": "Obtain a Fiery Pot"
 }

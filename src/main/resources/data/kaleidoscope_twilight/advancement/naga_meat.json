@@ -1,0 +1,37 @@
+{
+  "parent": "kaleidoscope_twilight:root",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_twilight:raw_naga_meat"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_twilight.naga_meat.title"
+    },
+    "description": {
+      "translate": "advancements.kaleidoscope_twilight.naga_meat.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "raw_naga_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_twilight:raw_naga_meat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "raw_naga_meat"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -54,7 +54,7 @@
   "tooltip.kaleidoscope_twilight.torchberry_cookie.maxim": "火炬浆果制成的曲奇，酥脆可口，带着淡淡的火焰气息",
   "item.kaleidoscope_twilight.torchberry_deer_sandwich": "火炬浆果鹿肉三明治",
   "tooltip.kaleidoscope_twilight.torchberry_deer_sandwich.maxim": "火炬浆果与鹿肉的完美结合",
-  "item.kaleidoscope_twilight.experiment_115_skewer": "试验品115号烤串",
+  "item.kaleidoscope_twilight.experiment_115_skewer": "试验品115号串串",
   "tooltip.kaleidoscope_twilight.experiment_115_skewer.maxim": "神秘的实验性食物，可以多次食用",
   "item.kaleidoscope_twilight.stir_fried_fat_caterpillar": "小炒肥虫",
   "tooltip.kaleidoscope_twilight.stir_fried_fat_caterpillar.maxim": "暮色森林肥虫的香辣炒制，口感酥脆，带着独特的香气",
@@ -188,5 +188,11 @@
   "advancements.kaleidoscope_twilight.root.title": "森罗物语：暮色",
   "advancements.kaleidoscope_twilight.root.description": "为暮色带来奇幻生机！",
   "advancements.kaleidoscope_twilight.umbral_sunflower.title": "屹立于暮色之下的傲慢之花",
-  "advancements.kaleidoscope_twilight.umbral_sunflower.description": "击败向日葵"
+  "advancements.kaleidoscope_twilight.umbral_sunflower.description": "击败向日葵",
+  "advancements.kaleidoscope_twilight.naga_meat.title": "蛇之初味",
+  "advancements.kaleidoscope_twilight.naga_meat.description": "获得一块生娜迦肉",
+  "advancements.kaleidoscope_twilight.naga_slayer.title": "娜迦杀手",
+  "advancements.kaleidoscope_twilight.naga_slayer.description": "累计击败20次娜迦",
+  "advancements.kaleidoscope_twilight.twilight_chef.title": "嘶……有点烫手",
+  "advancements.kaleidoscope_twilight.twilight_chef.description": "获得炽铁炒锅"
 }

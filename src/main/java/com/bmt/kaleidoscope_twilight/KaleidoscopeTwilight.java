@@ -24,6 +24,7 @@ public class KaleidoscopeTwilight {
         KTBlocks.register(modEventBus);
         KTBlockEntities.register(modEventBus);
         KTEntities.ENTITIES.register(modEventBus);
+        KTTriggers.TRIGGERS.register(modEventBus);
         KTMapDecorations.MAP_DECORATIONS.register(modEventBus);
         KTTeacups.init();
         KTFoodBites.init();

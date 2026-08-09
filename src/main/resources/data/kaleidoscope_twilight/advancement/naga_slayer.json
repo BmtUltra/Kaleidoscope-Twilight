@@ -1,0 +1,35 @@
+{
+  "parent": "kaleidoscope_twilight:naga_meat",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_twilight:naga_green_tongue"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_twilight.naga_slayer.title"
+    },
+    "description": {
+      "translate": "advancements.kaleidoscope_twilight.naga_slayer.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "slay_naga": {
+      "trigger": "kaleidoscope_twilight:naga_slayer"
+    }
+  },
+  "requirements": [
+    [
+      "slay_naga"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "kaleidoscope_twilight:advancement/naga_slayer"
+    ]
+  },
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "kaleidoscope_twilight:root",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_twilight:umbral_sunflower_trophy"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_twilight.umbral_sunflower.title"
+    },
+    "description": {
+      "translate": "advancements.kaleidoscope_twilight.umbral_sunflower.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill_umbral_sunflower": {
+      "conditions": {
+        "entity": {
+          "type": "kaleidoscope_twilight:umbral_sunflower"
+        }
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "requirements": [
+    [
+      "kill_umbral_sunflower"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
