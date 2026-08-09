@@ -85,10 +85,10 @@ public class KTFoods {
 
     // 九头蛇肉酱面
     public static final FoodProperties HYDRA_BOLOGNESE = new FoodProperties.Builder()
-            .nutrition(16)
-            .saturationModifier(1.1f)
-            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 240 * 20, 1), 1.0f)
-            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 240 * 20, 0), 1.0f)
+            .nutrition(24)
+            .saturationModifier(2.5f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 240 * 20, 2), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 240 * 20, 1), 1.0f)
             .alwaysEdible().build();
 
     // 荧光蘑菇瓦罐汤
@@ -226,7 +226,7 @@ public class KTFoods {
     public static final FoodProperties TORCHBERRY_DEER_SANDWICH = new FoodProperties.Builder()
             .nutrition(12)
             .saturationModifier(0.8F)
-            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 240 * 20, 0), 1.0f)
             .alwaysEdible().build();
 
     // 试验品115号烤串
@@ -255,6 +255,7 @@ public class KTFoods {
     public static final FoodProperties TWILIGHT_FERN = new FoodProperties.Builder()
             .nutrition(2)
             .saturationModifier(0.2f)
+            .fast()
             .alwaysEdible().build();
 
     // 凉拌蕨菜
@@ -338,18 +339,20 @@ public class KTFoods {
 
     // 牛头人沙拉酱意面
     public static final FoodProperties MINOTAUR_SALAD_PASTA = new FoodProperties.Builder()
-            .nutrition(16)
-            .saturationModifier(1.0f)
+            .nutrition(18)
+            .saturationModifier(2.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 240 * 20, 0), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300 * 20, 0), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 120 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(ModEffects.SATIATED_SHIELD, 180 * 20), 1.0F)
             .alwaysEdible().build();
 
     // 暮色恶魂刺身
     public static final FoodProperties TWILIGHT_GHOST_SASHIMI = new FoodProperties.Builder()
             .nutrition(6)
             .saturationModifier(0.5f)
-            .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 240 * 20, 0), 1.0f)
-            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 180 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 480 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 14 * 60 * 20, 0), 1.0f)
             .alwaysEdible().build();
 
     // 彩虹糖
@@ -414,8 +417,7 @@ public class KTFoods {
     public static final FoodProperties NAGA_GREEN_TONGUE = new FoodProperties.Builder()
             .nutrition(6)
             .saturationModifier(0.5f)
-            .effect(() -> new MobEffectInstance(MobEffects.POISON, 100, 0), 0.3f)
-            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 600 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(KTEffects.STURDY_SCALES, -1, 0), 1.0f)
             .alwaysEdible()
             .build();
 

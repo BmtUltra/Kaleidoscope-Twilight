@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "mod_items": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#kaleidoscope_twilight:mod_items"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "kaleidoscope_twilight:textures/advancement/background.png",
+    "description": {
+      "translate": "advancements.kaleidoscope_twilight.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_twilight:tea_date"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_twilight.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "mod_items"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

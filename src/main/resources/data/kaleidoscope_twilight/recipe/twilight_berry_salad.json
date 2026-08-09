@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "twilightforest:raspberry" },
+    { "item": "twilightforest:raspberry" },
+    { "item": "twilightforest:skyberry" },
+    { "item": "twilightforest:skyberry" },
+    { "item": "twilightforest:torchberries" },
+    { "item": "twilightforest:torchberries" },
+    { "item": "minecraft:bowl" }
+  ],
+  "result": {
+    "id": "kaleidoscope_twilight:twilight_berry_salad",
+    "count": 1
+  }
+}

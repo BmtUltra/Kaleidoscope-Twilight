@@ -183,5 +183,10 @@
   "enchantment.kaleidoscope_twilight.oil_blade": "油刃有余",
   "enchantment.kaleidoscope_twilight.oil_blade.desc": "击败生物被视为使用菜刀击败",
 
-  "tooltip.kaleidoscope_doll.doll.twilight_contributor": "暮色森林"
+  "tooltip.kaleidoscope_doll.doll.twilight_contributor": "暮色森林",
+
+  "advancements.kaleidoscope_twilight.root.title": "森罗物语：暮色",
+  "advancements.kaleidoscope_twilight.root.description": "为暮色带来奇幻生机！",
+  "advancements.kaleidoscope_twilight.umbral_sunflower.title": "屹立于暮色之下的傲慢之花",
+  "advancements.kaleidoscope_twilight.umbral_sunflower.description": "击败向日葵"
 }
