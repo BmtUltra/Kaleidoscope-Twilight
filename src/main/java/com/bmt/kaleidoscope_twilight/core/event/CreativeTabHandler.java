@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_twilight.datagen.event;
+package com.bmt.kaleidoscope_twilight.core.event;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 import com.bmt.kaleidoscope_twilight.init.KTItems;
