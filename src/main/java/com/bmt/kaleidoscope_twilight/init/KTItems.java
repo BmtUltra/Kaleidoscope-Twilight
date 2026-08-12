@@ -37,10 +37,6 @@ public class KTItems {
     public static final DeferredHolder<Item, BlockItem> UMBRAL_SUNFLOWER_SPAWNER = ITEMS.register("umbral_sunflower_spawner",
             () -> new BlockItem(KTBlocks.UMBRAL_SUNFLOWER_SPAWNER.get(), new Item.Properties()));
 
-    // 暮色浆果沙拉
-    public static final DeferredHolder<Item, BowlFoodOnlyItem> TWILIGHT_BERRY_SALAD_ITEM = ITEMS.register("twilight_berry_salad",
-            () -> new BowlFoodOnlyItem(KTFoods.TWILIGHT_BERRY_SALAD));
-
     // 暮色猪儿虫
     public static final DeferredHolder<Item, Item> TWILIGHT_CATERPILLAR_ITEM = ITEMS.register("twilight_caterpillar",
             () -> new Item(new Item.Properties().food(KTFoods.TWILIGHT_CATERPILLAR)));
@@ -72,10 +68,6 @@ public class KTItems {
     // 魔豆汤
     public static final DeferredHolder<Item, BowlFoodOnlyItem> MAGIC_BEAN_SOUP_ITEM = ITEMS.register("magic_bean_soup",
             () -> new BowlFoodOnlyItem(KTFoods.MAGIC_BEAN_SOUP));
-
-    // 荷花鸡
-    public static final DeferredHolder<Item, FoodWithEffectsItem> LOTUS_CHICKEN_ITEM = ITEMS.register("lotus_chicken",
-            () -> new BowlFoodOnlyItem(KTFoods.LOTUS_CHICKEN));
 
     // 生娜迦肉
     public static final DeferredHolder<Item, Item> RAW_NAGA_MEAT_ITEM = ITEMS.register("raw_naga_meat",
@@ -133,7 +125,7 @@ public class KTItems {
     public static final DeferredHolder<Item, Item> TORCHBERRY_DEER_SANDWICH_ITEM = ITEMS.register("torchberry_deer_sandwich",
             () -> new FoodWithEffectsItem(KTFoods.TORCHBERRY_DEER_SANDWICH));
 
-    // 试验品115号烤串
+    // 试验品115号串串
     public static final DeferredHolder<Item, Experiment115SkewerItem> EXPERIMENT_115_SKEWER_ITEM = ITEMS.register("experiment_115_skewer",
             () -> new Experiment115SkewerItem(KTFoods.EXPERIMENT_115_SKEWER));
 
@@ -208,10 +200,6 @@ public class KTItems {
     // 四叶冰晶
     public static final DeferredHolder<Item, Item> FOUR_LEAF_ICE_CRYSTAL_ITEM = ITEMS.register("four_leaf_ice_crystal",
             () -> new Item(new Item.Properties()));
-
-    // 冰晶九头蛇排
-    public static final DeferredHolder<Item, FoodWithEffectsItem> ICE_CRYSTAL_HYDRA_STEAK_ITEM = ITEMS.register("ice_crystal_hydra_steak",
-            () -> new BowlFoodOnlyItem(KTFoods.ICE_CRYSTAL_HYDRA_STEAK));
 
     // 冰晶慕斯
     public static final DeferredHolder<Item, FoodWithEffectsItem> ICE_CRYSTAL_MOUSSE_ITEM = ITEMS.register("ice_crystal_mousse",

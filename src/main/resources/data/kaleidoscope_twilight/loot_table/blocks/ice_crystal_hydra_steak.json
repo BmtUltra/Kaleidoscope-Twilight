@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "block": "kaleidoscope_twilight:ice_crystal_hydra_steak",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "bites": "0"
+                  }
+                }
+              ],
+              "name": "kaleidoscope_twilight:ice_crystal_hydra_steak"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:bowl"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "kaleidoscope_twilight:blocks/ice_crystal_hydra_steak"
+}

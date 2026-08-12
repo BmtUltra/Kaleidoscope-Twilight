@@ -7,7 +7,10 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 
 public class KTFoodBites {
+    public static ResourceLocation TWILIGHT_BERRY_SALAD;
     public static ResourceLocation TWILIGHT_WELLINGTON_STEAK;
+    public static ResourceLocation LOTUS_CHICKEN;
+    public static ResourceLocation ICE_CRYSTAL_HYDRA_STEAK;
     public static ResourceLocation DEER_STEW_POTATO;
     public static ResourceLocation SALT_BAKED_NAGA;
     public static ResourceLocation GLACIER_CAKE;
@@ -16,8 +19,20 @@ public class KTFoodBites {
 
     public static void init() {
         FoodBiteRegistry registry = new FoodBiteRegistry();
+        TWILIGHT_BERRY_SALAD = registry.registerFoodData(KaleidoscopeTwilight.id("twilight_berry_salad"),
+                FoodBiteRegistry.FoodData.create(3, KTFoods.TWILIGHT_BERRY_SALAD_BLOCK, KTFoods.TWILIGHT_BERRY_SALAD_ITEM)
+        );
+
         TWILIGHT_WELLINGTON_STEAK = registry.registerFoodData(KaleidoscopeTwilight.id("twilight_wellington_steak"),
                 FoodBiteRegistry.FoodData.create(4, KTFoods.TWILIGHT_WELLINGTON_STEAK_BLOCK, KTFoods.TWILIGHT_WELLINGTON_STEAK_ITEM)
+        );
+
+        LOTUS_CHICKEN = registry.registerFoodData(KaleidoscopeTwilight.id("lotus_chicken"),
+                FoodBiteRegistry.FoodData.create(4, KTFoods.LOTUS_CHICKEN_BLOCK, KTFoods.LOTUS_CHICKEN_ITEM)
+        );
+
+        ICE_CRYSTAL_HYDRA_STEAK = registry.registerFoodData(KaleidoscopeTwilight.id("ice_crystal_hydra_steak"),
+                FoodBiteRegistry.FoodData.create(4, KTFoods.ICE_CRYSTAL_HYDRA_STEAK_BLOCK, KTFoods.ICE_CRYSTAL_HYDRA_STEAK_ITEM)
         );
 
         DEER_STEW_POTATO = registry.registerFoodData(KaleidoscopeTwilight.id("deer_stew_potato"),

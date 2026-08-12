@@ -3,7 +3,7 @@
 
   "biome.kaleidoscope_twilight.sunflower_plains": "Sunflower Plains",
 
-  "item.kaleidoscope_twilight.twilight_berry_salad": "Twilight Berry Salad",
+  "block.kaleidoscope_twilight.twilight_berry_salad": "Twilight Berry Salad",
   "tooltip.kaleidoscope_twilight.twilight_berry_salad.maxim": "Fresh and crisp, carrying the fragrance of the forest",
   "item.kaleidoscope_twilight.twilight_caterpillar": "Twilight Caterpillar",
   "block.kaleidoscope_twilight.deer_stew_potato": "Venison Stew with Potatoes",
@@ -30,7 +30,7 @@
   "tooltip.kaleidoscope_twilight.magic_bean_soup.maxim": "A magical soup brewed from magic beans, as if you can feel the magic flowing through you",
   "block.kaleidoscope_twilight.glacier_cake": "Glacier Cake",
   "tooltip.kaleidoscope_twilight.glacier_cake.maxim": "A cake inspired by glaciers, icy cold and carrying the purity of snowy mountains",
-  "item.kaleidoscope_twilight.lotus_chicken": "Lotus Chicken",
+  "block.kaleidoscope_twilight.lotus_chicken": "Lotus Chicken",
   "tooltip.kaleidoscope_twilight.lotus_chicken.maxim": "Chicken wrapped in lotus leaves, fragrant and tender",
   "item.kaleidoscope_twilight.raw_naga_meat": "Raw Naga Meat",
   "item.kaleidoscope_twilight.cooked_naga_meat": "Cooked Naga Meat",
@@ -64,7 +64,7 @@
   "item.kaleidoscope_twilight.cold_tossed_fern": "Cold Tossed Fern",
   "tooltip.kaleidoscope_twilight.cold_tossed_fern.maxim": "A cold dish made from twilight ferns, refreshing and perfect for summer",
   "item.kaleidoscope_twilight.four_leaf_ice_crystal": "Four-Leaf Ice Crystal",
-  "item.kaleidoscope_twilight.ice_crystal_hydra_steak": "Ice Crystal Hydra Steak",
+  "block.kaleidoscope_twilight.ice_crystal_hydra_steak": "Ice Crystal Hydra Steak",
   "tooltip.kaleidoscope_twilight.ice_crystal_hydra_steak.maxim": "A perfect fusion of Hydra meat and ice crystals, tender meat with a frosty touch",
   "item.kaleidoscope_twilight.ice_crystal_mousse": "Ice Crystal Mousse",
   "tooltip.kaleidoscope_twilight.ice_crystal_mousse.maxim": "A mousse cake inspired by ice crystals, icy cold and delicate, melting in your mouth",
@@ -179,6 +179,8 @@
   "entity.kaleidoscope_twilight.thrown_sword": "Thrown Sword",
   "entity.kaleidoscope_twilight.ground_spike": "Ground Spike",
   "entity.kaleidoscope_twilight.giant_sword": "Giant Sword",
+  "entity.kaleidoscope_twilight.earthquake": "Earthquake",
+  "entity.kaleidoscope_twilight.erupting_block": "Erupting Block",
 
   "enchantment.kaleidoscope_twilight.oil_blade": "Oil Blade",
   "enchantment.kaleidoscope_twilight.oil_blade.desc": "Killing mobs is treated as defeating them with a cleaver",

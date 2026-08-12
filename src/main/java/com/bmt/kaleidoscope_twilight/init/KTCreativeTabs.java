@@ -23,12 +23,8 @@ public class KTCreativeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, KaleidoscopeTwilight.MODID);
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> KALEIDOSCOPE_TWILIGHT =
-            CREATIVE_MODE_TABS.register("kaleidoscope_twilight",
-            () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.kaleidoscope_twilight"))
-                    .icon(() -> new ItemStack(KTItems.TEA_DATE_ITEM.get()))
-                    .displayItems((parameters, output) -> {
-                        output.accept(KTItems.TWILIGHT_BERRY_SALAD_ITEM.get());
+            CREATIVE_MODE_TABS.register("kaleidoscope_twilight", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.kaleidoscope_twilight")).icon(() -> new ItemStack(KTItems.TEA_DATE_ITEM.get())).displayItems((parameters, output) -> {
+                        output.accept(BuiltInRegistries.ITEM.get(KTFoodBites.TWILIGHT_BERRY_SALAD));
                         output.accept(KTItems.TWILIGHT_CATERPILLAR_ITEM.get());
                         output.accept(KTItems.DEER_STEW_POTATO_RICE_BOWL_ITEM.get());
                         output.accept(KTItems.MINOTAUR_ROLL_ITEM.get());
@@ -37,7 +33,7 @@ public class KTCreativeTabs {
                         output.accept(KTItems.SAUCED_SNAKE_FEAST_ITEM.get());
                         output.accept(KTItems.AURORA_ICE_CREAM_ITEM.get());
                         output.accept(KTItems.MAGIC_BEAN_SOUP_ITEM.get());
-                        output.accept(KTItems.LOTUS_CHICKEN_ITEM.get());
+                        output.accept(BuiltInRegistries.ITEM.get(KTFoodBites.LOTUS_CHICKEN));
                         output.accept(KTItems.RAW_NAGA_MEAT_ITEM.get());
                         output.accept(KTItems.COOKED_NAGA_MEAT_ITEM.get());
                         output.accept(KTItems.TOMAHAWK_STEAK_ITEM.get());
@@ -58,7 +54,6 @@ public class KTCreativeTabs {
                         output.accept(KTItems.TWILIGHT_FERN_ITEM.get());
                         output.accept(KTItems.COLD_TOSSED_FERN_ITEM.get());
                         output.accept(KTItems.FOUR_LEAF_ICE_CRYSTAL_ITEM.get());
-                        output.accept(KTItems.ICE_CRYSTAL_HYDRA_STEAK_ITEM.get());
                         output.accept(KTItems.ICE_CRYSTAL_MOUSSE_ITEM.get());
                         output.accept(KTItems.TWILIGHT_CHICKEN_MUSHROOM_STEW_ITEM.get());
                         output.accept(KTItems.MAZE_STUFFED_PANCAKE_ITEM.get());

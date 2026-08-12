@@ -79,6 +79,8 @@ public class KTClient {
         event.registerEntityRenderer(KTEntities.SWORD_AURA.get(), SwordAuraRender::new);
         event.registerEntityRenderer(KTEntities.GROUND_SPIKE.get(), GroundSpikeRender::new);
         event.registerEntityRenderer(KTEntities.GIANT_SWORD.get(), GiantSwordRender::new);
+        event.registerEntityRenderer(KTEntities.EARTHQUAKE.get(), EarthquakeRender::new);
+        event.registerEntityRenderer(KTEntities.ERUPTING_BLOCK.get(), EruptingBlockRenderer::new);
     }
 
     @SubscribeEvent

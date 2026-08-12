@@ -7,8 +7,14 @@ import net.minecraft.world.food.FoodProperties;
 
 public class KTFoods {
     // 暮色浆果沙拉
-    public static final FoodProperties TWILIGHT_BERRY_SALAD = new FoodProperties.Builder()
+    public static final FoodProperties TWILIGHT_BERRY_SALAD_ITEM = new FoodProperties.Builder()
             .nutrition(8)
+            .saturationModifier(0.6f)
+            .effect(() -> new MobEffectInstance(ModEffects.MUSTARD, 300 * 20), 1.0F)
+            .alwaysEdible().build();
+
+    public static final FoodProperties TWILIGHT_BERRY_SALAD_BLOCK = new FoodProperties.Builder()
+            .nutrition(2)
             .saturationModifier(0.6f)
             .effect(() -> new MobEffectInstance(ModEffects.MUSTARD, 300 * 20), 1.0F)
             .alwaysEdible().build();
@@ -143,8 +149,14 @@ public class KTFoods {
             .alwaysEdible().build();
 
     // 荷花鸡
-    public static final FoodProperties LOTUS_CHICKEN = new FoodProperties.Builder()
+    public static final FoodProperties LOTUS_CHICKEN_ITEM = new FoodProperties.Builder()
             .nutrition(14)
+            .saturationModifier(0.9f)
+            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 300 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    public static final FoodProperties LOTUS_CHICKEN_BLOCK = new FoodProperties.Builder()
+            .nutrition(4)
             .saturationModifier(0.9f)
             .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 300 * 20, 0), 1.0f)
             .alwaysEdible().build();
@@ -229,7 +241,7 @@ public class KTFoods {
             .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 240 * 20, 0), 1.0f)
             .alwaysEdible().build();
 
-    // 试验品115号烤串
+    // 试验品115号串串
     public static final FoodProperties EXPERIMENT_115_SKEWER = new FoodProperties.Builder()
             .nutrition(2)
             .saturationModifier(0.1F)
@@ -267,8 +279,16 @@ public class KTFoods {
             .alwaysEdible().build();
 
     // 冰晶九头蛇排
-    public static final FoodProperties ICE_CRYSTAL_HYDRA_STEAK = new FoodProperties.Builder()
+    public static final FoodProperties ICE_CRYSTAL_HYDRA_STEAK_ITEM = new FoodProperties.Builder()
             .nutrition(20)
+            .saturationModifier(1.5f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(KTEffects.FROST_CLOUD, 300 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    public static final FoodProperties ICE_CRYSTAL_HYDRA_STEAK_BLOCK = new FoodProperties.Builder()
+            .nutrition(5)
             .saturationModifier(1.5f)
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600 * 20, 0), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600 * 20, 0), 1.0f)

@@ -1,14 +1,12 @@
 package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
-import com.bmt.kaleidoscope_twilight.entity.GiantSwordEntity;
-import com.bmt.kaleidoscope_twilight.entity.GroundSpikeEntity;
-import com.bmt.kaleidoscope_twilight.entity.SwordAuraEntity;
-import com.bmt.kaleidoscope_twilight.entity.ThrownSwordEntity;
+import com.bmt.kaleidoscope_twilight.entity.*;
 import com.bmt.kaleidoscope_twilight.entity.boss.UmbralSunflower;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -55,4 +53,23 @@ public class KTEntities {
                             .clientTrackingRange(10)
                             .build("giant_sword")
             );
+
+    public static final Supplier<EntityType<EarthquakeEntity>> EARTHQUAKE =
+            ENTITIES.register("earthquake",
+                    () -> EntityType.Builder.of(EarthquakeEntity::new, MobCategory.MISC)
+                            .sized(0.1F, 0.1F)
+                            .clientTrackingRange(10)
+                            .updateInterval(1)
+                            .build("earthquake"));
+
+    public static final Supplier<EntityType<EruptingBlockEntity>> ERUPTING_BLOCK =
+            ENTITIES.register("erupting_block",
+                    () -> EntityType.Builder.of(
+                                    (EntityType<EruptingBlockEntity> type, Level level) ->
+                                            new EruptingBlockEntity(type, level),
+                                    MobCategory.MISC)
+                            .sized(0.98F, 0.98F)
+                            .clientTrackingRange(10)
+                            .updateInterval(1)
+                            .build("erupting_block"));
 }
