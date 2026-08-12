@@ -1,11 +1,11 @@
 package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
-import com.bmt.kaleidoscope_twilight.core.blockentity.trophy.NormalUmbralSunflowerTrophyBlockEntity;
-import com.bmt.kaleidoscope_twilight.core.blockentity.trophy.WallUmbralSunflowerTrophyBlockEntity;
-import com.bmt.kaleidoscope_twilight.core.blockentity.FieryPotBlockEntity;
-import com.bmt.kaleidoscope_twilight.core.blockentity.FieryStockpotBlockEntity;
-import com.bmt.kaleidoscope_twilight.core.blockentity.UmbralSunflowerSpawnerBlockEntity;
+import com.bmt.kaleidoscope_twilight.common.blockentity.trophy.NormalUmbralSunflowerTrophyBlockEntity;
+import com.bmt.kaleidoscope_twilight.common.blockentity.trophy.WallUmbralSunflowerTrophyBlockEntity;
+import com.bmt.kaleidoscope_twilight.common.blockentity.FieryPotBlockEntity;
+import com.bmt.kaleidoscope_twilight.common.blockentity.FieryStockpotBlockEntity;
+import com.bmt.kaleidoscope_twilight.common.blockentity.UmbralSunflowerSpawnerBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;

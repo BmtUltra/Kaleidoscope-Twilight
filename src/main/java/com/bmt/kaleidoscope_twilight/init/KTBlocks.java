@@ -1,12 +1,12 @@
 package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
-import com.bmt.kaleidoscope_twilight.core.block.FieryStockPotBlock;
-import com.bmt.kaleidoscope_twilight.core.block.FieryPotBlock;
-import com.bmt.kaleidoscope_twilight.core.block.trophy.UmbralSunflowerTrophyBlock;
-import com.bmt.kaleidoscope_twilight.core.block.trophy.WallUmbralSunflowerTrophyBlock;
-import com.bmt.kaleidoscope_twilight.core.block.UmbralSunflowerSpawnerBlock;
-import com.bmt.kaleidoscope_twilight.core.block.crop.TwilightFernCropBlock;
+import com.bmt.kaleidoscope_twilight.common.block.FieryStockPotBlock;
+import com.bmt.kaleidoscope_twilight.common.block.FieryPotBlock;
+import com.bmt.kaleidoscope_twilight.common.block.trophy.UmbralSunflowerTrophyBlock;
+import com.bmt.kaleidoscope_twilight.common.block.trophy.WallUmbralSunflowerTrophyBlock;
+import com.bmt.kaleidoscope_twilight.common.block.UmbralSunflowerSpawnerBlock;
+import com.bmt.kaleidoscope_twilight.common.block.crop.TwilightFernCropBlock;
 import com.github.ysbbbbbb.kaleidoscopecookery.block.kitchen.StoveBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;

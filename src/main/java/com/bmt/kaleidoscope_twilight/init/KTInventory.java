@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
-import com.bmt.kaleidoscope_twilight.core.inventory.KeepingPouchMenu;
+import com.bmt.kaleidoscope_twilight.common.inventory.KeepingPouchMenu;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;

@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_twilight;
 
-import com.bmt.kaleidoscope_twilight.core.entity.ThrownSwordEntity;
-import com.bmt.kaleidoscope_twilight.core.entity.boss.UmbralSunflower;
+import com.bmt.kaleidoscope_twilight.common.entity.ThrownSwordEntity;
+import com.bmt.kaleidoscope_twilight.common.entity.boss.UmbralSunflower;
 import com.bmt.kaleidoscope_twilight.init.*;
 import com.bmt.kaleidoscope_twilight.network.FireBreathPacket;
 

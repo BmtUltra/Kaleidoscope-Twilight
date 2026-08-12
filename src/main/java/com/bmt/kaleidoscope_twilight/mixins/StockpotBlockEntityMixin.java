@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_twilight.mixins;
 
-import com.bmt.kaleidoscope_twilight.core.block.FieryStockPotBlock;
-import com.bmt.kaleidoscope_twilight.core.blockentity.FieryStockpotBlockEntity;
+import com.bmt.kaleidoscope_twilight.common.block.FieryStockPotBlock;
+import com.bmt.kaleidoscope_twilight.common.blockentity.FieryStockpotBlockEntity;
 import com.bmt.kaleidoscope_twilight.init.KTItems;
 import com.bmt.kaleidoscope_twilight.mixins.accessor.StockpotBlockEntityAccessor;
 import com.github.ysbbbbbb.kaleidoscopecookery.block.kitchen.StockpotBlock;
