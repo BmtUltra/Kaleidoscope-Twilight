@@ -150,7 +150,7 @@ dependencies {
 //    implementation "curse.maven:rhino-416294:7104526"
 //    compileOnly "curse.maven:kaleidoscope-dimensions-wine-1506363:7934166"
 //    runtimeOnly "curse.maven:kaleidoscope-dimensions-wine-1506363:7934166"
-//    implementation fileTree("libs")
+    implementation fileTree("libs")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

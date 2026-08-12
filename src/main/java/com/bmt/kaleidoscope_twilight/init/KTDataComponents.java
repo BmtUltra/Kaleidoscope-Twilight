@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
-import com.bmt.kaleidoscope_twilight.item.KeepingPouchItem;
+import com.bmt.kaleidoscope_twilight.core.item.KeepingPouchItem;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.neoforged.neoforge.registries.DeferredRegister;

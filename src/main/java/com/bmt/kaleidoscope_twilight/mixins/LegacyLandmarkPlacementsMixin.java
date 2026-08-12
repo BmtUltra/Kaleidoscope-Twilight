@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import twilightforest.util.landmarks.LegacyLandmarkPlacements;
 
-@Mixin(value = LegacyLandmarkPlacements.class, remap = false)
+@Mixin(LegacyLandmarkPlacements.class)
 public abstract class LegacyLandmarkPlacementsMixin {
     @Unique
     private static final ResourceKey<Biome> KT_SUNFLOWER_PLAINS = ResourceKey.create(Registries.BIOME, KaleidoscopeTwilight.id("sunflower_plains"));

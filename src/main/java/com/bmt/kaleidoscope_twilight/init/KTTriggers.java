@@ -1,8 +1,8 @@
 package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
-import com.bmt.kaleidoscope_twilight.advancement.NagaSlayerTrigger;
-import com.bmt.kaleidoscope_twilight.advancement.SunflowerSeenTrigger;
+import com.bmt.kaleidoscope_twilight.core.advancement.NagaSlayerTrigger;
+import com.bmt.kaleidoscope_twilight.core.advancement.SunflowerSeenTrigger;
 import net.minecraft.advancements.CriterionTrigger;
 import net.minecraft.core.registries.Registries;
 import net.neoforged.neoforge.registries.DeferredHolder;

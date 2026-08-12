@@ -8,11 +8,14 @@ import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Mixin(Inventory.class)
 public class InventoryMixin {
@@ -20,19 +23,29 @@ public class InventoryMixin {
     @Shadow @Final
     public Player player;
 
-    @Inject(method = "dropAll", at = @At("HEAD"), cancellable = true)
-    private void kaleidoscope_twilight$protectKeepingPouches(CallbackInfo ci) {
+    @Unique
+    private final Map<int[], ItemStack> kaleidoscope_twilight$reservedPouches = new HashMap<>();
+
+    @Inject(method = "dropAll", at = @At("HEAD"))
+    private void kaleidoscope_twilight$reserveKeepingPouches(CallbackInfo ci) {
         List<List<ItemStack>> compartments = ((InventoryAccessor) this).getCompartments();
 
-        for (List<ItemStack> list : compartments) {
-            for (int i = 0; i < list.size(); ++i) {
-                ItemStack itemstack = list.get(i);
-                if (!itemstack.isEmpty() && itemstack.getItem() != KTItems.KEEPING_POUCH_ITEM.get()) {
-                    this.player.drop(itemstack, true, false);
-                    list.set(i, ItemStack.EMPTY);
+        for (int listIndex = 0; listIndex < compartments.size(); listIndex++) {
+            List<ItemStack> list = compartments.get(listIndex);
+            for (int itemIndex = 0; itemIndex < list.size(); itemIndex++) {
+                ItemStack itemstack = list.get(itemIndex);
+                if (!itemstack.isEmpty() && itemstack.getItem() == KTItems.KEEPING_POUCH_ITEM.get()) {
+                    kaleidoscope_twilight$reservedPouches.put(new int[]{listIndex, itemIndex}, itemstack);
+                    list.set(itemIndex, ItemStack.EMPTY);
                 }
             }
         }
-        ci.cancel();
+    }
+
+    @Inject(method = "dropAll", at = @At("RETURN"))
+    private void kaleidoscope_twilight$restoreKeepingPouches(CallbackInfo ci) {
+        List<List<ItemStack>> compartments = ((InventoryAccessor) this).getCompartments();
+        kaleidoscope_twilight$reservedPouches.forEach((position, stack) -> compartments.get(position[0]).set(position[1], stack));
+        kaleidoscope_twilight$reservedPouches.clear();
     }
 }

@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
-import com.bmt.kaleidoscope_twilight.item.*;
+import com.bmt.kaleidoscope_twilight.core.item.*;
 import com.bmt.kaleidoscope_twilight.util.ItemTiers;
 import com.bmt.kaleidoscope_twilight.util.TagUtils;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.BowlFoodOnlyItem;

@@ -1,8 +1,8 @@
 package com.bmt.kaleidoscope_twilight.init;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
-import com.bmt.kaleidoscope_twilight.entity.*;
-import com.bmt.kaleidoscope_twilight.entity.boss.UmbralSunflower;
+import com.bmt.kaleidoscope_twilight.core.entity.*;
+import com.bmt.kaleidoscope_twilight.core.entity.boss.UmbralSunflower;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;

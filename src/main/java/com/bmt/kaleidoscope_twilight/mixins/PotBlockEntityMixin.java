@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_twilight.mixins;
 
-import com.bmt.kaleidoscope_twilight.block.FieryPotBlock;
+import com.bmt.kaleidoscope_twilight.core.block.FieryPotBlock;
 import com.bmt.kaleidoscope_twilight.mixins.accessor.PotBlockEntityAccessor;
 import com.github.ysbbbbbb.kaleidoscopecookery.blockentity.kitchen.PotBlockEntity;
 import net.minecraft.world.entity.LivingEntity;
