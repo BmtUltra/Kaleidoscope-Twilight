@@ -1,6 +1,7 @@
 package com.bmt.kaleidoscope_twilight.common.client.tooltip;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
+import com.bmt.kaleidoscope_twilight.init.KTItems;
 import com.bmt.kaleidoscope_twilight.util.TagUtils;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -30,5 +31,16 @@ public class TooltipHandler {
         if (effects.isEmpty()) return;
         event.getToolTip().add(CommonComponents.space());
         PotionContents.addPotionTooltip(effects, event.getToolTip()::add, 1.0F, 20.0F);
+    }
+
+    @SubscribeEvent
+    public static void onTeaDateTooltip(ItemTooltipEvent event) {
+        if (!event.getItemStack().is(KTItems.TEA_DATE_ITEM.get())) {
+            return;
+        }
+        List<net.minecraft.network.chat.Component> tooltip = event.getToolTip();
+        if (tooltip.size() > 2) {
+            tooltip.remove(3);
+        }
     }
 }

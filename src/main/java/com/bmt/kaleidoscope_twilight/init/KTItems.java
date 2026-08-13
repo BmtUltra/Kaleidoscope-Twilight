@@ -207,8 +207,8 @@ public class KTItems {
             () -> new FoodWithEffectsItem(KTFoods.ICE_CRYSTAL_MOUSSE));
 
     // 茶枣子
-    public static final DeferredHolder<Item, FoodWithEffectsItem> TEA_DATE_ITEM = ITEMS.register("tea_date",
-            () -> new FoodWithEffectsItem(KTFoods.TEA_DATE));
+    public static final DeferredHolder<Item, TeaDateItem> TEA_DATE_ITEM = ITEMS.register("tea_date",
+            () -> new TeaDateItem(KTFoods.TEA_DATE));
 
     // 娜迦绿舌头
     public static final DeferredHolder<Item, FoodWithEffectsItem> NAGA_GREEN_TONGUE_ITEM = ITEMS.register("naga_green_tongue",

@@ -31,6 +31,7 @@ public class KaleidoscopeTwilight {
         KTTeacups.init();
         KTFoodBites.init();
         KTDataComponents.DATA_COMPONENT_TYPES.register(modEventBus);
+        KTRecipes.register(modEventBus);
         modEventBus.addListener(KaleidoscopeTwilight::registerEntityAttributes);
         if (ModList.get().isLoaded("kaleidoscope_tavern")) {
             KTFluids.FLUID_TYPES.register(modEventBus);
