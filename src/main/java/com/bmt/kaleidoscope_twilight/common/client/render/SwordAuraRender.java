@@ -22,13 +22,22 @@ public class SwordAuraRender extends EntityRenderer<SwordAuraEntity> {
     public void render(SwordAuraEntity entity, float entityYaw, float partialTick,
                        PoseStack poseStack, MultiBufferSource bufferSource, int packedLight) {
         poseStack.pushPose();
-        poseStack.translate(0.0D, -2.2D, 0.0D);
-        float yRot = Mth.lerp(partialTick, entity.yRotO, entity.getYRot()) + 180.0F;
-        poseStack.mulPose(Axis.YP.rotationDegrees(yRot));
-
-        poseStack.scale(2.5F, 2.5F, 2.5F);
-        model.renderToBuffer(poseStack, bufferSource.getBuffer(model.renderType(getTextureLocation(entity))),
-                packedLight, 0, -1);
+        if (entity.isPlayerAura()) {
+            float yRot = Mth.lerp(partialTick, entity.yRotO, entity.getYRot()) + 180.0F;
+            float xRot = Mth.lerp(partialTick, entity.xRotO, entity.getXRot());
+            poseStack.mulPose(Axis.YP.rotationDegrees(yRot));
+            poseStack.mulPose(Axis.XP.rotationDegrees(xRot));
+            poseStack.translate(0.0D, -22.0D / 16.0D, 0.0D);
+            model.renderToBuffer(poseStack, bufferSource.getBuffer(model.renderType(getTextureLocation(entity))),
+                    packedLight, 0, -1);
+        } else {
+            poseStack.translate(0.0D, -2.2D, 0.0D);
+            float yRot = Mth.lerp(partialTick, entity.yRotO, entity.getYRot()) + 180.0F;
+            poseStack.mulPose(Axis.YP.rotationDegrees(yRot));
+            poseStack.scale(2.5F, 2.5F, 2.5F);
+            model.renderToBuffer(poseStack, bufferSource.getBuffer(model.renderType(getTextureLocation(entity))),
+                    packedLight, 0, -1);
+        }
         poseStack.popPose();
         super.render(entity, entityYaw, partialTick, poseStack, bufferSource, packedLight);
     }

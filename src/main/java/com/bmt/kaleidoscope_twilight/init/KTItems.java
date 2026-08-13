@@ -13,6 +13,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -268,6 +269,11 @@ public class KTItems {
     // 保管符袋
     public static final DeferredHolder<Item, KeepingPouchItem> KEEPING_POUCH_ITEM = ITEMS.register("keeping_pouch",
             KeepingPouchItem::new);
+
+    // 热泪之剑
+    public static final DeferredHolder<Item, HotTearSwordItem> HOT_TEAR_SWORD = ITEMS.register("hot_tear_sword",
+            () -> new HotTearSwordItem(Tiers.NETHERITE, 4, -2.4F,
+                    new Item.Properties().fireResistant().durability(2561).rarity(Rarity.EPIC)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

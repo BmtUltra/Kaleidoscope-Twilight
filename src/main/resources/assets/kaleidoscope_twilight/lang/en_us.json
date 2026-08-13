@@ -122,6 +122,8 @@
   "item.kaleidoscope_twilight.knight_kitchen_knife.tooltip": "Deals bonus damage to armored targets",
   "item.kaleidoscope_twilight.ironwood_kitchen_knife": "Ironwood Kitchen Knife",
   "item.kaleidoscope_twilight.steelleaf_kitchen_knife": "Steelleaf Kitchen Knife",
+  "item.kaleidoscope_twilight.hot_tear_sword": "Hot Tear Sword",
+  "item.kaleidoscope_twilight.hot_tear_sword.tooltip": "Left-click to launch a sword aura dealing magic damage equal to your attack damage",
 
   "block.kaleidoscope_twilight.cave_firefly_brew": "Cave Firefly Brew",
   "block.kaleidoscope_twilight.twilight_dew": "Twilight Dew",

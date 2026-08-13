@@ -1,6 +1,8 @@
 package com.bmt.kaleidoscope_twilight.common.entity;
 
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
@@ -22,11 +24,15 @@ import java.util.UUID;
 
 public class SwordAuraEntity extends ThrowableItemProjectile {
 
+    private static final EntityDataAccessor<Boolean> DATA_PLAYER_AURA =
+            SynchedEntityData.defineId(SwordAuraEntity.class, EntityDataSerializers.BOOLEAN);
+
     private static final float BASE_DAMAGE = 5.0F;
     private static final float MAX_HEALTH_PERCENT = 0.15F;
     private static final int MAX_LIFE_TICKS = 20;
 
     private int life = 0;
+    private float customDamage = -1.0F;
     private final List<UUID> attackedEntityUUID = new ArrayList<>();
 
     public SwordAuraEntity(EntityType<? extends SwordAuraEntity> entityType, Level level) {
@@ -35,9 +41,22 @@ public class SwordAuraEntity extends ThrowableItemProjectile {
         this.noPhysics = true;
     }
 
+    public void setDamage(float damage) {
+        this.customDamage = damage;
+    }
+
+    public void setPlayerAura(boolean playerAura) {
+        this.entityData.set(DATA_PLAYER_AURA, playerAura);
+    }
+
+    public boolean isPlayerAura() {
+        return this.entityData.get(DATA_PLAYER_AURA);
+    }
+
     @Override
     protected void defineSynchedData(SynchedEntityData.@NotNull Builder builder) {
         super.defineSynchedData(builder);
+        builder.define(DATA_PLAYER_AURA, false);
     }
 
     @Override
@@ -55,7 +74,9 @@ public class SwordAuraEntity extends ThrowableItemProjectile {
         if (horizDist > 1.0E-7) {
             float targetYaw = (float) Mth.atan2(vel.x, vel.z) * Mth.RAD_TO_DEG;
             this.setYRot(targetYaw);
-            this.setXRot(0.0F);
+            if (!this.isPlayerAura()) {
+                this.setXRot(0.0F);
+            }
         }
 
         if (vel.lengthSqr() < 1.0E-4) {
@@ -96,7 +117,9 @@ public class SwordAuraEntity extends ThrowableItemProjectile {
         for (Entity entity : hits) {
             if (entity instanceof LivingEntity living) {
                 living.invulnerableTime = 0;
-                float damage = BASE_DAMAGE + living.getMaxHealth() * MAX_HEALTH_PERCENT;
+                float damage = this.customDamage > 0
+                        ? this.customDamage
+                        : BASE_DAMAGE + living.getMaxHealth() * MAX_HEALTH_PERCENT;
                 DamageSource damageSource = this.damageSources().indirectMagic(this, owner);
 
                 ItemStack offhand = living.getOffhandItem();
@@ -110,6 +133,7 @@ public class SwordAuraEntity extends ThrowableItemProjectile {
                 boolean hurt = living.hurt(damageSource, damage);
                 if (hurt) {
                     attackedEntityUUID.add(living.getUUID());
+                    living.setRemainingFireTicks(6 * 20);
                 }
             }
         }

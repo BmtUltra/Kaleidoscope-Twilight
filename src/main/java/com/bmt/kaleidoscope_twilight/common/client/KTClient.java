@@ -13,8 +13,10 @@ import com.bmt.kaleidoscope_twilight.init.KTEntities;
 import com.bmt.kaleidoscope_twilight.init.KTItems;
 import com.bmt.kaleidoscope_twilight.init.KTInventory;
 import com.bmt.kaleidoscope_twilight.common.item.FieryStockpotLidItem;
+import com.bmt.kaleidoscope_twilight.common.item.HotTearSwordItem;
 import com.bmt.kaleidoscope_twilight.common.item.KeepingPouchItem;
 import com.bmt.kaleidoscope_twilight.network.FireBreathPacket;
+import com.bmt.kaleidoscope_twilight.network.HotTearSwordPacket;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
@@ -33,6 +35,7 @@ import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.network.PacketDistributor;
 import org.jetbrains.annotations.NotNull;
 
@@ -40,6 +43,7 @@ import static net.neoforged.neoforge.client.gui.VanillaGuiLayers.CROSSHAIR;
 
 @EventBusSubscriber(modid = KaleidoscopeTwilight.MODID, value = Dist.CLIENT)
 public class KTClient {
+    private static int lastSentTick = -999999;
 
     @SubscribeEvent
     public static void registerTooltipComponents(RegisterClientTooltipComponentFactoriesEvent event) {
@@ -107,6 +111,19 @@ public class KTClient {
         if (mc.options.keyAttack.isDown()) {
             PacketDistributor.sendToServer(new FireBreathPacket());
         }
+    }
+
+    @SubscribeEvent
+    public static void onLeftClickEmpty(PlayerInteractEvent.LeftClickEmpty event) {
+        Player player = event.getEntity();
+        if (player == null) return;
+        if (!HotTearSwordItem.isHotTearSword(player.getMainHandItem())) return;
+        if (Minecraft.getInstance().player != player) return;
+
+        int now = player.tickCount;
+        if (now == lastSentTick) return;
+        lastSentTick = now;
+        PacketDistributor.sendToServer(new HotTearSwordPacket());
     }
 
     @SubscribeEvent

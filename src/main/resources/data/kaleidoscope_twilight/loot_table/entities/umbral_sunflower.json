@@ -10,6 +10,16 @@
         }
       ],
       "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kaleidoscope_twilight:hot_tear_sword"
+        }
+      ],
+      "rolls": 1.0
     }
   ],
   "random_sequence": "kaleidoscope_twilight:entities/umbral_sunflower"

@@ -3,6 +3,7 @@ package com.bmt.kaleidoscope_twilight.common;
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 import com.bmt.kaleidoscope_twilight.common.effect.GiantBlessingEffect;
 import com.bmt.kaleidoscope_twilight.common.entity.boss.UmbralSunflower;
+import com.bmt.kaleidoscope_twilight.common.item.HotTearSwordItem;
 import com.bmt.kaleidoscope_twilight.init.*;
 import com.bmt.kaleidoscope_twilight.mixins.accessor.BlockEntityTypeAccessor;
 import com.bmt.kaleidoscope_twilight.util.FoodHelper;
@@ -35,6 +36,7 @@ import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
+import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerXpEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
@@ -178,6 +180,13 @@ public class EventHandler {
         if (event.getEntity() instanceof ServerPlayer player) {
             KTTriggers.SUNFLOWER_SEEN.get().trigger(player);
         }
+    }
+
+    @SubscribeEvent
+    public static void onAttackEntity(AttackEntityEvent event) {
+        if (!(event.getEntity() instanceof ServerPlayer player)) return;
+        if (!HotTearSwordItem.isHotTearSword(player.getMainHandItem())) return;
+        HotTearSwordItem.shootSwordAura(player);
     }
 
     @SubscribeEvent

@@ -103,6 +103,7 @@ public class KTCreativeTabs {
                         output.accept(KTItems.KNIGHT_KITCHEN_KNIFE.get());
                         output.accept(KTItems.IRONWOOD_KITCHEN_KNIFE.get());
                         output.accept(KTItems.STEELLEAF_KITCHEN_KNIFE.get());
+                        output.accept(KTItems.HOT_TEAR_SWORD.get());
                         if (ModList.get().isLoaded("kaleidoscope_tavern")) {
                             output.accept(KTBrewItems.TORCHBERRY_BUCKET.get());
                         }

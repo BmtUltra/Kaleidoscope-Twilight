@@ -4,6 +4,7 @@ import com.bmt.kaleidoscope_twilight.common.entity.ThrownSwordEntity;
 import com.bmt.kaleidoscope_twilight.common.entity.boss.UmbralSunflower;
 import com.bmt.kaleidoscope_twilight.init.*;
 import com.bmt.kaleidoscope_twilight.network.FireBreathPacket;
+import com.bmt.kaleidoscope_twilight.network.HotTearSwordPacket;
 
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.ModList;
@@ -40,6 +41,7 @@ public class KaleidoscopeTwilight {
         modEventBus.addListener(RegisterPayloadHandlersEvent.class, event -> {
             final PayloadRegistrar registrar = event.registrar(MODID);
             registrar.playToServer(FireBreathPacket.TYPE, FireBreathPacket.STREAM_CODEC, FireBreathPacket::handle);
+            registrar.playToServer(HotTearSwordPacket.TYPE, HotTearSwordPacket.STREAM_CODEC, HotTearSwordPacket::handle);
         });
     }
 
