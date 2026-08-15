@@ -98,6 +98,11 @@ public class KeepingPouchItem extends Item {
     }
 
     @Override
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
+        return false;
+    }
+
+    @Override
     public boolean overrideStackedOnOther(ItemStack pouch, Slot slot, ClickAction action, Player player) {
         if (pouch.getCount() != 1 || action != ClickAction.SECONDARY) {
             return false;

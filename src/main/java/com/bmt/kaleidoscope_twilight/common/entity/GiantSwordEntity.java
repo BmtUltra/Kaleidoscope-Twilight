@@ -135,8 +135,6 @@ public class GiantSwordEntity extends Entity {
         this.playSound(SoundEvents.ANVIL_LAND, 1.0F, 0.7F);
         this.playSound(SoundEvents.GENERIC_EXPLODE.value(), 0.6F, 1.2F);
 
-        EarthquakeEntity.summon(this.owner, this.position(), this.level(), 40);
-
         for (int i = 0; i < 40; i++) {
             double angle = this.random.nextDouble() * Math.PI * 2.0D;
             double dist = this.random.nextDouble() * IMPACT_RADIUS;
