@@ -1,10 +1,13 @@
 package com.bmt.kaleidoscope_twilight.common;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
+import com.bmt.kaleidoscope_twilight.common.entity.ThrownSwordEntity;
 import com.bmt.kaleidoscope_twilight.common.entity.boss.UmbralSunflower;
 import com.bmt.kaleidoscope_twilight.common.item.HotTearSwordItem;
 import com.bmt.kaleidoscope_twilight.init.*;
 import com.bmt.kaleidoscope_twilight.mixins.accessor.BlockEntityTypeAccessor;
+import com.bmt.kaleidoscope_twilight.network.FireBreathPacket;
+import com.bmt.kaleidoscope_twilight.network.HotTearSwordPacket;
 import com.bmt.kaleidoscope_twilight.util.FoodHelper;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.ModCreativeTabs;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.ModEffects;
@@ -35,6 +38,7 @@ import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
@@ -43,6 +47,8 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerXpEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.fluids.capability.wrappers.FluidBucketWrapper;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
+import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import twilightforest.entity.boss.HydraMortar;
 import twilightforest.entity.boss.Naga;
 import twilightforest.init.*;
@@ -218,6 +224,19 @@ public class EventHandler {
                 }
             }
         }
+    }
+
+    @SubscribeEvent
+    public static void onRegisterPayloadHandlers(RegisterPayloadHandlersEvent event) {
+        final PayloadRegistrar registrar = event.registrar(KaleidoscopeTwilight.MODID);
+        registrar.playToServer(FireBreathPacket.TYPE, FireBreathPacket.STREAM_CODEC, FireBreathPacket::handle);
+        registrar.playToServer(HotTearSwordPacket.TYPE, HotTearSwordPacket.STREAM_CODEC, HotTearSwordPacket::handle);
+    }
+
+    @SubscribeEvent
+    private static void registerEntityAttributes(EntityAttributeCreationEvent event) {
+        event.put(KTEntities.UMBRAL_SUNFLOWER.get(), UmbralSunflower.createAttributes().build());
+        event.put(KTEntities.THROWN_SWORD.get(), ThrownSwordEntity.createAttributes().build());
     }
 
     @SubscribeEvent
