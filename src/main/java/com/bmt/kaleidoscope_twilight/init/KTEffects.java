@@ -3,21 +3,17 @@ package com.bmt.kaleidoscope_twilight.init;
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
 
 import com.bmt.kaleidoscope_twilight.util.AttributeModifierHelper;
-import net.minecraft.core.Holder;
+import com.bmt.kaleidoscope_twilight.util.FlightHelper;
+import com.bmt.kaleidoscope_twilight.util.ParticleHelper;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -85,48 +81,17 @@ public class KTEffects {
                 @Override
                 public boolean applyEffectTick(@NotNull LivingEntity entity, int amplifier) {
                     if (entity instanceof Player player) {
-                        boolean changed = false;
-                        if (!player.getAbilities().flying) {
-                            player.getAbilities().flying = true;
-                            changed = true;
-                        }
-                        if (!player.getAbilities().mayfly) {
-                            player.getAbilities().mayfly = true;
-                            changed = true;
-                        }
-                        if (changed) {
-                            player.onUpdateAbilities();
-                        }
-                        player.fallDistance = 0.0F;
+                        FlightHelper.enableFlight(player);
                     } else {
                         entity.setNoGravity(true);
                         entity.fallDistance = 0.0F;
                     }
-                    spawnSnowParticles(entity, amplifier);
+
+                    ParticleHelper.spawnSnowParticles(entity, amplifier, TFParticleType.SNOW.get());
                     return true;
                 }
-
-                private void spawnSnowParticles(LivingEntity entity, int amplifier) {
-                    if (entity.tickCount % 3 != 0) {
-                        return;
-                    }
-                    Vec3 pos = entity.position();
-                    int particleCount = 3 + amplifier;
-                    for (int i = 0; i < particleCount; i++) {
-                        double px = (entity.getRandom().nextDouble() - 0.5) * 0.8;
-                        double py = 0.05 + entity.getRandom().nextDouble() * 0.15;
-                        double pz = (entity.getRandom().nextDouble() - 0.5) * 0.8;
-                        double vx = (entity.getRandom().nextDouble() - 0.5) * 0.02;
-                        double vy = 0.02 + entity.getRandom().nextDouble() * 0.04;
-                        double vz = (entity.getRandom().nextDouble() - 0.5) * 0.02;
-                        if (entity.level().isClientSide()) {
-                            entity.level().addParticle(TFParticleType.SNOW.get(), pos.x + px, pos.y + py, pos.z + pz, vx, vy, vz);
-                        } else if (entity.level() instanceof ServerLevel serverLevel) {
-                            serverLevel.sendParticles(TFParticleType.SNOW.get(), pos.x + px, pos.y + py, pos.z + pz, 1, vx, vy, vz, 0.05);
-                        }
-                    }
-                }
             });
+
     public static final DeferredHolder<MobEffect, MobEffect> FIRE_BREATH = EFFECTS.register("fire_breath",
             () -> new MobEffect(MobEffectCategory.BENEFICIAL, 0xFF4500) {
             });
