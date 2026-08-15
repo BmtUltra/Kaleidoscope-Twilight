@@ -5,6 +5,7 @@ import com.bmt.kaleidoscope_twilight.mixins.accessor.InventoryAccessor;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.GameRules;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -29,6 +30,9 @@ public class InventoryMixin {
     @Inject(method = "dropAll", at = @At("HEAD"))
     private void kaleidoscope_twilight$reserveKeepingPouches(CallbackInfo ci) {
         List<List<ItemStack>> compartments = ((InventoryAccessor) this).getCompartments();
+        if (player.level().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY)) {
+            return;
+        }
 
         for (int listIndex = 0; listIndex < compartments.size(); listIndex++) {
             List<ItemStack> list = compartments.get(listIndex);

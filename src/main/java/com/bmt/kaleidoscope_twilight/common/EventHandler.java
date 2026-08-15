@@ -1,21 +1,23 @@
 package com.bmt.kaleidoscope_twilight.common;
 
 import com.bmt.kaleidoscope_twilight.KaleidoscopeTwilight;
-import com.bmt.kaleidoscope_twilight.common.effect.GiantBlessingEffect;
 import com.bmt.kaleidoscope_twilight.common.entity.boss.UmbralSunflower;
 import com.bmt.kaleidoscope_twilight.common.item.HotTearSwordItem;
 import com.bmt.kaleidoscope_twilight.init.*;
 import com.bmt.kaleidoscope_twilight.mixins.accessor.BlockEntityTypeAccessor;
 import com.bmt.kaleidoscope_twilight.util.FoodHelper;
+import com.github.ysbbbbbb.kaleidoscopecookery.init.ModCreativeTabs;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.ModEffects;
+import com.github.ysbbbbbb.kaleidoscopetavern.KaleidoscopeTavern;
+import com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks;
 import com.google.common.collect.Sets;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AnvilMenu;
@@ -43,17 +45,14 @@ import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.fluids.capability.wrappers.FluidBucketWrapper;
 import twilightforest.entity.boss.HydraMortar;
 import twilightforest.entity.boss.Naga;
-import twilightforest.init.TFBlockEntities;
-import twilightforest.init.TFDamageTypes;
-import twilightforest.init.TFItems;
+import twilightforest.init.*;
 
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Set;
 
 @EventBusSubscriber(modid = KaleidoscopeTwilight.MODID)
 public class EventHandler {
-    private static final ResourceLocation TAVERN_DRINK_BE = ResourceLocation.tryBuild("kaleidoscope_tavern", "drink");
-    public static final int NAGA_SLAYER_KILLS = 20;
 
     @SubscribeEvent
     public static void onCommonSetup(FMLCommonSetupEvent event) {
@@ -81,7 +80,7 @@ public class EventHandler {
         }
 
         if (entity.hasEffect(KTEffects.PHANTOM)) {
-            if (event.getSource().type().msgId().equals("inWall")) {
+            if (event.getSource().is(DamageTypes.IN_WALL)) {
                 event.setCanceled(true);
             }
         }
@@ -131,10 +130,7 @@ public class EventHandler {
 
     @SubscribeEvent
     public static void onPlayerClone(PlayerEvent.Clone event) {
-        if (!event.isWasDeath() || event.getEntity().level().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY)) {
-            return;
-        }
-
+        if (!event.isWasDeath() || event.getEntity().level().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY)) return;
         for (ItemStack item : event.getOriginal().getInventory().items) {
             if (item.getItem() == KTItems.KEEPING_POUCH_ITEM.get()) {
                 event.getEntity().getInventory().add(item);
@@ -144,32 +140,38 @@ public class EventHandler {
 
     @SubscribeEvent
     public static void onEffectRemove(MobEffectEvent.Remove event) {
-        if (event.getEffect().value() instanceof GiantBlessingEffect) {
-            LivingEntity entity = event.getEntity();
-            GiantBlessingEffect.removeAllBonuses(entity);
+        if (event.getEffect() == KTEffects.FROST_CLOUD) {
+            cleanupFrostCloud(event.getEntity());
         }
     }
 
     @SubscribeEvent
     public static void onEffectExpire(MobEffectEvent.Expired event) {
-        if (event.getEffectInstance() != null && event.getEffectInstance().getEffect().value() instanceof GiantBlessingEffect) {
-            LivingEntity entity = event.getEntity();
-            GiantBlessingEffect.removeAllBonuses(entity);
+        MobEffectInstance instance = event.getEffectInstance();
+        if (instance != null && instance.getEffect().value() == KTEffects.FROST_CLOUD.get()) {
+            cleanupFrostCloud(event.getEntity());
+        }
+    }
+
+    private static void cleanupFrostCloud(LivingEntity entity) {
+        if (entity instanceof Player player) {
+            if (!player.hasEffect(KTEffects.FROST_CLOUD)) {
+                player.getAbilities().flying = false;
+                player.getAbilities().mayfly = player.getAbilities().instabuild;
+                player.onUpdateAbilities();
+                player.fallDistance = 0.0F;
+            }
+        } else {
+            entity.setNoGravity(false);
         }
     }
 
     @SubscribeEvent
     public static void onLivingDeath(LivingDeathEvent event) {
-        if (!(event.getEntity() instanceof Naga)) {
-            return;
-        }
-        if (!(event.getSource().getEntity() instanceof ServerPlayer player)) {
-            return;
-        }
+        if (!(event.getEntity() instanceof Naga)) return;
+        if (!(event.getSource().getEntity() instanceof ServerPlayer player)) return;
         int kills = player.getStats().getValue(Stats.ENTITY_KILLED, event.getEntity().getType()) + 1;
-        if (kills >= NAGA_SLAYER_KILLS) {
-            KTTriggers.NAGA_SLAYER.get().trigger(player);
-        }
+        if (kills >= 20) KTTriggers.NAGA_SLAYER.get().trigger(player);
     }
 
     @SubscribeEvent
@@ -191,19 +193,24 @@ public class EventHandler {
 
     @SubscribeEvent
     public static void addItemsToTabs(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey().location().equals(KaleidoscopeTwilight.fromNamespaceAndPath("twilightforest", "items"))) {
+        if (event.getTabKey() == TFCreativeTabs.ITEMS.getKey()) {
             event.accept(KTItems.UMBRAL_SUNFLOWER_SPAWN_EGG.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
-        if (event.getTabKey().location().equals(KaleidoscopeTwilight.fromNamespaceAndPath("twilightforest", "blocks"))) {
-            Item bossSpawner = BuiltInRegistries.ITEM.getOptional(
-                    ResourceKey.create(Registries.ITEM, KaleidoscopeTwilight.fromNamespaceAndPath("twilightforest", "snow_queen_boss_spawner"))).orElse(null);
-            if (bossSpawner != null && event.getParentEntries().stream().anyMatch(stack -> stack.is(bossSpawner))) {
-                event.insertAfter(new ItemStack(bossSpawner), new ItemStack(KTItems.UMBRAL_SUNFLOWER_SPAWNER.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+        if (event.getTabKey() == TFCreativeTabs.BLOCKS.getKey()) {
+            Item bossSpawner = TFBlocks.SNOW_QUEEN_BOSS_SPAWNER.asItem();
+
+            if (event.getParentEntries().stream().anyMatch(stack -> stack.is(bossSpawner))) {
+                event.insertAfter(new ItemStack(bossSpawner),
+                        new ItemStack(KTItems.UMBRAL_SUNFLOWER_SPAWNER.get()),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             } else {
-                event.accept(KTItems.UMBRAL_SUNFLOWER_SPAWNER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.accept(KTItems.UMBRAL_SUNFLOWER_SPAWNER.get(),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
         }
-        if (event.getTabKey().location().equals(KaleidoscopeTwilight.fromNamespaceAndPath("kaleidoscope_cookery", "cookery_food"))) {
+
+        if (event.getTabKey() == BuiltInRegistries.CREATIVE_MODE_TAB.getResourceKey(ModCreativeTabs.COOKERY_FOOD_TAB.get()).orElseThrow()) {
             for (ItemStack itemStack : event.getParentEntries().toArray(ItemStack[]::new)) {
                 if (Objects.requireNonNull(BuiltInRegistries.ITEM.getKey(itemStack.getItem()))
                         .getNamespace().equals(KaleidoscopeTwilight.MODID)) {
@@ -216,23 +223,18 @@ public class EventHandler {
     @SubscribeEvent
     public static void modifyDefaultComponents(ModifyDefaultComponentsEvent event) {
         Item meefStroganoff = TFItems.MEEF_STROGANOFF.get();
-
         event.modify(meefStroganoff, builder -> {
             builder.set(DataComponents.MAX_STACK_SIZE, 16);
             builder.set(DataComponents.FOOD,
-                    FoodHelper.withEffect(
-                            Objects.requireNonNull(meefStroganoff.components().get(DataComponents.FOOD)),
-                            ModEffects.SATIATED_SHIELD,
-                            20 * 80, 0, 1.0F
+                    FoodHelper.withEffect(Objects.requireNonNull(meefStroganoff.components().get(DataComponents.FOOD)),
+                            ModEffects.SATIATED_SHIELD, 1600, 0, 1.0F
                     ));
         });
     }
 
     @SubscribeEvent
     public static void registerGenericItemHandlers(RegisterCapabilitiesEvent event) {
-        if (!ModList.get().isLoaded("kaleidoscope_tavern")) {
-            return;
-        }
+        if (!ModList.get().isLoaded(KaleidoscopeTavern.MOD_ID)) return;
         event.registerItem(Capabilities.FluidHandler.ITEM,
                 (stack, ctx) -> new FluidBucketWrapper(stack),
                 KTBrewItems.TORCHBERRY_BUCKET.get());
@@ -240,24 +242,9 @@ public class EventHandler {
 
     @SubscribeEvent
     public static void onBlockEntityTypeAddBlocks(BlockEntityTypeAddBlocksEvent event) {
-        if (!ModList.get().isLoaded("kaleidoscope_tavern")) {
-            return;
-        }
-        BuiltInRegistries.BLOCK_ENTITY_TYPE.getOptional(TAVERN_DRINK_BE).ifPresent(drinkType -> {
-            event.modify(drinkType, KTBrews.CAVE_FIREFLY_BREW.get());
-            event.modify(drinkType, KTBrews.TWILIGHT_DEW.get());
-            event.modify(drinkType, KTBrews.WITCHCRAFT_SECRET_BREW.get());
-            event.modify(drinkType, KTBrews.SNAKE_SKIN_LIQUOR.get());
-            event.modify(drinkType, KTBrews.ICE_CRYSTAL_FROST_DEW.get());
-            event.modify(drinkType, KTBrews.MAGIC_BEAN_BREW.get());
-            event.modify(drinkType, KTBrews.EMBER_EYE.get());
-            event.modify(drinkType, KTBrews.DEER_SONG.get());
-            event.modify(drinkType, KTBrews.THORN_HEART.get());
-            event.modify(drinkType, KTBrews.DRUID_SECRET_BREW.get());
-            event.modify(drinkType, KTBrews.GLOWING_NIGHT_BIRD_SONG.get());
-            event.modify(drinkType, KTBrews.GLACIER_FROST_DEW.get());
-            event.modify(drinkType, KTBrews.GIANT_SPIRIT.get());
-            event.modify(drinkType, KTBrews.NATURE_SPIRIT.get());
-        });
+        if (!ModList.get().isLoaded(KaleidoscopeTavern.MOD_ID)) return;
+        Arrays.stream(KTBrews.ALL_BREWS).forEach(brew ->
+                event.modify(ModBlocks.DRINK_BE.get(), brew.get())
+        );
     }
 }

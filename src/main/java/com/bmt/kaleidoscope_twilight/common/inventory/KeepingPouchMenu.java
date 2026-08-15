@@ -5,7 +5,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.ShulkerBoxMenu;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -33,14 +32,6 @@ public class KeepingPouchMenu extends ShulkerBoxMenu {
             }
         }
         return -1;
-    }
-
-    @Override
-    public void clicked(int slotId, int button, @NotNull ClickType clickType, @NotNull Player player) {
-        if (slotId == this.pouchSlotIndex) {
-            return;
-        }
-        super.clicked(slotId, button, clickType, player);
     }
 
     @Override
@@ -98,7 +89,7 @@ public class KeepingPouchMenu extends ShulkerBoxMenu {
 
         @Override
         public boolean canPlaceItem(int index, @NotNull ItemStack stack) {
-            return stack.getItem().canFitInsideContainerItems() && !(stack.getItem() instanceof KeepingPouchItem);
+            return KeepingPouchItem.canPouchAccept(stack);
         }
 
         @Override

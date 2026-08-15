@@ -38,6 +38,11 @@ public class KeepingPouchItem extends Item {
         super((new Item.Properties()).stacksTo(1));
     }
 
+    @Override
+    public boolean canFitInsideContainerItems() {
+        return false;
+    }
+
     public static boolean hasItems(ItemStack pouch) {
         return pouch.has(KTDataComponents.KEEPING_POUCH_ITEMS.get());
     }
@@ -63,6 +68,10 @@ public class KeepingPouchItem extends Item {
         } else {
             pouch.set(KTDataComponents.KEEPING_POUCH_ITEMS.get(), ItemContainer.of(items));
         }
+    }
+
+    public static boolean canPouchAccept(ItemStack stack) {
+        return stack.getItem().canFitInsideContainerItems();
     }
 
     @Override
@@ -97,7 +106,7 @@ public class KeepingPouchItem extends Item {
         if (clickItem.isEmpty()) {
             this.playRemoveOneSound(player);
             removeOne(pouch).ifPresent(stack -> add(pouch, slot.safeInsert(stack)));
-        } else if (clickItem.getItem().canFitInsideContainerItems()) {
+        } else if (canPouchAccept(clickItem)) {
             int addCount = add(pouch, clickItem, true);
             if (addCount > 0) {
                 ItemStack takeout = slot.safeTake(clickItem.getCount(), addCount, player);
@@ -123,7 +132,7 @@ public class KeepingPouchItem extends Item {
                 this.playRemoveOneSound(player);
                 access.set(stack);
             });
-        } else {
+        } else if (canPouchAccept(other)) {
             int added = add(pouch, other);
             if (added > 0) {
                 this.playInsertSound(player);
@@ -153,6 +162,9 @@ public class KeepingPouchItem extends Item {
     }
 
     private static int add(ItemStack pouch, ItemStack item, boolean simulate) {
+        if (!canPouchAccept(item)) {
+            return 0;
+        }
         int totalCount = item.getCount();
 
         ItemStackHandler items = getItems(pouch);

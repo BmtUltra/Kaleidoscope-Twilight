@@ -9,8 +9,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class KTBrews {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(KaleidoscopeTwilight.MODID);
-    
-    // 洞窟萤火酿
+
     public static final DeferredBlock<Block> CAVE_FIREFLY_BREW = BLOCKS.register("cave_firefly_brew", 
             () -> DrinkBlock.create().maxCount(4).shapes(
                     Block.box(6, 0, 6, 10, 16, 10),
@@ -21,8 +20,7 @@ public class KTBrews {
                     ),
                     Block.box(2, 0, 2, 14, 16, 14)
             ).build().get());
-    
-    // 暮光晨露
+
     public static final DeferredBlock<Block> TWILIGHT_DEW = BLOCKS.register("twilight_dew", 
             () -> DrinkBlock.create().maxCount(4).shapes(
                     Block.box(6, 0, 6, 10, 16, 10),
@@ -33,8 +31,7 @@ public class KTBrews {
                     ),
                     Block.box(2, 0, 2, 14, 16, 14)
             ).build().get());
-    
-    // 巫术秘酿
+
     public static final DeferredBlock<Block> WITCHCRAFT_SECRET_BREW = BLOCKS.register("witchcraft_secret_brew", 
             () -> DrinkBlock.create().maxCount(4).shapes(
                     Block.box(4, 0, 4, 12, 15, 12),
@@ -45,8 +42,7 @@ public class KTBrews {
                     ),
                     Block.box(0, 0, 0, 16, 16, 16)
             ).build().get());
-    
-    // 蛇蜕利
+
     public static final DeferredBlock<Block> SNAKE_SKIN_LIQUOR = BLOCKS.register("snake_skin_liquor", 
             () -> DrinkBlock.create().maxCount(4).shapes(
                     Block.box(4, 0, 4, 12, 15, 12),
@@ -57,8 +53,7 @@ public class KTBrews {
                     ),
                     Block.box(0, 0, 0, 16, 16, 16)
             ).build().get());
-    
-    // 冰晶露
+
     public static final DeferredBlock<Block> ICE_CRYSTAL_FROST_DEW = BLOCKS.register("ice_crystal_frost_dew", 
             () -> DrinkBlock.create().maxCount(2).shapes(
                     Block.box(4, 0, 4, 12, 15, 12),
@@ -69,8 +64,7 @@ public class KTBrews {
                     ),
                     Block.box(0, 0, 0, 16, 16, 16)
             ).build().get());
-    
-    // 魔豆酿
+
     public static final DeferredBlock<Block> MAGIC_BEAN_BREW = BLOCKS.register("magic_bean_brew", 
             () -> DrinkBlock.create().maxCount(4).shapes(
                     Block.box(6, 0, 6, 10, 16, 10),
@@ -81,16 +75,14 @@ public class KTBrews {
                     ),
                     Block.box(2, 0, 2, 14, 16, 14)
             ).build().get());
-    
-    // 灰烬之眼
+
     public static final DeferredBlock<Block> EMBER_EYE = BLOCKS.register("ember_eye", 
             () -> DrinkBlock.create().maxCount(3).shapes(
                     Block.box(3, 0, 6, 13, 12, 10),
                     Block.box(1, 0, 3, 15, 12, 12),
                     Block.box(0, 0, 1, 16, 12, 13)
             ).build().get());
-    
-    // 呦呦鹿鸣
+
     public static final DeferredBlock<Block> DEER_SONG = BLOCKS.register("deer_song", 
             () -> DrinkBlock.create().maxCount(3).shapes(
                     Block.box(6, 0, 6, 10, 16, 10),
@@ -101,8 +93,7 @@ public class KTBrews {
                     ),
                     Block.box(2, 0, 2, 14, 16, 14)
             ).build().get());
-    
-    // 荆棘之心
+
     public static final DeferredBlock<Block> THORN_HEART = BLOCKS.register("thorn_heart", 
             () -> DrinkBlock.create().maxCount(2).shapes(
                     Block.box(4, 0, 4, 12, 15, 12),
@@ -113,8 +104,7 @@ public class KTBrews {
                     ),
                     Block.box(0, 0, 0, 16, 16, 16)
             ).build().get());
-    
-    // 德鲁伊秘酿
+
     public static final DeferredBlock<Block> DRUID_SECRET_BREW = BLOCKS.register("druid_secret_brew", 
             () -> DrinkBlock.create().maxCount(2).shapes(
                     Block.box(4, 0, 4, 12, 15, 12),
@@ -125,8 +115,7 @@ public class KTBrews {
                     ),
                     Block.box(0, 0, 0, 16, 16, 16)
             ).build().get());
-    
-    // 辉夜鸟之歌
+
     public static final DeferredBlock<Block> GLOWING_NIGHT_BIRD_SONG = BLOCKS.register("glowing_night_bird_song", 
             () -> DrinkBlock.create().maxCount(2).shapes(
                     Block.box(4, 0, 4, 12, 15, 12),
@@ -137,8 +126,7 @@ public class KTBrews {
                     ),
                     Block.box(0, 0, 0, 16, 16, 16)
             ).build().get());
-    
-    // 冰川霜露
+
     public static final DeferredBlock<Block> GLACIER_FROST_DEW = BLOCKS.register("glacier_frost_dew", 
             () -> DrinkBlock.create().maxCount(4).shapes(
                     Block.box(6, 0, 6, 10, 16, 10),
@@ -149,8 +137,7 @@ public class KTBrews {
                     ),
                     Block.box(2, 0, 2, 14, 16, 14)
             ).build().get());
-    
-    // 巨人烈酒
+
     public static final DeferredBlock<Block> GIANT_SPIRIT = BLOCKS.register("giant_spirit", 
             () -> DrinkBlock.create().maxCount(1).shapes(
                     Block.box(4, 0, 4, 12, 10, 12),
@@ -161,8 +148,7 @@ public class KTBrews {
                     ),
                     Block.box(0, 0, 0, 16, 16, 16)
             ).build().get());
-    
-    // 自然葡萄酒
+
     public static final DeferredBlock<Block> NATURE_SPIRIT = BLOCKS.register("nature_spirit", 
             () -> DrinkBlock.create().maxCount(4).shapes(
                     Block.box(6, 0, 6, 10, 16, 10),
@@ -173,4 +159,21 @@ public class KTBrews {
                     ),
                     Block.box(2, 0, 2, 14, 16, 14)
             ).build().get());
+
+    public static final DeferredBlock<?>[] ALL_BREWS = {
+            CAVE_FIREFLY_BREW,
+            TWILIGHT_DEW,
+            WITCHCRAFT_SECRET_BREW,
+            SNAKE_SKIN_LIQUOR,
+            ICE_CRYSTAL_FROST_DEW,
+            MAGIC_BEAN_BREW,
+            EMBER_EYE,
+            DEER_SONG,
+            THORN_HEART,
+            DRUID_SECRET_BREW,
+            GLOWING_NIGHT_BIRD_SONG,
+            GLACIER_FROST_DEW,
+            GIANT_SPIRIT,
+            NATURE_SPIRIT
+    };
 }
