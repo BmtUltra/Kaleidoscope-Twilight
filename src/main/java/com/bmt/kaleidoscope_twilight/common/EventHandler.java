@@ -16,7 +16,6 @@ import com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks;
 import com.google.common.collect.Sets;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -53,9 +52,7 @@ import twilightforest.entity.boss.HydraMortar;
 import twilightforest.entity.boss.Naga;
 import twilightforest.init.*;
 
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @EventBusSubscriber(modid = KaleidoscopeTwilight.MODID)
 public class EventHandler {

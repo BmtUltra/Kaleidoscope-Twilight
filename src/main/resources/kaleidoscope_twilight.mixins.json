@@ -15,6 +15,7 @@
     "StockpotLidItemMixin",
     "StoveBlockMixin",
     "accessor.BlockEntityTypeAccessor",
+    "accessor.CraftingMenuAccessor",
     "accessor.FoodBiteBlockAccessor",
     "accessor.InventoryAccessor",
     "accessor.ItemCombinerMenuAccessor",
