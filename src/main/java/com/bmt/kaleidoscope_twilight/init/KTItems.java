@@ -16,9 +16,11 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.FarmBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
@@ -30,15 +32,12 @@ public class KTItems {
     public static final DeferredHolder<Item, UmbralSunflowerTrophyItem> UMBRAL_SUNFLOWER_TROPHY = ITEMS.register("umbral_sunflower_trophy", () -> new UmbralSunflowerTrophyItem(KTBlocks.UMBRAL_SUNFLOWER_TROPHY.get(), KTBlocks.UMBRAL_SUNFLOWER_WALL_TROPHY.get(), new Item.Properties().rarity(Rarity.valueOf("TWILIGHTFOREST_TWILIGHT"))));
     public static final DeferredHolder<Item, Item> TWILIGHT_STOVE = ITEMS.register("twilight_stove", () -> new BlockItem(KTBlocks.TWILIGHT_STOVE.get(), new Item.Properties()));
 
-    // 向日葵刷怪蛋
     public static final DeferredHolder<Item, DeferredSpawnEggItem> UMBRAL_SUNFLOWER_SPAWN_EGG = ITEMS.register("umbral_sunflower_spawn_egg",
             () -> new DeferredSpawnEggItem(KTEntities.UMBRAL_SUNFLOWER, 0x5C1010, 0xFFA930, new Item.Properties()));
 
-    // 向日葵刷怪笼
     public static final DeferredHolder<Item, BlockItem> UMBRAL_SUNFLOWER_SPAWNER = ITEMS.register("umbral_sunflower_spawner",
             () -> new BlockItem(KTBlocks.UMBRAL_SUNFLOWER_SPAWNER.get(), new Item.Properties()));
 
-    // 暮色猪儿虫
     public static final DeferredHolder<Item, Item> TWILIGHT_CATERPILLAR_ITEM = ITEMS.register("twilight_caterpillar",
             () -> new Item(new Item.Properties().food(KTFoods.TWILIGHT_CATERPILLAR)));
 
@@ -182,8 +181,7 @@ public class KTItems {
                     Level level = context.getLevel();
                     BlockPos pos = context.getClickedPos();
                     BlockState state = level.getBlockState(pos);
-
-                    if (state.is(TagUtils.Blocks.FERN_PLANTABLE)) {
+                    if (state.is(TagUtils.Blocks.FERN_PLANTABLE) || state.is(Tags.Blocks.VILLAGER_FARMLANDS) || state.getBlock() instanceof FarmBlock) {
                         level.setBlock(pos.above(), KTBlocks.TWILIGHT_FERN_CROP.get().defaultBlockState(), 3);
                         if (context.getPlayer() != null && !context.getPlayer().isCreative()) {
                             context.getItemInHand().shrink(1);

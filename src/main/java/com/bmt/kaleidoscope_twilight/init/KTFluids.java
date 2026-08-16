@@ -17,7 +17,6 @@ public class KTFluids {
     public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(BuiltInRegistries.FLUID, KaleidoscopeTwilight.MODID);
 
     public static final ResourceLocation TORCHBERRY_JUICE_ID = KaleidoscopeTwilight.id("torchberry_juice");
-    public static final ResourceLocation FLOWING_TORCHBERRY_JUICE_ID = KaleidoscopeTwilight.id("flowing_torchberry_juice");
 
     public static final Supplier<FluidType> TORCHBERRY_JUICE_TYPE = FLUID_TYPES.register("torchberry_juice",
             () -> new JuiceFluidType(TORCHBERRY_JUICE_ID, 10));
